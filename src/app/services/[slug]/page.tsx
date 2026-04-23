@@ -100,7 +100,6 @@ export default async function ServicePage({ params }: PageProps) {
         name="Lukas Ehrk"
         role="Technisches SEO & UX"
         expertise={["Technisches SEO", "Content-Migration", "Conversion-Orientierung"]}
-        profileHref="/ueber-uns/"
         note="Qualitätssicherung und fachliche Freigabe für diese Service-Seite."
       />
     </>

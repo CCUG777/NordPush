@@ -4,7 +4,15 @@ type AuthorBoxProps = {
   name: string;
   role: string;
   expertise: readonly string[];
-  profileHref: string;
+  /**
+   * Link to a dedicated author profile page. Optional — omit this prop
+   * when no individual profile page exists (currently the case across
+   * the site; the profiles will be added as part of audit finding H2).
+   * When omitted, the "Profil ansehen" link is not rendered at all,
+   * avoiding circular links back to /ueber-uns/ that the author box
+   * itself appears on.
+   */
+  profileHref?: string;
   note?: string;
 };
 
@@ -31,9 +39,11 @@ export function AuthorBox({ name, role, expertise, profileHref, note }: AuthorBo
             <li key={entry}>{entry}</li>
           ))}
         </ul>
-        <p className="author-links">
-          <Link href={profileHref}>Profil ansehen</Link>
-        </p>
+        {profileHref ? (
+          <p className="author-links">
+            <Link href={profileHref}>Profil ansehen</Link>
+          </p>
+        ) : null}
         {note ? <p className="author-note">{note}</p> : null}
       </div>
     </aside>

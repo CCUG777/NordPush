@@ -72,21 +72,18 @@ export default async function AuthorPage({ params }: PageProps) {
             name="Marc Friedrich"
             role="Gründer · Key-Account Manager"
             expertise={["Account Strategy", "Kundenbetreuung", "SEO-Projektsteuerung"]}
-            profileHref="/ueber-uns/"
             note="Dein erster Ansprechpartner für Strategie, Scope und Zusammenarbeit."
           />
           <AuthorBox
             name="Lukas Ehrk"
             role="Technisches SEO & UX"
             expertise={["Technisches SEO", "Core Web Vitals", "Conversion-orientierte IA"]}
-            profileHref="/ueber-uns/"
             note="Verantwortet Technik-Audits, Rendering und Relaunch-Begleitung."
           />
           <AuthorBox
             name="Julian Dreier"
             role="Content & OnPage-Spezialist"
             expertise={["Content-Qualität", "OnPage SEO", "SERP-Optimierung"]}
-            profileHref="/ueber-uns/"
             note="Entwickelt Redaktionspläne und führt OnPage-Reviews."
           />
         </div>

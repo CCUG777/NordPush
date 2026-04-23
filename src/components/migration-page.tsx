@@ -219,7 +219,6 @@ export function MigrationPage({ title, slug, canonicalPath, section, children }:
         name="Lukas Ehrk"
         role="Technisches SEO & UX"
         expertise={["Technical SEO migrations", "Conversion-oriented IA", "Performance-first component systems"]}
-        profileHref="/author/ueber-uns/"
         note="Author/reviewer block placeholder is now implemented as reusable UI component."
       />
 

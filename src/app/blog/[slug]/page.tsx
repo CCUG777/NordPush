@@ -86,7 +86,6 @@ export default async function BlogPage({ params }: PageProps) {
         name="Julian Dreier"
         role="Content & OnPage-Spezialist"
         expertise={["Content-Qualität", "OnPage SEO", "SERP-Optimierung"]}
-        profileHref="/ueber-uns/"
         note="Primärer redaktioneller Ansprechpartner für diese Themenseite."
       />
     </>
