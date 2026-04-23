@@ -166,11 +166,11 @@ export default async function LegalPage({ params }: PageProps) {
           aside={
             <>
               <p>
-                Noch unsicher? Ruf einfach an — kein Vertrieb, nur eine ehrliche Einschätzung in 5
-                Minuten.
+                Noch unsicher? Schreib uns einfach — kein Vertrieb, nur eine ehrliche
+                Einschätzung. Antwort in der Regel innerhalb von 24 Stunden.
               </p>
-              <a href="tel:+491713117971" className="button">
-                0171 / 311 79 71
+              <a href="mailto:info@nordpush.de" className="button">
+                info@nordpush.de
               </a>
             </>
           }
