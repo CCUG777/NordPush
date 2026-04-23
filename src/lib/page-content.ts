@@ -601,7 +601,7 @@ const blogContent: Record<string, PageContent> = {
 const aboutContent: PageContent = {
   eyebrow: "Über uns",
   heroDescription:
-    "NordPush ist eine inhabergeführte SEO-Agentur aus Neumünster, gegründet 2021. Unser Team ist seit 2014 in der SEO-Branche tätig – mit Substanz statt Sales-Theater.",
+    "NordPush ist eine Marke der Common Consulting UG (haftungsbeschränkt) – eine inhabergeführte SEO-Agentur aus Neumünster, gegründet 2021. Unser Team ist seit 2014 in der SEO-Branche tätig – mit Substanz statt Sales-Theater.",
   proofBadge: "Branchenexpertise seit 2014",
   heroStats: [
     { value: "90+", label: "Kundenprojekte DACH" },
