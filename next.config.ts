@@ -92,8 +92,33 @@ const securityHeaders = [
       "usb=()",
     ].join(", "),
   },
-  // Cross-origin isolation — conservative defaults that don't affect our site.
+  // Cross-Origin-Isolation header trio (claude-seo M7).
+  //
+  // Previously only COOP was set — which is security theatre without its
+  // companions: cross-origin isolation only activates when all three
+  // (COOP + COEP + CORP) align, and the modern JS APIs that depend on it
+  // (SharedArrayBuffer, high-resolution performance.now, WASM threads)
+  // require `crossOriginIsolated === true`.
+  //
+  // COEP uses `credentialless` rather than `require-corp` deliberately:
+  //   - `require-corp` blocks any third-party resource that doesn't
+  //     advertise Cross-Origin-Resource-Policy on its response. That
+  //     breaks analytics, calendar embeds, social pixels on the day
+  //     they get added.
+  //   - `credentialless` keeps isolation active while still allowing
+  //     third-party resources without CORP headers — the request just
+  //     goes out without cookies/auth. Perfect for GA4, GTM, LinkedIn
+  //     Pixel, Calendly, etc., which never need credentials on their
+  //     script loads.
+  //   - Browser support: Chrome 96+, Firefox 110+, Safari 16.4+ — all
+  //     shipped 2+ years ago, broadly safe in 2026.
+  //
+  // CORP `same-site` means our own assets (images, generated OG images,
+  // the Satoshi font bundle) can be embedded across nordpush.de and any
+  // subdomain, but not hotlinked by unrelated domains.
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
+  { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
+  { key: "Cross-Origin-Resource-Policy", value: "same-site" },
   // CSP in Report-Only mode for now. Flip the key name to enforce.
   { key: "Content-Security-Policy-Report-Only", value: contentSecurityPolicy },
 ];
