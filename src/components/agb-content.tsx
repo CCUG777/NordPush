@@ -149,7 +149,7 @@ export function AgbContent() {
         </p>
         <p>
           <strong>6.4 Form.</strong> Kündigungen bedürfen der Textform (E-Mail an
-          <a href="mailto:support@nordpush.de"> support@nordpush.de</a> genügt).
+          <a href="mailto:info@nordpush.de"> info@nordpush.de</a> genügt).
         </p>
 
         <h2>§ 7 · Beendigung des Website-Abos, Export und Ablöse</h2>
@@ -271,7 +271,7 @@ export function AgbContent() {
           <p>
             <strong>Hinweis:</strong> Bei Rückfragen zu diesen AGB oder zur konkreten
             Ausgestaltung eines Vertrags erreichst du uns jederzeit unter{" "}
-            <a href="mailto:support@nordpush.de">support@nordpush.de</a>.
+            <a href="mailto:info@nordpush.de">info@nordpush.de</a>.
           </p>
         </div>
       </section>

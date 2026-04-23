@@ -48,7 +48,7 @@ function buildOrganizationSchema(): JsonLdSchema {
     "@id": organizationId,
     name: "NordPush",
     url: SITE_URL,
-    email: "support@nordpush.de",
+    email: "info@nordpush.de",
     telephone: "+49-171-3117971",
     address: {
       "@type": "PostalAddress",

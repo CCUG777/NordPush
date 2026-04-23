@@ -630,8 +630,7 @@ const contactContent: PageContent = {
   deliverables: {
     heading: "So erreichst du uns",
     bullets: [
-      { title: "Telefon", body: "+49 171 3117971 – Mo–Fr, 9:00–17:00 Uhr. Unter der Mobilnummer bist du direkt bei Marc." },
-      { title: "E-Mail", body: "support@nordpush.de – Antwort innerhalb eines Werktags garantiert." },
+      { title: "E-Mail", body: "info@nordpush.de – Antwort innerhalb eines Werktags garantiert." },
       { title: "Slack-Connect", body: "Bei laufenden Mandaten richten wir einen dedizierten Slack-Channel ein." },
       { title: "Vor Ort", body: "Biberweg 6, 24539 Neumünster. Termine bitte vorher abstimmen." },
     ],
@@ -690,7 +689,7 @@ const legalContentByPath: Record<string, PageContent> = {
       heading: "Anbieterkennzeichnung",
       bullets: [
         { title: "NordPush", body: "Biberweg 6, 24539 Neumünster, Deutschland" },
-        { title: "Kontakt", body: "Telefon: +49 171 3117971 · E-Mail: support@nordpush.de" },
+        { title: "Kontakt", body: "Telefon: +49 171 3117971 · E-Mail: info@nordpush.de" },
         { title: "Verantwortlich i. S. d. § 55 Abs. 2 RStV", body: "Marc Friedrich, Biberweg 6, 24539 Neumünster" },
         { title: "EU-Streitschlichtung", body: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung bereit: https://ec.europa.eu/consumers/odr/" },
       ],
@@ -708,7 +707,7 @@ const legalContentByPath: Record<string, PageContent> = {
       bullets: [
         { title: "Verantwortlicher", body: "NordPush, Biberweg 6, 24539 Neumünster" },
         { title: "Verarbeitete Daten", body: "IP-Adressen (gekürzt), Analytics-Daten (aggregiert), Kontaktdaten aus Formularen und E-Mails." },
-        { title: "Deine Rechte", body: "Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit – jederzeit per E-Mail an support@nordpush.de." },
+        { title: "Deine Rechte", body: "Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch, Datenübertragbarkeit – jederzeit per E-Mail an info@nordpush.de." },
         { title: "Cookies & Tools", body: "Wir setzen nur essenzielle Cookies ohne Einwilligung. Analytics und Marketing-Tools werden erst nach Einwilligung im Consent-Banner geladen." },
       ],
     },
@@ -719,7 +718,7 @@ const legalContentByPath: Record<string, PageContent> = {
       },
       {
         question: "An wen wende ich mich bei Datenschutzfragen?",
-        answer: "Direkt an support@nordpush.de. Wir melden uns innerhalb von 72 Stunden zurück.",
+        answer: "Direkt an info@nordpush.de. Wir melden uns innerhalb von 72 Stunden zurück.",
       },
     ],
     ctaHeading: "Fragen zum Datenschutz?",

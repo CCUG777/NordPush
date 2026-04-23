@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
   const port = Number(process.env.SMTP_PORT || "587");
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_TO_EMAIL || "support@nordpush.de";
+  const to = process.env.CONTACT_TO_EMAIL || "info@nordpush.de";
   const from = process.env.CONTACT_FROM_EMAIL || "noreply@nordpush.de";
 
   if (!host || !user || !pass) {

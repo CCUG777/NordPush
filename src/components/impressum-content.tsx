@@ -52,7 +52,7 @@ export function ImpressumContent() {
             </dd>
             <dt>Support</dt>
             <dd>
-              <a href="mailto:support@nordpush.de">support@nordpush.de</a>
+              <a href="mailto:info@nordpush.de">info@nordpush.de</a>
             </dd>
           </dl>
         </div>
@@ -94,7 +94,7 @@ export function ImpressumContent() {
           <p>
             Inhaltliche Verantwortlichkeit und Haftung für Inhalte nach § 7 Abs. 1 TMG bei der
             Common Consulting UG. Bei Fragen zur Website oder den Inhalten erreichst du uns unter{" "}
-            <a href="mailto:support@nordpush.de">support@nordpush.de</a>.
+            <a href="mailto:info@nordpush.de">info@nordpush.de</a>.
           </p>
         </div>
       </section>

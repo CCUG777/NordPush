@@ -111,7 +111,7 @@ export function Footer() {
               <br />
               24539 Neumünster
               <br />
-              <a href="mailto:support@nordpush.de">support@nordpush.de</a>
+              <a href="mailto:info@nordpush.de">info@nordpush.de</a>
             </address>
           </section>
         </div>
