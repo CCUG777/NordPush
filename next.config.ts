@@ -46,11 +46,31 @@ const rewriteToSection = [
 // HSTS is set by Vercel by default (max-age=63072000; includeSubDomains; preload),
 // so we do not override it here.
 //
-// CSP starts in *Report-Only* mode on purpose: enforcing a strict CSP on a
-// fresh Next.js deploy often breaks hydration or inlined Next/Image helpers.
-// Once we've watched the browser console + `report-uri` endpoint for a week
-// or two and seen zero real violations, flip
-// `Content-Security-Policy-Report-Only` → `Content-Security-Policy` to enforce.
+// CSP is ENFORCING (claude-seo re-audit M6 Option C). The known weakness
+// is `'unsafe-inline'` in script-src, which leaves an inline-script XSS
+// hole open — deliberately kept for now because:
+//
+//   1. The primary inline-script attack path (WordPress HTML via
+//      dangerouslySetInnerHTML) is mitigated by DOMPurify build-time
+//      sanitization in RichBody (commit 7ac40cd, finding T4).
+//   2. The alternative paths — nonce-based or hash-based CSP — either
+//      disable SSG (nonces are per-request, make every page dynamic) or
+//      require ongoing hash-list maintenance. For a static B2B
+//      marketing site without logins/PII/payment flows, the SSG
+//      tradeoff is not worth it.
+//
+// Non-script protections DO bite with this enforcement:
+//   - frame-ancestors 'none'           → clickjacking blocked
+//   - form-action 'self'                → form hijacking blocked
+//   - upgrade-insecure-requests         → mixed-content auto-upgraded
+//   - object-src 'none'                 → Flash/plugin vectors blocked
+//   - base-uri 'self'                   → base-tag hijacking blocked
+//
+// `vercel.live` is only used on Preview deployments for the comment/collab
+// UI — harmless in production, required to avoid CSP noise on previews.
+// `va.vercel-scripts.com` + `vitals.vercel-insights.com` cover Vercel
+// Analytics / Speed Insights (even if currently not enabled — pre-allowing
+// means adding them later doesn't require CSP changes).
 //
 // `vercel.live` is only used on Preview deployments for the comment/collab
 // UI — harmless in production, required to avoid CSP noise on previews.
@@ -119,8 +139,9 @@ const securityHeaders = [
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
   { key: "Cross-Origin-Resource-Policy", value: "same-site" },
-  // CSP in Report-Only mode for now. Flip the key name to enforce.
-  { key: "Content-Security-Policy-Report-Only", value: contentSecurityPolicy },
+  // CSP enforcing (see comment block above for the 'unsafe-inline'
+  // trade-off and why nonce/hash modes were not chosen).
+  { key: "Content-Security-Policy", value: contentSecurityPolicy },
 ];
 
 const nextConfig: NextConfig = {
