@@ -1,0 +1,77 @@
+# NordPush
+
+> SEO- und Website-Agentur aus Neumünster für B2B-Unternehmen. Websites, Landingpages, Online-Shops und laufende SEO-Betreuung aus einem Team — Strategie, Technik und Content werden nicht getrennt behandelt.
+
+NordPush ist der Markenauftritt der Common Consulting UG. Die Agentur arbeitet im deutschsprachigen Raum (DACH) mit Unternehmen, die Sichtbarkeit, Conversion und Vertrieb als zusammenhängendes System verstehen wollen. Kein Baukasten, keine Sales-Show — stattdessen priorisierte Roadmaps, pflegbare Websites und monatlich planbare Retainer.
+
+## Websites
+
+- [Websites — Übersicht](https://nordpush.de/websites/): Landingpages, WordPress-Websites, Online-Shops, Mehrsprachige Sites, Website-Wartung — mit Case Studies.
+- [WordPress-Webseiten](https://nordpush.de/websites/#wordpress): Individuelle Themes, performant, redaktionell pflegbar
+- [Landingpages](https://nordpush.de/websites/#landingpages): Conversion-optimierte Einzelseiten mit Analytics-Anbindung
+- [Online-Shops](https://nordpush.de/websites/#shops): WooCommerce oder Shopify, SEO-bereit
+- [Mehrsprachige Webseiten](https://nordpush.de/websites/#mehrsprachig): hreflang-sauber, redaktionell tragfähig
+- [Website-Wartung](https://nordpush.de/websites/#wartung): Updates, Security, Performance-Checks
+
+## SEO-Leistungen
+
+- [SEO-Strategie](https://nordpush.de/seo-strategie/): Roadmap, Prioritäten und Opportunity-Mapping
+- [SEO-Audit](https://nordpush.de/seo-audit/): Grundlegendes Audit inkl. Kickoff, Tracking, Strategie-Ableitung — ab 1.499 €
+- [Technisches SEO-Audit](https://nordpush.de/technisches-seo-audit/): Crawling, Core Web Vitals, Struktur, interne Verlinkung — ab 1.499 €
+- [SEO-Konkurrenzanalyse](https://nordpush.de/seo-konkurrenzanalyse/): Content-Gaps und Link-Vergleich — ab 1.199 €
+- [Keyword-Recherche](https://nordpush.de/keyword-recherche/): Themenlandschaft, Suchvolumen, Intent-Mapping — ab 1.199 €
+- [Content Marketing](https://nordpush.de/content-marketing/): Strategie, Produktion, Distribution
+- [SEO-Texte schreiben](https://nordpush.de/seo-texte-schreiben/): Redaktionell und suchmaschinenoptimiert — ab 499 €
+- [Content Templates](https://nordpush.de/content-templates/): Strukturierte Redaktions-Vorgaben — 299 €
+- [Backlinks](https://nordpush.de/backlinks/): Digital PR und Linkable Assets — ab 299 € pro Backlink
+- [Link Risk Management](https://nordpush.de/link-risk-management/): Toxische Backlinks identifizieren und disavowen — 1.999 €
+- [PageSpeed-Optimierung](https://nordpush.de/pagespeed-optimierung/): Core Web Vitals und Ladezeit-Optimierung
+- [WordPress SEO](https://nordpush.de/wordpress-seo/): Theme- und Plugin-Tuning für bestehende WordPress-Sites
+- [E-Commerce SEO](https://nordpush.de/e-commerce-seo/): Kategorie- und Produkt-Optimierung für Shops
+- [B2B SEO](https://nordpush.de/b2b-seo-agentur/): Sichtbarkeit für erklärungsbedürftige Leistungen
+- [Internationales SEO](https://nordpush.de/internationales-seo/): Hreflang, Mehrsprachigkeit, internationale Rankings
+- [SEO für lokale Unternehmen](https://nordpush.de/seo-fuer-lokale-unternehmen/): Local Pack und regionale Sichtbarkeit
+- [GEO-Optimierung](https://nordpush.de/geo-optimierung/): Sichtbarkeit in AI Overviews, ChatGPT Search und Perplexity
+- [Google Unternehmensprofil](https://nordpush.de/google-unternehmensprofil/): GBP-Optimierung — 399 €
+- [SEO-Betreuung](https://nordpush.de/seo-betreuung/): Laufende monatliche Betreuung als Retainer
+- [SEO-Beratung](https://nordpush.de/seo-beratung/): Consulting, Workshops, strategische Beratung
+- [SEO-Monitoring](https://nordpush.de/seo-monitoring/): Ranking-Tracking und regelmäßiges Reporting
+- [SEO-Relaunch](https://nordpush.de/seo-relaunch/): Site-Migration ohne Ranking-Verlust
+
+## Preise
+
+- [Preise](https://nordpush.de/preise/): Alle Modelle (Cash-Kauf, Abo, Bundle) und SEO-Retainer an einem Ort
+- **SEO-Quick-Audit**: 299 € — niederschwelliger Einstieg, wird bei Retainer-Buchung innerhalb 4 Wochen voll angerechnet
+- **SEO-Retainer Starter**: 1.200 €/Monat (oder 12.960 €/Jahr, 10 % Rabatt)
+- **SEO-Retainer Wachstum**: 2.200 €/Monat (oder 23.760 €/Jahr, 10 % Rabatt)
+- **SEO-Retainer Skalierung**: 3.800 €/Monat (oder 41.040 €/Jahr, 10 % Rabatt)
+- **SEO-Retainer Enterprise**: ab 6.900 €/Monat
+- **Website-Projekte**: Landingpage ab 4.900 € · WordPress-Website ab 9.900 € · Online-Shop ab 14.900 € · Individuelle Projekte auf Anfrage
+- **Website-Abos** (mit Hosting und Wartung, 24 Monate Mindestlaufzeit): Landingpage-Abo ab 229 €/Monat · Website-Abo ab 479 €/Monat · Shop-Abo ab 699 €/Monat
+- **Bundle-Abos** (Website + SEO kombiniert): Start-Bundle ab 1.199 €/Monat · Wachstum-Bundle ab 2.299 €/Monat · Skalierung-Bundle ab 3.799 €/Monat — rund 15 % günstiger als einzeln gebucht
+
+## Agentur
+
+- [Über uns](https://nordpush.de/ueber-uns/): Team, Positionierung, Arbeitsweise
+- [SEO in Neumünster](https://nordpush.de/seo-neumuenster/): Lokale Verankerung, Kunden in Schleswig-Holstein
+- [Kontakt](https://nordpush.de/kontakt/): Kostenloses Erstgespräch (30 Minuten, unverbindlich, kein Pitch)
+
+## Wissen
+
+- [Wissensbereich](https://nordpush.de/category/wissen/): SEO-Grundlagen, Guides, Insights
+- [Agentur-Blog](https://nordpush.de/agentur/): Einblicke in Projekte und Arbeitsweise
+- [Suchmaschinenoptimierung erklärt](https://nordpush.de/suchmaschinenoptimierung/): Grundlagen-Artikel für Einsteiger
+
+## Rechtliches
+
+- [Impressum](https://nordpush.de/impressum/): Anbieter, Registereintrag, Kontakt
+- [Datenschutz](https://nordpush.de/datenschutz/): DSGVO-Information
+- [AGB](https://nordpush.de/agb/): B2B-Vertragsbedingungen inkl. Website-Abo, SEO-Retainer und Bundle-Laufzeiten
+
+## Kontakt
+
+- Common Consulting UG (haftungsbeschränkt)
+- Biberweg 6, 24539 Neumünster, Deutschland
+- E-Mail: support@nordpush.de · business@nordpush.de
+- Geschäftsführung: Cornelia Witt
+- Handelsregister: HRB 23719 KI · USt-ID: DE454984741
