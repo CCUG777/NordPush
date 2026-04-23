@@ -2415,6 +2415,33 @@ button.button {
 .author-links a { border-bottom: 1.5px solid currentColor; margin-right: 14px; }
 .author-note { margin: var(--space-3) 0 0; font-size: 14px; color: var(--rui-text-secondary); line-height: 1.55; }
 
+/* -------------------------------------------------------------------------
+   17b. Team section — used on /ueber-uns/. Spacious rhythm + subtle lila
+   accents. Semantic exception vs. DESIGN.md "semantic colors reserved for
+   product UI": this is the one marketing surface where the brand purple
+   is deliberately surfaced on cards (author labels) and the section
+   eyebrow, per explicit user preference.
+   ------------------------------------------------------------------------- */
+.team-section {
+  margin-top: var(--space-12);
+}
+.team-section > header {
+  margin-bottom: var(--space-8);
+}
+.team-section > header .eyebrow {
+  color: var(--rui-primary);
+}
+.team-section > header h2 {
+  margin: var(--space-2) 0 0;
+}
+.team-grid {
+  display: grid;
+  gap: var(--space-8);
+}
+.team-grid .author-label {
+  color: var(--rui-primary);
+}
+
 .rich-body {
   max-width: 72ch;
   font-size: 17px;
