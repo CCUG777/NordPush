@@ -23,27 +23,29 @@ export type BlogDates = {
 const blogDatesByPath: Record<string, BlogDates> = {
   "/agentur/": {
     datePublished: "2025-04-09T10:16:49+00:00",
-    dateModified: "2026-03-26T19:23:32+00:00",
+    dateModified: "2026-04-22T00:00:00+00:00",
   },
   "/etsy-seo/": {
     datePublished: "2025-06-26T19:26:15+00:00",
-    dateModified: "2026-03-26T20:44:00+00:00",
+    dateModified: "2026-04-22T00:00:00+00:00",
   },
   "/seo-bamberg/": {
     datePublished: "2025-07-02T07:54:41+00:00",
-    dateModified: "2026-03-28T21:25:17+00:00",
+    // Case-study section rewritten (M3) + heading hierarchy fixed (#13) +
+    // description-override (#12) + 100+-badge softened (M2) on 2026-04-23.
+    dateModified: "2026-04-23T00:00:00+00:00",
   },
   "/seo-neumuenster/": {
     datePublished: "2025-06-20T13:43:15+00:00",
-    dateModified: "2026-03-26T20:44:01+00:00",
+    dateModified: "2026-04-22T00:00:00+00:00",
   },
   "/seo-sachsen/": {
     datePublished: "2025-06-29T15:48:45+00:00",
-    dateModified: "2026-03-28T12:06:21+00:00",
+    dateModified: "2026-04-22T00:00:00+00:00",
   },
   "/suchmaschinenoptimierung/": {
     datePublished: "2025-04-09T10:16:49+00:00",
-    dateModified: "2026-03-26T19:17:50+00:00",
+    dateModified: "2026-04-22T00:00:00+00:00",
   },
 };
 
