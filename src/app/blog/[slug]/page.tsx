@@ -26,6 +26,27 @@ export async function generateMetadata({ params }: PageProps) {
     return {};
   }
 
+  // Fix truncated titles from the WordPress metadata snapshot — both of
+  // these pages were imported with " -" trailing where the WP brand suffix
+  // was lost. Force override with Sistrix-optimized values (<475 px).
+  if (slug === "agentur") {
+    return buildPageMetadata(
+      "/agentur/",
+      "SEO-Agentur aus Neumünster & DACH | NordPush",
+      "NordPush ist die SEO-Agentur für Unternehmen mit Anspruch an Substanz. Strategie, Technik und Content aus einer Hand — aus Neumünster, für DACH.",
+      { forceOverride: true },
+    );
+  }
+
+  if (slug === "suchmaschinenoptimierung") {
+    return buildPageMetadata(
+      "/suchmaschinenoptimierung/",
+      "Suchmaschinenoptimierung erklärt | NordPush",
+      "SEO-Grundlagen verständlich erklärt: Wie Suchmaschinenoptimierung wirklich funktioniert, was sie kostet und wo der Einstieg gelingt. Von NordPush.",
+      { forceOverride: true },
+    );
+  }
+
   return buildPageMetadata(`/${slug}/`, `Blog: ${slug}`);
 }
 
