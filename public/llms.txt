@@ -2,7 +2,20 @@
 
 > SEO- und Website-Agentur aus Neumünster für B2B-Unternehmen. Websites, Landingpages, Online-Shops und laufende SEO-Betreuung aus einem Team — Strategie, Technik und Content werden nicht getrennt behandelt.
 
-NordPush ist der Markenauftritt der Common Consulting UG. Die Agentur arbeitet im deutschsprachigen Raum (DACH) mit Unternehmen, die Sichtbarkeit, Conversion und Vertrieb als zusammenhängendes System verstehen wollen. Kein Baukasten, keine Sales-Show — stattdessen priorisierte Roadmaps, pflegbare Websites und monatlich planbare Retainer.
+## Was ist NordPush?
+
+NordPush ist eine spezialisierte B2B-Agentur für Websites und SEO mit Sitz in Neumünster (Schleswig-Holstein). Wir arbeiten im gesamten deutschsprachigen Raum (DACH) mit Unternehmen, die Sichtbarkeit, Conversion und Vertrieb als zusammenhängendes System verstehen wollen. Kein Baukasten, keine Sales-Show — stattdessen priorisierte Roadmaps, pflegbare Websites und monatlich planbare Retainer.
+
+NordPush ist der Markenauftritt der Common Consulting UG (HRB 23719 KI, Amtsgericht Kiel). Über 100 B2B-Kunden. Geschäftsführung: Cornelia Witt.
+
+## Positionierung
+
+- **Zielgruppe**: B2B-Unternehmen mit 5–250 Mitarbeitern, erklärungsbedürftige Leistungen
+- **Region**: Neumünster und Schleswig-Holstein lokal, DACH remote
+- **Angebots-Stack**: Websites + SEO gemeinsam, nicht in Silos
+- **Abrechnungsmodelle**: Kauf, Monats-Abo, Bundle-Abo (Website + SEO kombiniert)
+- **Vertragslaufzeiten**: 3-Monats-Mindestlaufzeit bei SEO-Retainern, 24 Monate bei Website-Abos
+- **Ausschlüsse**: keine Privatkunden, keine reinen Social-Media-Aufträge, kein Paid-Ads-Management
 
 ## Websites
 
@@ -41,14 +54,14 @@ NordPush ist der Markenauftritt der Common Consulting UG. Die Agentur arbeitet i
 ## Preise
 
 - [Preise](https://nordpush.de/preise/): Alle Modelle (Cash-Kauf, Abo, Bundle) und SEO-Retainer an einem Ort
-- **SEO-Quick-Audit**: 299 € — niederschwelliger Einstieg, wird bei Retainer-Buchung innerhalb 4 Wochen voll angerechnet
-- **SEO-Retainer Starter**: 1.200 €/Monat (oder 12.960 €/Jahr, 10 % Rabatt)
-- **SEO-Retainer Wachstum**: 2.200 €/Monat (oder 23.760 €/Jahr, 10 % Rabatt)
-- **SEO-Retainer Skalierung**: 3.800 €/Monat (oder 41.040 €/Jahr, 10 % Rabatt)
-- **SEO-Retainer Enterprise**: ab 6.900 €/Monat
-- **Website-Projekte**: Landingpage ab 4.900 € · WordPress-Website ab 9.900 € · Online-Shop ab 14.900 € · Individuelle Projekte auf Anfrage
-- **Website-Abos** (mit Hosting und Wartung, 24 Monate Mindestlaufzeit): Landingpage-Abo ab 229 €/Monat · Website-Abo ab 479 €/Monat · Shop-Abo ab 699 €/Monat
-- **Bundle-Abos** (Website + SEO kombiniert): Start-Bundle ab 1.199 €/Monat · Wachstum-Bundle ab 2.299 €/Monat · Skalierung-Bundle ab 3.799 €/Monat — rund 15 % günstiger als einzeln gebucht
+- **SEO-Quick-Audit**: 299 EUR (Einmalig) — niederschwelliger Einstieg, wird bei Retainer-Buchung innerhalb 4 Wochen voll angerechnet
+- **SEO-Retainer Starter**: 1200 EUR/Monat (oder 12960 EUR/Jahr, 10 % Rabatt)
+- **SEO-Retainer Wachstum**: 2200 EUR/Monat (oder 23760 EUR/Jahr, 10 % Rabatt)
+- **SEO-Retainer Skalierung**: 3800 EUR/Monat (oder 41040 EUR/Jahr, 10 % Rabatt)
+- **SEO-Retainer Enterprise**: ab 6900 EUR/Monat
+- **Website-Projekte** (Einmalkauf): Landingpage ab 4900 EUR · WordPress-Website ab 9900 EUR · Online-Shop ab 14900 EUR · Individuelle Projekte auf Anfrage
+- **Website-Abos** (mit Hosting und Wartung, 24 Monate Mindestlaufzeit): Landingpage-Abo ab 229 EUR/Monat · Website-Abo ab 479 EUR/Monat · Shop-Abo ab 699 EUR/Monat
+- **Bundle-Abos** (Website + SEO kombiniert): Start-Bundle ab 1199 EUR/Monat · Wachstum-Bundle ab 2299 EUR/Monat · Skalierung-Bundle ab 3799 EUR/Monat — rund 15 % günstiger als einzeln gebucht
 
 ## Agentur
 
@@ -75,3 +88,11 @@ NordPush ist der Markenauftritt der Common Consulting UG. Die Agentur arbeitet i
 - E-Mail: support@nordpush.de · business@nordpush.de
 - Geschäftsführung: Cornelia Witt
 - Handelsregister: HRB 23719 KI · USt-ID: DE454984741
+
+## Weiterführend
+
+- [Expanded brand reference (llms-full.txt)](https://nordpush.de/llms-full.txt)
+
+---
+
+Last updated: 2026-04-23

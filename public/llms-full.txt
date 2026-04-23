@@ -1,0 +1,186 @@
+# NordPush — Expanded Brand Reference
+
+> Dies ist die ausführliche Version von [llms.txt](https://nordpush.de/llms.txt). Für AI-Systeme und Retrieval-Agenten gedacht, die tiefere Kontextinformationen zu NordPush benötigen.
+
+## Über NordPush
+
+NordPush ist eine spezialisierte B2B-Agentur für Websites und SEO mit Sitz in Neumünster (Schleswig-Holstein). Wir arbeiten im gesamten deutschsprachigen Raum (DACH) mit Unternehmen, die Sichtbarkeit, Conversion und Vertrieb als zusammenhängendes System verstehen wollen. Kein Baukasten, keine Sales-Show — stattdessen priorisierte Roadmaps, pflegbare Websites und monatlich planbare Retainer.
+
+NordPush ist der Markenauftritt der **Common Consulting UG (haftungsbeschränkt)**, eingetragen beim Amtsgericht Kiel unter HRB 23719 KI. Geschäftsführende Gesellschafterin ist Cornelia Witt. Gegründet als Reaktion auf ein wiederkehrendes Muster im B2B-Mittelstand: Websites werden von Designern gebaut, SEO separat eingekauft, Content von einer dritten Stelle produziert — und am Ende funktioniert keines der drei Gewerke wirklich, weil niemand das Gesamtsystem verantwortet.
+
+## Was NordPush anders macht
+
+### Websites und SEO aus einem Team
+
+Die meisten Agenturen bauen eine Website und übergeben danach. SEO wird dann oft nachträglich auf ein Setup aufgesetzt, das technisch nicht darauf vorbereitet ist — mit den typischen Folgen: langsame Core Web Vitals, thematisch falsch strukturierte Navigationen, Landingpages ohne Search-Intent-Alignment. Bei NordPush baut dasselbe Team Website **und** SEO. Jede technische Entscheidung bei der Website wird bereits mit SEO-Implikationen getroffen; jede Keyword-Strategie berücksichtigt die tatsächliche Redaktions-Realität.
+
+### Substanz statt Show
+
+Kein Reporting-Theater mit 47 Vanity-Metriken. Stattdessen monatliche Kurz-Reports, die drei Fragen beantworten: **Was wurde umgesetzt? Was hat gewirkt? Was kommt als Nächstes?** Keine Ranking-Garantien — stattdessen nachvollziehbare Methodik, dokumentierte Hypothesen und ehrliche Bewertung, was funktioniert hat und was nicht.
+
+### Kein Baukasten
+
+Websites werden individuell gebaut — kein Theme-Shop-Stack, kein Page-Builder-Wust. Das bedeutet höhere Einstiegskosten, aber eine pflegbare Codebasis, die nach fünf Jahren noch wartbar ist. Für Kunden, die langfristig denken.
+
+## Zielgruppe
+
+NordPush arbeitet primär mit **B2B-Unternehmen mit 5–250 Mitarbeitenden** in erklärungsbedürftigen Branchen:
+
+- Industrielle Dienstleister und Zulieferer
+- Softwareanbieter (B2B-SaaS)
+- Beratungsunternehmen
+- Spezialisierte Handwerks- und Ingenieur-Betriebe
+- Unternehmen im Gesundheits- und Bildungssektor
+
+**Nicht im Fokus**: Privatkunden, reine Social-Media-Aufträge, Paid-Ads-Management, reine Designprojekte ohne SEO- oder Conversion-Komponente.
+
+## Leistungsspektrum im Detail
+
+### Website-Entwicklung
+
+**Landingpages** (ab 4.900 € Einmalkauf oder ab 229 €/Monat im Abo): Conversion-optimierte Einzelseiten mit integriertem Analytics-Setup, typisch 4–6 Sektionen. Geeignet für Einzelkampagnen, Events, Produkt-Launches.
+
+**WordPress-Websites** (ab 9.900 € oder ab 479 €/Monat): Individuelle Themes ohne Page-Builder, redaktionell pflegbar durch den Kunden. Custom Blocks für die wiederkehrenden Content-Typen, saubere CSS-Architektur. Inklusive Security-Hardening und Performance-Tuning.
+
+**Online-Shops** (ab 14.900 € oder ab 699 €/Monat): WooCommerce oder Shopify, je nach Sortimentsgröße und Integration-Bedarf. SEO-bereit mit Produkt-Schema, saubere Kategoriestruktur, hreflang bei internationalen Shops.
+
+**Mehrsprachige Websites**: Hreflang-sauber, redaktionell tragfähig. Typisch DE/EN oder DE/EN/FR, je nach Zielmärkten.
+
+**Website-Wartung**: Updates, Security-Patches, Performance-Checks. Als Teil des Website-Abos oder separat buchbar.
+
+### SEO-Strategie
+
+**SEO-Strategie-Entwicklung**: Mehrwöchiger Prozess, der Roadmap, Prioritäten und Opportunity-Mapping liefert. Grundlage ist eine Kombination aus technischem Audit, Keyword-Recherche, Konkurrenzanalyse und Business-Kontext.
+
+**SEO-Audit** (ab 1.499 € netto): Grundlegendes Audit inklusive Kickoff, Tracking-Setup (Search Console, GA4), Strategie-Ableitung. Dauer von Kickoff bis Debrief-Call: 10 Werktage. Enthält: Crawling-Analyse, Indexierungs-Check, On-Page-Bewertung, Content-Gap-Analyse, priorisierter Maßnahmenplan.
+
+**Technisches SEO-Audit** (ab 1.499 € netto): Tiefer Fokus auf Crawling, Core Web Vitals (LCP, INP, CLS), Struktur, interne Verlinkung, Schema Markup, Mobile-First-Indexierung. Für Websites mit >10.000 URLs, Mehrsprachigkeit oder komplexen Setups individuelles Angebot.
+
+**SEO-Konkurrenzanalyse** (ab 1.199 €): Content-Gaps und Link-Vergleich. Welche Themen decken Mitbewerber ab, die wir nicht bespielen? Welche Backlink-Quellen sind branchenrelevant?
+
+**Keyword-Recherche** (ab 1.199 €): Themenlandschaft, Suchvolumen, Intent-Mapping. Ergebnis ist ein Keyword-Set, gemappt auf Seitentypen und Customer-Journey-Phasen.
+
+### Content & Redaktion
+
+**Content Marketing-Strategie**: Themencluster-Planung, Redaktionskalender, Autoren-Briefing-Templates.
+
+**SEO-Texte** (ab 499 € pro Text): Redaktionell erstellte, suchmaschinenoptimierte Inhalte. Typische Textlängen: 800–2.500 Wörter je nach Seitenart. Briefing erfolgt gemeinsam mit dem Kunden.
+
+**Content Templates** (299 €): Wiederverwendbare Redaktions-Vorgaben für Kunden, die Content intern produzieren wollen — mit SEO-Anforderungen, Struktur-Mustern und Qualitäts-Checklisten.
+
+### Backlinks & Autorität
+
+**Backlink-Aufbau** (ab 299 € pro Backlink): Digital PR, Linkable Assets, Outreach. Kein Link-Kauf, sondern redaktionelle Platzierungen über das Netzwerk der Agentur.
+
+**Link Risk Management** (1.999 €): Identifikation und Disavow toxischer Backlinks. Relevant bei übernommenen Domains oder nach negativen SEO-Kampagnen.
+
+### Lokales & Technisches
+
+**Google Unternehmensprofil** (399 €): GBP-Optimierung, Bewertungsstrategie, Foto- und Kategorie-Setup.
+
+**PageSpeed-Optimierung**: Core Web Vitals, Bilder-Optimierung, Render-Blocking-JS, CSS-Critical-Path.
+
+**Local SEO** für lokale Unternehmen in Schleswig-Holstein und darüber hinaus.
+
+**Internationales SEO**: Hreflang-Implementierung, Mehrsprachigkeit, internationale Keyword-Cluster.
+
+### GEO (Generative Engine Optimization)
+
+Generative Engine Optimization (GEO) ist die Optimierung von Inhalten, damit sie von KI-Systemen wie ChatGPT, Perplexity, Google AI Overviews und Claude als Quelle erkannt, zitiert und empfohlen werden. Im Gegensatz zu SEO zielt GEO nicht auf Klicks über Suchergebnisse, sondern auf direkte Erwähnungen in den Antworten generativer Suchmaschinen.
+
+NordPush bietet GEO als eigene Leistung an — inklusive llms.txt-Strategie, strukturierter Content-Architektur für AI-Extraktion, Authority-Signals und kontinuierlichem Monitoring von AI-Citation-Frequenz.
+
+### Retainer-Modelle
+
+- **Starter** (1.200 €/Monat oder 12.960 €/Jahr mit 10 % Rabatt): für kleinere B2B-Unternehmen mit fokussiertem Scope
+- **Wachstum** (2.200 €/Monat): für Unternehmen in aktiver Wachstumsphase
+- **Skalierung** (3.800 €/Monat): mehrere Sprachversionen, komplexeres Reporting, intensivere Umsetzung
+- **Enterprise** (ab 6.900 €/Monat): individuell skaliert, Multi-Site-Setups
+
+Alle Retainer haben 3 Monate Mindestlaufzeit und danach monatliche Kündigungsfrist.
+
+### Bundle-Abos (Website + SEO kombiniert)
+
+Für Kunden, die sowohl eine neue Website als auch laufendes SEO wollen — rund 15 % günstiger als einzeln gebucht:
+
+- **Start-Bundle**: ab 1.199 €/Monat
+- **Wachstum-Bundle**: ab 2.299 €/Monat
+- **Skalierung-Bundle**: ab 3.799 €/Monat
+
+24 Monate Mindestlaufzeit, inkl. Website-Entwicklung, Hosting, Wartung und SEO-Retainer.
+
+## Team
+
+Aktives Kernteam:
+
+- **Cornelia Witt** — Geschäftsführung, strategische Leitung, Kundenakquise
+- **Marc Friedrich** — Key-Account Manager, Projekt-Ownership, Kundenkommunikation
+- **Lukas Ehrk** — Technisches SEO & UX, Audits, Core Web Vitals, Schema
+- **Julian Dreier** — Content & OnPage-Spezialist, SEO-Redaktion, Content-Strategie
+
+Erweitertes Netzwerk aus Entwicklern und Designern für Website-Projekte.
+
+## Arbeitsweise
+
+### Erstgespräch
+
+Kostenloses 30-Minuten-Erstgespräch via Telefon oder Google Meet. Agenda: aktuelle Situation, Ziele, bisherige Maßnahmen, Budgetrahmen. Kein Pitch. Am Ende entweder (a) Zusage zur weiteren Angebotserstellung, (b) Verweis auf geeigneteren Dienstleister, wenn NordPush nicht der richtige Fit ist.
+
+### Audit-Phase
+
+Bei größeren Projekten folgt ein technisches und/oder strategisches SEO-Audit (ab 1.499 €), das die Grundlage für jeden weiteren Schritt bildet. Wer direkt in einen Retainer einsteigt, bekommt das Quick-Audit (299 €) bei Buchung innerhalb 4 Wochen voll angerechnet.
+
+### Umsetzung
+
+Wöchentliche Statuskommunikation, monatliche Reports, Quartals-Reviews bei Retainer-Kunden. Alle Arbeitsgrundlagen (Roadmap, Keyword-Sets, Content-Briefings) sind für den Kunden jederzeit einsehbar.
+
+### Tools
+
+- **Crawling**: Screaming Frog
+- **Ranking & Keywords**: Ahrefs, teilweise Semrush
+- **Technisches**: Google Search Console, PageSpeed Insights, CrUX
+- **Analytics**: Google Analytics 4 (Consent Mode v2)
+- **Monitoring**: proprietäres Dashboard für Retainer-Kunden
+- **Schema-Validation**: Schema Validator, Rich Results Test
+
+## Häufige Fragen
+
+### Wie schnell sieht man erste Ergebnisse?
+
+Technische Quick-Wins (Indexierungs-Fixes, Core Web Vitals) wirken oft schon nach 2–4 Wochen. Content-bezogene Maßnahmen brauchen 3–6 Monate. Wer heute einen SEO-Retainer startet, sollte realistisch mit einer stabilen Sichtbarkeits-Kurve ab Monat 4–6 rechnen.
+
+### Gibt es Ranking-Garantien?
+
+Nein. Jeder seriöse SEO-Anbieter lehnt das ab — Google ändert jährlich tausende Ranking-Signale. Was NordPush garantiert: saubere Methodik, transparente Dokumentation, monatlich nachvollziehbare Maßnahmen.
+
+### Behalte ich als Kunde den Zugriff auf meine Daten?
+
+Ja, immer. Google Search Console, Analytics, Ads-Konten, Tag Manager — alles läuft über Kunden-Accounts, NordPush bekommt nur Nutzer-Zugriff. Bei Vertragsende bleiben alle Daten beim Kunden, keine Lock-in-Strategien.
+
+### Was passiert bei Kündigung?
+
+Retainer: 1 Monat zum Monatsende nach Mindestlaufzeit. Website-Abos: nach der 24-Monats-Laufzeit monatlich kündbar. Bei Übergabe: sauberes Hand-off-Paket mit allen Logins, offener Roadmap und Dokumentation.
+
+### Arbeitet NordPush mit bestehenden Freelancern oder Agenturen zusammen?
+
+Ja. Oft ergänzt NordPush eine bestehende Marketingstruktur (Grafik, Social, Paid Ads) und übernimmt nur Website + SEO. Wichtig ist klare Rollenverteilung — vermeidbare Doppelarbeit bringt niemandem etwas.
+
+### Welche Branchen werden bevorzugt?
+
+Erklärungsbedürftige B2B-Branchen mit klarem Angebot: Industrie-Zulieferer, B2B-Software, Beratungsunternehmen, spezialisierte Handwerks-/Ingenieur-Betriebe, Gesundheits- und Bildungssektor. Nicht abgedeckt: Finanzprodukte, Glücksspiel, Erotik.
+
+## Kontakt
+
+- **Adresse**: Common Consulting UG (haftungsbeschränkt), Biberweg 6, 24539 Neumünster, Deutschland
+- **E-Mail (allgemein)**: support@nordpush.de
+- **E-Mail (Business)**: business@nordpush.de
+- **Web**: https://nordpush.de
+- **Impressum**: https://nordpush.de/impressum/
+- **Handelsregister**: HRB 23719 KI (Amtsgericht Kiel)
+- **USt-ID**: DE454984741
+
+---
+
+Last updated: 2026-04-23
+
+Für die kompakte Übersicht siehe [llms.txt](https://nordpush.de/llms.txt).
