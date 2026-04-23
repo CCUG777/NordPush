@@ -126,6 +126,16 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   trailingSlash: true,
+  // Image optimization output formats. Next.js picks the first entry the
+  // requesting browser supports via the `Accept` header. AVIF is ~30%
+  // smaller than WebP at equivalent quality; browser support is Chrome
+  // 85+, Firefox 93+, Safari 16.4+ (~95% of traffic in 2026). WebP stays
+  // as the universal fallback. Originals (JPG/PNG) remain untouched on
+  // disk — transformation happens at the edge via Vercel's image
+  // optimizer. claude-seo re-audit P1-variant fix.
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
   async rewrites() {
     return {
       beforeFiles: rewriteToSection,
