@@ -1,3 +1,4 @@
+import DOMPurify from "isomorphic-dompurify";
 import type { CSSProperties } from "react";
 
 type RichBodyProps = {
@@ -156,14 +157,21 @@ function enhance(html: string): string {
 }
 
 export function RichBody({ html, className, style }: RichBodyProps) {
+  // Transform layout-relevant blocks first, then sanitize to strip any
+  // script/on*/javascript:-href vectors before the string is injected via
+  // dangerouslySetInnerHTML. Defense-in-depth against a future where
+  // extracted-pages.ts stops being hand-curated build-time data (CMS,
+  // submission flows, external APIs). Sanitize runs server-side during
+  // SSG/SSR — zero runtime cost for end users on static pages.
   const enhanced = enhance(html);
+  const sanitized = DOMPurify.sanitize(enhanced);
 
   return (
     <div
       className={["rich-prose", className].filter(Boolean).join(" ")}
       style={style}
       data-block="rich-body"
-      dangerouslySetInnerHTML={{ __html: enhanced }}
+      dangerouslySetInnerHTML={{ __html: sanitized }}
     />
   );
 }
