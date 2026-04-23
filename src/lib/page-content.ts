@@ -104,7 +104,7 @@ function service({
     heroStats: heroStats ?? [
       { value: "90+", label: "Teams in DACH begleitet" },
       { value: "4.9/5", label: "Kundenbewertung (ProvenExpert)" },
-      { value: "2014", label: "Seit Gründung in Neumünster" },
+      { value: "2021", label: "Gegründet in Neumünster" },
     ],
     problem,
     deliverables,
@@ -601,12 +601,12 @@ const blogContent: Record<string, PageContent> = {
 const aboutContent: PageContent = {
   eyebrow: "Über uns",
   heroDescription:
-    "NordPush ist eine inhabergeführte SEO-Agentur aus Neumünster. Seit 2014 begleiten wir ambitionierte Marken – mit Substanz statt Sales-Theater.",
-  proofBadge: "Inhabergeführt seit 2014",
+    "NordPush ist eine inhabergeführte SEO-Agentur aus Neumünster, gegründet 2021. Unser Team ist seit 2014 in der SEO-Branche tätig – mit Substanz statt Sales-Theater.",
+  proofBadge: "Branchenexpertise seit 2014",
   heroStats: [
     { value: "90+", label: "Kundenprojekte DACH" },
-    { value: "12 Jahre", label: "Teamerfahrung Ø" },
-    { value: "2014", label: "Gegründet in Neumünster" },
+    { value: "seit 2014", label: "SEO-Erfahrung im Team" },
+    { value: "2021", label: "NordPush gegründet" },
   ],
   deliverables: {
     heading: "Was uns ausmacht",
