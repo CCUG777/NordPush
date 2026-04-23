@@ -40,6 +40,28 @@ export function buildPageMetadata(
   const ogDescription = override ? description : record?.ogDescription ?? description;
   const ogTitle = override ? title : record?.ogTitle ?? title;
 
+  // Next.js merges file-based OG images (opengraph-image.tsx) into metadata
+  // ONLY when `openGraph.images` is absent. If we set `images: undefined`
+  // explicitly, Next.js treats that as an intentional override and omits the
+  // og:image tag entirely. So we build openGraph / twitter objects without
+  // the `images` key when we have no snapshot URL, letting the file-based
+  // fallback kick in.
+  const openGraph: Metadata["openGraph"] = {
+    type: "website",
+    url: toAbsoluteUrl(resolvedCanonicalPath),
+    title: ogTitle,
+    description: ogDescription,
+  };
+  const twitter: Metadata["twitter"] = {
+    card: "summary_large_image",
+    title: ogTitle,
+    description: ogDescription,
+  };
+  if (ogImage) {
+    openGraph.images = [{ url: ogImage }];
+    twitter.images = [ogImage];
+  }
+
   return {
     metadataBase: new URL(SITE_URL),
     title,
@@ -47,24 +69,8 @@ export function buildPageMetadata(
     alternates: {
       canonical: resolvedCanonicalPath,
     },
-    openGraph: {
-      type: "website",
-      url: toAbsoluteUrl(resolvedCanonicalPath),
-      title: ogTitle,
-      description: ogDescription,
-      // When undefined, Next.js falls back to the generated
-      // `src/app/opengraph-image.tsx` (and per-route overrides), so we always
-      // ship a 1200x630 image even if no record.ogImage is set.
-      images: ogImage ? [{ url: ogImage }] : undefined,
-    },
-    twitter: {
-      // Always large card: either a Snapshot-ogImage or the auto-generated
-      // `twitter-image.tsx` delivers the 1200x630 asset.
-      card: "summary_large_image",
-      title: ogTitle,
-      description: ogDescription,
-      images: ogImage ? [ogImage] : undefined,
-    },
+    openGraph,
+    twitter,
     robots: {
       index: true,
       follow: true,
