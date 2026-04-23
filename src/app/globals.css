@@ -2516,6 +2516,27 @@ button.button {
 .service-card h3 { font-size: 22px; letter-spacing: -0.01em; margin: 0; }
 .service-card p { font-size: 15px; line-height: 1.55; color: var(--rui-text-secondary); margin: 0; }
 
+/* Inner layout for blog-listing cards on /category/wissen/. The description
+   paragraph sits tight under the title, then a clear CTA break before the
+   "Artikel lesen →" link. Link itself picks up the brand lila so it reads
+   as a deliberate call-to-action, not body copy. Consistent with the team
+   section — same surface, same accent logic. */
+.service-card-body {
+  display: grid;
+  gap: var(--space-3);
+}
+.service-card-actions {
+  margin-top: var(--space-3);
+}
+.service-card-actions .text-link {
+  color: var(--rui-primary);
+  border-bottom-color: var(--rui-primary);
+}
+.service-card-actions .text-link:hover {
+  color: var(--rui-primary-hover);
+  border-bottom-color: var(--rui-primary-hover);
+}
+
 /* -------------------------------------------------------------------------
    19. Decorative SVGs — muted on light surface (zero-chrome aesthetic)
    ------------------------------------------------------------------------- */
