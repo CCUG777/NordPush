@@ -146,6 +146,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  /* Prevent horizontal scroll from occasional wide SVG decorations, images
+     with intrinsic width attributes (legacy WordPress imports), or slight
+     overshoots on negative-margin full-bleed sections. `overflow-x: clip`
+     (instead of `hidden`) keeps the layout's scroll-container behavior
+     intact while visually clipping any x-axis overflow. CLI-Audit #14. */
+  overflow-x: clip;
 }
 
 body {
@@ -157,6 +163,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.24px;
   font-feature-settings: "ss01", "cv11";
+  overflow-x: clip;
 }
 
 img, svg, video, picture { display: block; max-width: 100%; height: auto; }

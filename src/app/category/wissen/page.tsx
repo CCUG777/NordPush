@@ -92,7 +92,10 @@ export default function WissenCategoryPage() {
                 <h3>{card.title}</h3>
                 {card.description ? <p>{card.description}</p> : null}
                 <div className="service-card-actions">
-                  <Link href={card.href} className="text-link">
+                  {/* aria-label makes each link's accessible name unique
+                      — fixes CLI-Audit #15 (a11y-link-text: 6× identical
+                      "Artikel lesen →" was flagged as duplicate link text). */}
+                  <Link href={card.href} className="text-link" aria-label={`Artikel lesen: ${card.title}`}>
                     Artikel lesen →
                   </Link>
                 </div>

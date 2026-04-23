@@ -1,3 +1,4 @@
+import { getBlogDates } from "@/data/blog-dates";
 import { getMetadataRecord } from "@/lib/metadata-catalog";
 import { SITE_URL, normalizePath, toAbsoluteUrl } from "@/lib/url-normalization";
 
@@ -172,7 +173,8 @@ function buildLocalBusinessSchema(canonicalPath: string, fallbackName: string): 
 
 function buildArticleSchema(canonicalPath: string, fallbackName: string): JsonLdSchema {
   const pageName = resolvePageName(canonicalPath, fallbackName);
-  return {
+  const dates = getBlogDates(canonicalPath);
+  const schema: JsonLdSchema = {
     "@type": "Article",
     "@id": `${toAbsoluteUrl(canonicalPath)}#article`,
     headline: pageName,
@@ -185,6 +187,16 @@ function buildArticleSchema(canonicalPath: string, fallbackName: string): JsonLd
       "@id": organizationId,
     },
   };
+  // datePublished is required by Google for Article rich results.
+  // dateModified + image are recommended fields (CLI audit finding #11).
+  if (dates) {
+    schema.datePublished = dates.datePublished;
+    schema.dateModified = dates.dateModified;
+    if (dates.image) {
+      schema.image = dates.image;
+    }
+  }
+  return schema;
 }
 
 function buildCollectionPageSchema(canonicalPath: string, fallbackName: string): JsonLdSchema {

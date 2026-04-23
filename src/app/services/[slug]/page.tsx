@@ -33,17 +33,17 @@ export async function generateMetadata({ params }: PageProps) {
     "seo-audit": {
       title: "SEO-Audit: Sichtbarkeit & Leads | NordPush",
       description:
-        "Technisches und inhaltliches SEO-Audit deiner Website. Prioritäten, Quick Wins und umsetzbare Maßnahmen — ab 1.499 €. Von NordPush.",
+        "Technisches und inhaltliches SEO-Audit: Prioritäten, Quick Wins, umsetzbare Maßnahmen. Ab 1.499 €. Von NordPush.",
     },
     "keyword-recherche": {
       title: "Keyword-Recherche für SEO | NordPush",
       description:
-        "Professionelle Keyword-Recherche mit Profi-Tools: Suchvolumen, Intent, Konkurrenzdichte und Mapping zu deinen Seitentypen. Ab 1.199 €.",
+        "Keyword-Recherche mit Profi-Tools: Suchvolumen, Intent, Mapping zu Seitentypen. Ab 1.199 €. Von NordPush.",
     },
     "seo-monitoring": {
       title: "SEO-Monitoring für KMU | NordPush",
       description:
-        "SEO-Monitoring mit klarem Reporting: Rankings, Sichtbarkeit, Wettbewerb und Quick Wins. Transparent, regelmäßig, entscheidungsreif.",
+        "SEO-Monitoring mit klarem Reporting: Rankings, Sichtbarkeit, Wettbewerb und Quick Wins. Von NordPush.",
     },
   };
 

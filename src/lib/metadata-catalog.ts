@@ -1,5 +1,6 @@
 import metadataSnapshotJson from "../../artifacts/latest/metadata_snapshot.json";
 import contentAssetManifestJson from "../../artifacts/latest/content_asset_manifest.json";
+import { getDescriptionOverride } from "@/data/description-overrides";
 import { normalizePath } from "@/lib/url-normalization";
 
 type PageType =
@@ -76,11 +77,21 @@ const metadataByPath = new Map<string, MetadataRecord>(
     const snapshotOgImage = ogImageByPath.get(canonicalPath);
     // Snapshot-ogImage aus record ebenfalls nur übernehmen, wenn sie usable ist.
     const ogImage = isUsableOgImage(snapshotOgImage) ? snapshotOgImage : undefined;
+    // Sistrix-pixel-safe description override (CLI-Audit Finding #12).
+    // Viele WordPress-Legacy-Descriptions überschreiten 791 px ("Gut"-Zone)
+    // und würden in der SERP abgeschnitten. Wir überschreiben sie hier
+    // zentral — sowohl metaDescription (Meta-Tag) als auch ogDescription
+    // (OG-Tag) werden aligned, damit Facebook/LinkedIn denselben Text sehen.
+    const descriptionOverride = getDescriptionOverride(canonicalPath);
+    const metaDescription = descriptionOverride ?? record.metaDescription;
+    const ogDescription = descriptionOverride ?? record.ogDescription;
     return [
       canonicalPath,
       {
         ...record,
         canonicalPath,
+        metaDescription,
+        ogDescription,
         ogImage,
       },
     ];

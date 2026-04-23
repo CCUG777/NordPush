@@ -62,6 +62,22 @@ export async function generateMetadata({ params }: PageProps) {
   return buildPageMetadata(`/${slug}/`, `Info: ${slug}`);
 }
 
+// Schema `name`/`headline` must match a visible element on the page — otherwise
+// SEOmator / Google flag it as "schema drift" (CLI-Audit #16). Pages like /agb/,
+// /kontakt/ and /preise/ have no WordPress metadata snapshot, so without this
+// map the generic `Info: ${slug}` fallback leaked into the JSON-LD and didn't
+// match any visible H1. We map slug → a short topic label that's guaranteed
+// to appear in the visible content (H1, breadcrumb, or eyebrow).
+const schemaNameBySlug: Record<string, string> = {
+  agb: "Allgemeine Geschäftsbedingungen",
+  impressum: "Impressum",
+  datenschutz: "Datenschutzerklärung",
+  // Must match the visible H1 exactly (line ~128 below) — otherwise
+  // SEOmator flags name/headline drift against the visible content.
+  kontakt: "Lass uns über dein SEO sprechen.",
+  preise: "Preise",
+};
+
 export default async function LegalPage({ params }: PageProps) {
   const { slug } = await params;
 
@@ -75,7 +91,7 @@ export default async function LegalPage({ params }: PageProps) {
 
   const schemas = buildPageSchemas({
     canonicalPath,
-    fallbackName: `Info: ${slug}`,
+    fallbackName: schemaNameBySlug[slug] ?? `Info: ${slug}`,
     kind: "legal",
     faqs: useRich && extracted ? extracted.faqs : [],
   });
