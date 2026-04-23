@@ -2578,16 +2578,9 @@ label {
 }
 
 /* -------------------------------------------------------------------------
-   21. Scroll reveal
+   21. Reduced-motion preferences — global a11y override
    ------------------------------------------------------------------------- */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s var(--ease-standard), transform 0.7s var(--ease-standard);
-}
-.scroll-reveal.is-visible { opacity: 1; transform: translateY(0); }
 @media (prefers-reduced-motion: reduce) {
-  .scroll-reveal { opacity: 1; transform: none; transition: none; }
   *, *::before, *::after {
     animation-duration: 0s !important;
     animation-iteration-count: 1 !important;

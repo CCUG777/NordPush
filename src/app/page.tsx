@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ClientLogos } from "@/components/client-logos";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { JsonLd } from "@/components/json-ld";
-import { ScrollReveal } from "@/components/scroll-reveal";
 import { SiteShell } from "@/components/site-shell";
 import { buildPageMetadata } from "@/lib/seo";
 import { buildPageSchemas } from "@/lib/structured-data";
@@ -284,7 +283,7 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <ScrollReveal as="section" className="home-section home-trust">
+      <section className="home-section home-trust">
         <div className="section-heading section-heading--compact">
           <p className="eyebrow">Vertrauen &amp; Fokus</p>
           <h2>SEO für Teams, die Substanz vor Show wählen.</h2>
@@ -311,9 +310,9 @@ export default function HomePage() {
             variant="grid"
           />
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section">
+      <section className="home-section">
         <div className="section-heading">
           <p className="eyebrow">Wie wir arbeiten</p>
           <h2>Wir räumen zuerst die echten Bremsen aus dem Weg.</h2>
@@ -333,9 +332,9 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section">
+      <section className="home-section">
         <div className="section-heading">
           <p className="eyebrow">Leistungen</p>
           <h2>Ein Setup, das Strategie, Technik und Content wirklich verbindet.</h2>
@@ -372,9 +371,9 @@ export default function HomePage() {
             </article>
           ))}
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section home-operations">
+      <section className="home-section home-operations">
         <div className="section-heading">
           <p className="eyebrow">Projektmodell</p>
           <h2>Klare Phasen, klare Verantwortlichkeiten, kein Black-Box-Gefühl.</h2>
@@ -413,9 +412,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section home-reporting">
+      <section className="home-section home-reporting">
         <div className="section-heading">
           <p className="eyebrow">Reporting</p>
           <h2>Wir reporten auf die Metriken, die Entscheidungen auslösen.</h2>
@@ -451,7 +450,7 @@ export default function HomePage() {
             <span>Operating Principle</span>
           </footer>
         </blockquote>
-      </ScrollReveal>
+      </section>
 
       <FAQAccordion
         heading="Häufige Fragen vor dem Projektstart"

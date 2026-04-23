@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { JsonLd } from "@/components/json-ld";
-import { ScrollReveal } from "@/components/scroll-reveal";
 import { SiteShell } from "@/components/site-shell";
 import {
   bundleTiers,
@@ -322,7 +321,7 @@ export default function WebsitesPage() {
         </aside>
       </section>
 
-      <ScrollReveal as="section" className="home-section" id="was-wir-bauen">
+      <section className="home-section" id="was-wir-bauen">
         <div className="section-heading">
           <p className="eyebrow">Was wir bauen</p>
           <h2>Fünf Projekttypen, klar voneinander abgegrenzt.</h2>
@@ -352,9 +351,9 @@ export default function WebsitesPage() {
             </article>
           ))}
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section home-operations" id="prozess">
+      <section className="home-section home-operations" id="prozess">
         <div className="section-heading">
           <p className="eyebrow">Prozess</p>
           <h2>Fünf Phasen, eine klare Verantwortung.</h2>
@@ -373,9 +372,9 @@ export default function WebsitesPage() {
             </article>
           ))}
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section" id="arbeiten">
+      <section className="home-section" id="arbeiten">
         <div className="section-heading">
           <p className="eyebrow">Aus unseren Kundenprojekten</p>
           <h2>Websites, die im Alltag ihrer Unternehmen arbeiten.</h2>
@@ -448,9 +447,9 @@ export default function WebsitesPage() {
             </article>
           ))}
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section" id="tech-stack">
+      <section className="home-section" id="tech-stack">
         <div className="section-heading">
           <p className="eyebrow">Technologie</p>
           <h2>Wir wählen den Stack, der zu deinem Projekt passt.</h2>
@@ -469,9 +468,9 @@ export default function WebsitesPage() {
             </article>
           ))}
         </div>
-      </ScrollReveal>
+      </section>
 
-      <ScrollReveal as="section" className="home-section" id="preise">
+      <section className="home-section" id="preise">
         <div className="section-heading">
           <p className="eyebrow">Preisorientierung</p>
           <h2>Drei Wege, mit uns zu arbeiten.</h2>
@@ -617,11 +616,11 @@ export default function WebsitesPage() {
             Alle Preise und Pakete ansehen →
           </Link>
         </p>
-      </ScrollReveal>
+      </section>
 
       <FAQAccordion heading="Häufige Fragen zu Website-Projekten" items={websitesFaqs} />
 
-      <ScrollReveal as="section" className="home-section">
+      <section className="home-section">
         <div className="section-heading section-heading--compact">
           <p className="eyebrow">Nächster Schritt</p>
           <h2>Website-Projekt im Kopf? Erzähl uns davon.</h2>
@@ -638,7 +637,7 @@ export default function WebsitesPage() {
             Preise ansehen
           </Link>
         </div>
-      </ScrollReveal>
+      </section>
     </SiteShell>
   );
 }
