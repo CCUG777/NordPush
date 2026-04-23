@@ -26,6 +26,34 @@ export async function generateMetadata({ params }: PageProps) {
     return {};
   }
 
+  // Three service pages inherited overly-long titles from the WordPress
+  // snapshot that get truncated by Google's SERP pixel limit (~475 px).
+  // We force-override with Sistrix-optimized variants.
+  const pixelSafeTitleOverrides: Record<string, { title: string; description: string }> = {
+    "seo-audit": {
+      title: "SEO-Audit: Sichtbarkeit & Leads | NordPush",
+      description:
+        "Technisches und inhaltliches SEO-Audit deiner Website. Prioritäten, Quick Wins und umsetzbare Maßnahmen — ab 1.499 €. Von NordPush.",
+    },
+    "keyword-recherche": {
+      title: "Keyword-Recherche für SEO | NordPush",
+      description:
+        "Professionelle Keyword-Recherche mit Profi-Tools: Suchvolumen, Intent, Konkurrenzdichte und Mapping zu deinen Seitentypen. Ab 1.199 €.",
+    },
+    "seo-monitoring": {
+      title: "SEO-Monitoring für KMU | NordPush",
+      description:
+        "SEO-Monitoring mit klarem Reporting: Rankings, Sichtbarkeit, Wettbewerb und Quick Wins. Transparent, regelmäßig, entscheidungsreif.",
+    },
+  };
+
+  const override = pixelSafeTitleOverrides[slug];
+  if (override) {
+    return buildPageMetadata(`/${slug}/`, override.title, override.description, {
+      forceOverride: true,
+    });
+  }
+
   return buildPageMetadata(`/${slug}/`, `Service: ${slug}`);
 }
 
@@ -41,7 +69,12 @@ export default async function ServicePage({ params }: PageProps) {
   const extracted = getExtractedPage(canonicalPath);
   const useRich = Boolean(extracted && extracted.bodyTextLen > 150);
 
-  const faqs = useRich && extracted ? extracted.faqs : [];
+  // FAQ-Schema muss auch dann gebaut werden, wenn die Seite über den
+  // ContentPage-Fallback gerendert wird (keine WordPress-Extraktion, dafür
+  // Hand-Content aus page-content.ts). Sonst fehlt auf diesen Seiten das
+  // FAQPage-Schema — SEO-Audit #10 (z.B. /wordpress-seo/).
+  const contentPageFaqs = useRich ? [] : (getPageContent(canonicalPath).faqs ?? []);
+  const faqs = useRich && extracted ? extracted.faqs : contentPageFaqs;
   const schemas = buildPageSchemas({
     canonicalPath,
     fallbackName: isLocalSeoSlug(slug) ? `Local SEO: ${slug}` : `Service: ${slug}`,
