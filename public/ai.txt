@@ -1,0 +1,104 @@
+# ai.txt — content-licensing declarations for AI operators
+# https://nordpush.de/ai.txt
+# Format: RSL (Really Simple Licensing) 1.0-compatible
+# Canonical copy: https://nordpush.de/ai.txt
+
+# --- Contact ---
+Contact: info@nordpush.de
+Operator: Common Consulting UG (haftungsbeschränkt)
+
+# --- Default policy for all AI operators ---
+# NordPush is a B2B service agency that earns trust and recognition
+# from being cited, not from gate-keeping content. The default stance
+# is therefore permissive: training, retrieval and summarization are
+# all allowed, with attribution required when content is reproduced
+# substantively. Operators listed further down override this default.
+User-agent: *
+Allow-training: yes
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+# --- Retrieval-only operators (live AI answers) ---
+# These fetch pages on demand when users ask questions. Explicit
+# allow block to pair with robots.txt.
+User-agent: OAI-SearchBot
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: ChatGPT-User
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: PerplexityBot
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: Perplexity-User
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: Claude-SearchBot
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: Google-Extended
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: Applebot-Extended
+Allow-training: no
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+# --- Training operators with transparent opt-out policies ---
+# Brand-recognition benefit outweighs IP concerns for a service
+# agency whose product is advisory work, not content inventory.
+User-agent: GPTBot
+Allow-training: yes
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: ClaudeBot
+Allow-training: yes
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+User-agent: anthropic-ai
+Allow-training: yes
+Allow-retrieval: yes
+Allow-summarization: yes
+Attribution: required
+
+# --- Blocked operators (aggressive / opaque downstream usage) ---
+# Mirror robots.txt disallow entries. Blocking training + retrieval
+# signals quality expectations on the corpora NordPush ends up in
+# without sacrificing visibility through the operators we do trust.
+User-agent: CCBot
+Allow-training: no
+Allow-retrieval: no
+Allow-summarization: no
+
+User-agent: Bytespider
+Allow-training: no
+Allow-retrieval: no
+Allow-summarization: no
+
+# --- Metadata ---
+Last-updated: 2026-04-23
+Policy-version: 1.0
