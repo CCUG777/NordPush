@@ -85,7 +85,12 @@
 
   /* Typography */
   --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Aeonik Pro", "Aeonik", "Inter", "Helvetica Neue", Arial, sans-serif;
+  /* Display font: Satoshi Variable via next/font/local (see layout.tsx).
+     next/font injects var(--font-display-loaded) with size-adjusted fallback
+     metrics so the Inter fallback renders without CLS on swap. "Satoshi" is
+     listed as a secondary fallback for the rare user who has the font
+     installed locally. */
+  --font-display: var(--font-display-loaded), "Satoshi", "Inter", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* Radii */

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const sans = Inter({
@@ -14,6 +15,27 @@ const mono = JetBrains_Mono({
   variable: "--font-mono-loaded",
   display: "swap",
   weight: ["400", "500", "600"],
+});
+
+// Display font — Satoshi Variable (Indian Type Foundry / Fontshare FFL).
+// Geometric sans in the Aeonik-Pro-adjacent tradition; free for commercial
+// use under the Fontshare Free Font License. One variable-font file
+// (~43 KB) covers the full 300–900 weight range, so we load a single
+// asset instead of per-weight splits.
+//
+// next/font/local handles the performance hygiene automatically:
+// - rel=preload link is injected into <head> when the variable is used
+// - font-display: swap is applied
+// - Size-adjusted fallback metrics are generated (see `fallback`) so
+//   the Inter fallback renders at visually matching x-height and
+//   ascent/descent — prevents CLS on the font swap.
+const display = localFont({
+  src: "../../public/fonts/Satoshi-Variable.woff2",
+  variable: "--font-display-loaded",
+  display: "swap",
+  weight: "300 900",
+  style: "normal",
+  fallback: ["Inter", "Helvetica Neue", "Arial", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -69,7 +91,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body className={`${sans.variable} ${mono.variable}`}>{children}</body>
+      <body className={`${sans.variable} ${mono.variable} ${display.variable}`}>{children}</body>
     </html>
   );
 }
