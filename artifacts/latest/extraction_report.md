@@ -1,0 +1,37 @@
+# Extraction report
+
+- `/` — text=4935, faqs=6, images=3, pageType=homepage
+- `/agentur/` — text=0, faqs=0, images=0, pageType=blog_or_other
+- `/b2b-seo-agentur/` — text=6799, faqs=6, images=0, pageType=service
+- `/backlinks/` — text=6714, faqs=6, images=0, pageType=service
+- `/category/wissen/` — text=105, faqs=0, images=0, pageType=blog_category
+- `/content-marketing/` — text=5329, faqs=6, images=0, pageType=service
+- `/content-templates/` — text=6583, faqs=6, images=0, pageType=service
+- `/datenschutz/` — text=24470, faqs=4, images=0, pageType=info_legal_or_conversion
+- `/e-commerce-seo/` — text=6531, faqs=4, images=0, pageType=service
+- `/etsy-seo/` — text=23359, faqs=8, images=1, pageType=service
+- `/geo-optimierung/` — text=7484, faqs=6, images=0, pageType=service
+- `/google-unternehmensprofil/` — text=5602, faqs=7, images=0, pageType=service
+- `/impressum/` — text=706, faqs=0, images=0, pageType=info_legal_or_conversion
+- `/internationales-seo/` — text=6856, faqs=6, images=0, pageType=service
+- `/keyword-recherche/` — text=6504, faqs=6, images=0, pageType=service
+- `/kontakt/` — text=1824, faqs=5, images=0, pageType=info_legal_or_conversion
+- `/link-risk-management/` — text=6262, faqs=6, images=0, pageType=service
+- `/pagespeed-optimierung/` — text=7016, faqs=6, images=0, pageType=service
+- `/preise/` — text=7602, faqs=6, images=0, pageType=info_legal_or_conversion
+- `/seo-audit/` — text=6572, faqs=7, images=0, pageType=service
+- `/seo-bamberg/` — text=16780, faqs=7, images=0, pageType=local_seo
+- `/seo-beratung/` — text=6212, faqs=5, images=0, pageType=service
+- `/seo-betreuung/` — text=6666, faqs=6, images=0, pageType=service
+- `/seo-fuer-lokale-unternehmen/` — text=6702, faqs=5, images=0, pageType=service
+- `/seo-konkurrenzanalyse/` — text=6195, faqs=5, images=0, pageType=service
+- `/seo-monitoring/` — text=6422, faqs=5, images=0, pageType=service
+- `/seo-neumuenster/` — text=17711, faqs=5, images=0, pageType=local_seo
+- `/seo-relaunch/` — text=6269, faqs=6, images=0, pageType=service
+- `/seo-sachsen/` — text=20683, faqs=8, images=0, pageType=local_seo
+- `/seo-strategie/` — text=6840, faqs=4, images=0, pageType=service
+- `/seo-texte-schreiben/` — text=6507, faqs=7, images=0, pageType=service
+- `/suchmaschinenoptimierung/` — text=0, faqs=0, images=0, pageType=blog_or_other
+- `/technisches-seo-audit/` — text=6401, faqs=6, images=0, pageType=service
+- `/ueber-uns/` — text=5787, faqs=4, images=0, pageType=about_or_author
+- `/wordpress-seo/` — text=7226, faqs=5, images=0, pageType=service

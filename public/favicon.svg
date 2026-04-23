@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="NordPush">
+  <!-- Transparent-background browser-tab favicon. The H-with-arrow glyph is the
+       authentic letterform extracted from public/logos/nordpush-logo.svg
+       (source H bounding box 1461.3,410.5–1586.0,669.5 in the 1920x1080 artboard).
+       Transform scales 0.1081 and centres the glyph inside the 40x40 viewBox. -->
+  <g transform="translate(-144.7 -38.37) scale(0.1081)" fill="#5B22D5">
+    <path d="M1547.06,495.13l-23.42-55.59l-23.42,55.59v-84.65h-38.94v259.03h38.94V560.88l-27.94,18.06l51.36-121.05L1575,578.94l-27.94-18.06v108.64H1586V410.48h-38.94V495.13z"/>
+  </g>
+</svg>

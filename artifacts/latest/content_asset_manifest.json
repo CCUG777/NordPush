@@ -1,0 +1,738 @@
+{
+  "generatedAt": "2026-04-14T18:40:26+00:00",
+  "sourceFile": "C:\\Users\\Sven\\.paperclip\\instances\\default\\projects\\55f3147f-b7be-401d-99f5-fe68b042d6e6\\a23a46a7-ce25-44ff-8a17-f9d2ba61e3a3\\_default\\seo_migration_inventory.json",
+  "pageCount": 35,
+  "uniqueAssetCount": 28,
+  "pages": [
+    {
+      "recordId": "59059c2f72de",
+      "canonicalUrl": "https://nordpush.de/",
+      "canonicalPath": "/",
+      "pageType": "homepage",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "607037b8134b",
+      "canonicalUrl": "https://nordpush.de/agentur/",
+      "canonicalPath": "/agentur/",
+      "pageType": "blog_or_other",
+      "assets": []
+    },
+    {
+      "recordId": "fd2afe616665",
+      "canonicalUrl": "https://nordpush.de/b2b-seo-agentur/",
+      "canonicalPath": "/b2b-seo-agentur/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-12.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "8c9e1be1d14e",
+      "canonicalUrl": "https://nordpush.de/backlinks/",
+      "canonicalPath": "/backlinks/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-16.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "b0b74d78e561",
+      "canonicalUrl": "https://nordpush.de/category/wissen/",
+      "canonicalPath": "/category/wissen/",
+      "pageType": "blog_category",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "7dc922126312",
+      "canonicalUrl": "https://nordpush.de/content-marketing/",
+      "canonicalPath": "/content-marketing/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-17.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "f77c80a20616",
+      "canonicalUrl": "https://nordpush.de/content-templates/",
+      "canonicalPath": "/content-templates/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/content-template.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "c0b51f8a7087",
+      "canonicalUrl": "https://nordpush.de/datenschutz/",
+      "canonicalPath": "/datenschutz/",
+      "pageType": "info_legal_or_conversion",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "4fc2c3cb1a98",
+      "canonicalUrl": "https://nordpush.de/e-commerce-seo/",
+      "canonicalPath": "/e-commerce-seo/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-8.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "55356b659e98",
+      "canonicalUrl": "https://nordpush.de/etsy-seo/",
+      "canonicalPath": "/etsy-seo/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/06/Etsy-SEO.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "b773990de4e5",
+      "canonicalUrl": "https://nordpush.de/geo-optimierung/",
+      "canonicalPath": "/geo-optimierung/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-19.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "9fd77625f1c9",
+      "canonicalUrl": "https://nordpush.de/google-unternehmensprofil/",
+      "canonicalPath": "/google-unternehmensprofil/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/google-business.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "2c3aff2f72cc",
+      "canonicalUrl": "https://nordpush.de/impressum/",
+      "canonicalPath": "/impressum/",
+      "pageType": "info_legal_or_conversion",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "59ddaf71334b",
+      "canonicalUrl": "https://nordpush.de/internationales-seo/",
+      "canonicalPath": "/internationales-seo/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-15.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "24d1c37e16c6",
+      "canonicalUrl": "https://nordpush.de/keyword-recherche/",
+      "canonicalPath": "/keyword-recherche/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-5.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "cb13bf08e002",
+      "canonicalUrl": "https://nordpush.de/kontakt/",
+      "canonicalPath": "/kontakt/",
+      "pageType": "info_legal_or_conversion",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "24ad54568e51",
+      "canonicalUrl": "https://nordpush.de/link-risk-management/",
+      "canonicalPath": "/link-risk-management/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/link-risk-management.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "d1476577a4e0",
+      "canonicalUrl": "https://nordpush.de/pagespeed-optimierung/",
+      "canonicalPath": "/pagespeed-optimierung/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-10.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "8eca1224b231",
+      "canonicalUrl": "https://nordpush.de/preise/",
+      "canonicalPath": "/preise/",
+      "pageType": "info_legal_or_conversion",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-20.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "fe8a581c692b",
+      "canonicalUrl": "https://nordpush.de/seo-audit/",
+      "canonicalPath": "/seo-audit/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-2.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "339f2413e4de",
+      "canonicalUrl": "https://nordpush.de/seo-bamberg/",
+      "canonicalPath": "/seo-bamberg/",
+      "pageType": "local_seo",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/07/SEOBamberg.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "2afc402df132",
+      "canonicalUrl": "https://nordpush.de/seo-beratung/",
+      "canonicalPath": "/seo-beratung/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-10.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "e6d65caa8459",
+      "canonicalUrl": "https://nordpush.de/seo-betreuung/",
+      "canonicalPath": "/seo-betreuung/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-11.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "43a3677a4c76",
+      "canonicalUrl": "https://nordpush.de/seo-fuer-lokale-unternehmen/",
+      "canonicalPath": "/seo-fuer-lokale-unternehmen/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-13.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "84dcf405d23d",
+      "canonicalUrl": "https://nordpush.de/seo-konkurrenzanalyse/",
+      "canonicalPath": "/seo-konkurrenzanalyse/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-4.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "cb0902abd89c",
+      "canonicalUrl": "https://nordpush.de/seo-monitoring/",
+      "canonicalPath": "/seo-monitoring/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-14.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "c5982155d6bf",
+      "canonicalUrl": "https://nordpush.de/seo-neumuenster/",
+      "canonicalPath": "/seo-neumuenster/",
+      "pageType": "local_seo",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/06/image.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "3dcb1586ab30",
+      "canonicalUrl": "https://nordpush.de/seo-relaunch/",
+      "canonicalPath": "/seo-relaunch/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-7.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "bf17950040b7",
+      "canonicalUrl": "https://nordpush.de/seo-sachsen/",
+      "canonicalPath": "/seo-sachsen/",
+      "pageType": "local_seo",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/06/SEOSachsen.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "78fef243eeff",
+      "canonicalUrl": "https://nordpush.de/seo-strategie/",
+      "canonicalPath": "/seo-strategie/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-3.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "1e8785482be9",
+      "canonicalUrl": "https://nordpush.de/seo-texte-schreiben/",
+      "canonicalPath": "/seo-texte-schreiben/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-18.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "fa6e55873ad7",
+      "canonicalUrl": "https://nordpush.de/suchmaschinenoptimierung/",
+      "canonicalPath": "/suchmaschinenoptimierung/",
+      "pageType": "blog_or_other",
+      "assets": []
+    },
+    {
+      "recordId": "e1da66c7bcd0",
+      "canonicalUrl": "https://nordpush.de/technisches-seo-audit/",
+      "canonicalPath": "/technisches-seo-audit/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-6.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "320bc562d714",
+      "canonicalUrl": "https://nordpush.de/ueber-uns/",
+      "canonicalPath": "/ueber-uns/",
+      "pageType": "about_or_author",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    },
+    {
+      "recordId": "0da7acb74322",
+      "canonicalUrl": "https://nordpush.de/wordpress-seo/",
+      "canonicalPath": "/wordpress-seo/",
+      "pageType": "service",
+      "assets": [
+        {
+          "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-9.png",
+          "assetType": "image",
+          "discoverySource": "og:image"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-10.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-beratung/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/",
+        "https://nordpush.de/category/wissen/",
+        "https://nordpush.de/datenschutz/",
+        "https://nordpush.de/impressum/",
+        "https://nordpush.de/kontakt/",
+        "https://nordpush.de/ueber-uns/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/content-template.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/content-templates/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/google-business.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/google-unternehmensprofil/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-10.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/pagespeed-optimierung/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-11.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-betreuung/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-12.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/b2b-seo-agentur/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-13.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-fuer-lokale-unternehmen/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-14.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-monitoring/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-15.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/internationales-seo/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-16.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/backlinks/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-17.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/content-marketing/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-18.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-texte-schreiben/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-19.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/geo-optimierung/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-2.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-audit/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-20.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/preise/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-3.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-strategie/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-4.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-konkurrenzanalyse/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-5.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/keyword-recherche/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-6.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/technisches-seo-audit/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-7.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-relaunch/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-8.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/e-commerce-seo/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/image-9.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/wordpress-seo/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/05/link-risk-management.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/link-risk-management/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/06/Etsy-SEO.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/etsy-seo/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/06/SEOSachsen.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-sachsen/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/06/image.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-neumuenster/"
+      ]
+    },
+    {
+      "assetUrl": "https://nordpush.de/wp-content/uploads/2025/07/SEOBamberg.png",
+      "assetType": "image",
+      "discoverySources": [
+        "og:image"
+      ],
+      "referencedBy": [
+        "https://nordpush.de/seo-bamberg/"
+      ]
+    }
+  ]
+}

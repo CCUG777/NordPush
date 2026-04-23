@@ -1,0 +1,49 @@
+{
+  "generatedAt": "2026-04-14T18:40:26+00:00",
+  "sourceFile": "C:\\Users\\Sven\\.paperclip\\instances\\default\\projects\\55f3147f-b7be-401d-99f5-fe68b042d6e6\\a23a46a7-ce25-44ff-8a17-f9d2ba61e3a3\\_default\\seo_migration_inventory.json",
+  "summary": {
+    "recordsProcessed": 35,
+    "blockerCount": 1,
+    "warningCount": 1,
+    "missingCanonicalCount": 1,
+    "missingOgImageCount": 2,
+    "missingMetaDescriptionCount": 0,
+    "missingH1Count": 0,
+    "duplicateCanonicalGroupCount": 0
+  },
+  "blockers": [
+    {
+      "code": "missing_canonical_values",
+      "owner": "CMO",
+      "summary": "One or more pages do not expose canonical tags and need source-of-truth confirmation.",
+      "count": 1,
+      "affectedPages": [
+        {
+          "sourceUrl": "https://nordpush.de/seo-bamberg/",
+          "sourcePath": "/seo-bamberg/",
+          "pageType": "local_seo"
+        }
+      ],
+      "fallbackApplied": "source URL used as canonical placeholder"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "missing_og_image_values",
+      "summary": "Pages without og:image are still exported but media manifest coverage is partial.",
+      "count": 2,
+      "affectedPages": [
+        {
+          "canonicalUrl": "https://nordpush.de/agentur/",
+          "sourceUrl": "https://nordpush.de/agentur/",
+          "pageType": "blog_or_other"
+        },
+        {
+          "canonicalUrl": "https://nordpush.de/suchmaschinenoptimierung/",
+          "sourceUrl": "https://nordpush.de/suchmaschinenoptimierung/",
+          "pageType": "blog_or_other"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1020"/>
+      <stop offset="100%" stop-color="#141B2D"/>
+    </linearGradient>
+    <radialGradient id="aurora1" cx="20%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#14D9A1" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#14D9A1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora2" cx="85%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#0040E0" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0040E0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora3" cx="60%" cy="15%" r="40%">
+      <stop offset="0%" stop-color="#FF8A3D" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FF8A3D" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="needle" x1="600" y1="315" x2="600" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0040E0"/>
+      <stop offset="60%" stop-color="#1A7BFF"/>
+      <stop offset="100%" stop-color="#14D9A1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#aurora1)"/>
+  <rect width="1200" height="630" fill="url(#aurora2)"/>
+  <rect width="1200" height="630" fill="url(#aurora3)"/>
+
+  <!-- Compass mark, enlarged -->
+  <g transform="translate(100, 100)">
+    <circle cx="60" cy="60" r="48" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1.5"/>
+    <line x1="60" y1="6" x2="60" y2="14" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M 60 14 L 77 66 L 60 56 L 43 66 Z" fill="url(#needle)"/>
+    <path d="M 60 106 L 48 66 L 60 68 L 72 66 Z" fill="#FFFFFF" fill-opacity="0.4"/>
+    <circle cx="60" cy="66" r="4" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="100" y="350" font-family="ui-monospace, monospace" font-size="22" letter-spacing="4" fill="#14D9A1" font-weight="500">NORDPUSH — SEO AGENTUR</text>
+
+  <!-- Headline -->
+  <text x="100" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="600" fill="#FFFFFF" font-style="italic">Mehr Sichtbarkeit.</text>
+  <text x="100" y="510" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-weight="600" fill="#FFFFFF">Mehr Kunden.</text>
+
+  <!-- URL -->
+  <text x="100" y="575" font-family="ui-monospace, monospace" font-size="20" letter-spacing="2" fill="#FFFFFF" fill-opacity="0.55">nordpush.de</text>
+
+  <!-- Decorative tick marks right -->
+  <g transform="translate(1050, 480)" opacity="0.6">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#14D9A1" stroke-width="2"/>
+    <line x1="0" y1="20" x2="40" y2="20" stroke="#14D9A1" stroke-width="2" stroke-opacity="0.6"/>
+    <line x1="0" y1="40" x2="24" y2="40" stroke="#14D9A1" stroke-width="2" stroke-opacity="0.3"/>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+{
+  "name": "nordpush-website-rebuild",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "qa:seo": "node scripts/verify-seo-guardrails.mjs"
+  },
+  "dependencies": {
+    "next": "^15.0.0",
+    "nodemailer": "^8.0.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "eslint": "^9.14.0",
+    "eslint-config-next": "^15.0.0",
+    "typescript": "^5.6.3"
+  }
+}
