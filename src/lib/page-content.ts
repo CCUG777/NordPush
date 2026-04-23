@@ -102,9 +102,9 @@ function service({
     heroDescription,
     proofBadge,
     heroStats: heroStats ?? [
-      { value: "90+", label: "Teams in DACH begleitet" },
-      { value: "4.9/5", label: "Kundenbewertung (ProvenExpert)" },
-      { value: "2021", label: "Gegründet in Neumünster" },
+      { value: "seit 2021", label: "Inhabergeführt aus Neumünster" },
+      { value: "seit 2014", label: "SEO-Expertise im Team" },
+      { value: "DACH", label: "Marktgebiet" },
     ],
     problem,
     deliverables,
@@ -604,9 +604,9 @@ const aboutContent: PageContent = {
     "NordPush ist eine Marke der Common Consulting UG (haftungsbeschränkt) – eine inhabergeführte SEO-Agentur aus Neumünster, gegründet 2021. Unser Team ist seit 2014 in der SEO-Branche tätig – mit Substanz statt Sales-Theater.",
   proofBadge: "Branchenexpertise seit 2014",
   heroStats: [
-    { value: "90+", label: "Kundenprojekte DACH" },
-    { value: "seit 2014", label: "SEO-Erfahrung im Team" },
-    { value: "2021", label: "NordPush gegründet" },
+    { value: "seit 2021", label: "Inhabergeführt aus Neumünster" },
+    { value: "seit 2014", label: "SEO-Expertise im Team" },
+    { value: "DACH", label: "Marktgebiet" },
   ],
   deliverables: {
     heading: "Was uns ausmacht",
@@ -614,7 +614,7 @@ const aboutContent: PageContent = {
     bullets: [
       { title: "Ehrliche Einschätzung", body: "Wir nehmen Projekte nur an, wenn wir einen echten Unterschied machen können. Wenn nicht, sagen wir es dir." },
       { title: "Messbare Arbeit", body: "Jede Maßnahme hat eine Kennzahl. Und jede Kennzahl einen Verantwortlichen." },
-      { title: "Kontinuität", body: "Unsere durchschnittliche Kundenbeziehung dauert über 3 Jahre. Weil wir uns keinen Kundenwechsel alle 6 Monate leisten wollen." },
+      { title: "Kontinuität", body: "Unser Geschäftsmodell zielt auf langfristige Partnerschaften — nicht auf kurzfristige Mandate mit Kundenwechsel alle 6 Monate. SEO wirkt über Jahre, nicht über Quartale." },
     ],
   },
   faqs: baseFaqs,
