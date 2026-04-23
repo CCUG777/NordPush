@@ -52,10 +52,15 @@ export function buildPageMetadata(
       url: toAbsoluteUrl(resolvedCanonicalPath),
       title: ogTitle,
       description: ogDescription,
+      // When undefined, Next.js falls back to the generated
+      // `src/app/opengraph-image.tsx` (and per-route overrides), so we always
+      // ship a 1200x630 image even if no record.ogImage is set.
       images: ogImage ? [{ url: ogImage }] : undefined,
     },
     twitter: {
-      card: ogImage ? "summary_large_image" : "summary",
+      // Always large card: either a Snapshot-ogImage or the auto-generated
+      // `twitter-image.tsx` delivers the 1200x630 asset.
+      card: "summary_large_image",
       title: ogTitle,
       description: ogDescription,
       images: ogImage ? [ogImage] : undefined,

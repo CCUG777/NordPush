@@ -50,18 +50,22 @@ export type MetadataRecord = MetadataSnapshotRecord & {
 const metadataSnapshot = metadataSnapshotJson as MetadataSnapshot;
 const contentAssetManifest = contentAssetManifestJson as ContentAssetManifest;
 
-const sharedBrandOgImage = "https://nordpush.de/wp-content/uploads/2025/04/image-5-1024x956.png";
-
-// Approved in NOR-14 so migration parity can proceed without page-unique creatives.
-const ogImageOverridesByPath = new Map<string, string>([
-  ["/agentur/", sharedBrandOgImage],
-  ["/suchmaschinenoptimierung/", sharedBrandOgImage],
-]);
+// OG-Image-Override historisch über `sharedBrandOgImage` (wp-content-URL) war
+// ein Migrationsartefakt. Seit dem Relaunch werden die OG-Images dynamisch
+// von Next.js 15 generiert (siehe `src/app/opengraph-image.tsx` + pro-Route-
+// Overrides). Wir filtern deshalb veraltete wp-content-URLs aus dem Legacy-
+// Snapshot raus — das Next.js-generierte Bild wird stattdessen automatisch
+// verwendet, wenn `record.ogImage` undefined ist.
+function isUsableOgImage(url: string | undefined): url is string {
+  if (!url) return false;
+  if (url.includes("/wp-content/")) return false; // altes WordPress-Upload-Verzeichnis
+  return true;
+}
 
 const ogImageByPath = new Map<string, string>();
 for (const page of contentAssetManifest.pages) {
   const firstImage = page.assets.find((asset) => asset.assetType === "image")?.assetUrl;
-  if (firstImage) {
+  if (isUsableOgImage(firstImage)) {
     ogImageByPath.set(normalizePath(page.canonicalPath), firstImage);
   }
 }
@@ -69,7 +73,9 @@ for (const page of contentAssetManifest.pages) {
 const metadataByPath = new Map<string, MetadataRecord>(
   metadataSnapshot.records.map((record) => {
     const canonicalPath = normalizePath(record.canonicalPath);
-    const ogImage = ogImageOverridesByPath.get(canonicalPath) ?? ogImageByPath.get(canonicalPath);
+    const snapshotOgImage = ogImageByPath.get(canonicalPath);
+    // Snapshot-ogImage aus record ebenfalls nur übernehmen, wenn sie usable ist.
+    const ogImage = isUsableOgImage(snapshotOgImage) ? snapshotOgImage : undefined;
     return [
       canonicalPath,
       {
