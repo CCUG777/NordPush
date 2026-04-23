@@ -111,7 +111,7 @@ export function ContactForm() {
             name="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="+49 171 / 311 79 71"
+            placeholder="optional"
           />
         </div>
         <div className="contact-field">
@@ -163,9 +163,6 @@ export function ContactForm() {
         <button type="submit" className="button primary" disabled={state === "sending"}>
           {state === "sending" ? "Wird gesendet..." : "Nachricht senden"}
         </button>
-        <a href="tel:+491713117971" className="button">
-          0171 / 311 79 71
-        </a>
       </div>
     </form>
   );
