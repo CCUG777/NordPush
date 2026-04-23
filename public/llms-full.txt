@@ -86,7 +86,7 @@ NordPush arbeitet primär mit **B2B-Unternehmen mit 5–250 Mitarbeitenden** in 
 
 ### GEO (Generative Engine Optimization)
 
-Generative Engine Optimization (GEO) ist die Optimierung von Inhalten, damit sie von KI-Systemen wie ChatGPT, Perplexity, Google AI Overviews und Claude als Quelle erkannt, zitiert und empfohlen werden. Im Gegensatz zu SEO zielt GEO nicht auf Klicks über Suchergebnisse, sondern auf direkte Erwähnungen in den Antworten generativer Suchmaschinen.
+Generative Engine Optimization (GEO) ist die Optimierung von Inhalten, damit KI-Systeme wie ChatGPT, Perplexity, Google AI Overviews und Claude sie als Quelle erkennen und zitieren. Im Gegensatz zu SEO zielt GEO nicht auf Klicks aus Suchergebnissen, sondern auf direkte Erwähnungen in KI-generierten Antworten.
 
 NordPush bietet GEO als eigene Leistung an — inklusive llms.txt-Strategie, strukturierter Content-Architektur für AI-Extraktion, Authority-Signals und kontinuierlichem Monitoring von AI-Citation-Frequenz.
 
