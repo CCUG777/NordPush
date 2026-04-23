@@ -2274,21 +2274,19 @@ button.button {
 .faq-list {
   border-top: 1px solid var(--rui-border);
 }
+/* FAQ accordion uses native <details>/<summary> (zero JS, P3 fix). */
 .faq-item {
   border-bottom: 1px solid var(--rui-border);
   padding: var(--space-6) 0;
 }
-.faq-item h3 { margin: 0; }
 .faq-question {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-6);
-  background: transparent;
-  border: 0;
-  padding: 0;
   cursor: pointer;
+  list-style: none;                  /* Hide default triangle marker */
   text-align: left;
   font-family: var(--font-display);
   font-size: clamp(18px, 1.6vw, 22px);
@@ -2297,6 +2295,8 @@ button.button {
   letter-spacing: -0.01em;
   color: var(--rui-ink);
 }
+/* Safari/WebKit uses a separate pseudo-element for the marker */
+.faq-question::-webkit-details-marker { display: none; }
 .faq-question:hover { opacity: 0.75; }
 .faq-caret {
   flex: 0 0 auto;
@@ -2309,7 +2309,8 @@ button.button {
   color: var(--rui-ink);
   transition: transform 0.25s var(--ease-standard), background 0.2s var(--ease-standard);
 }
-.faq-question[aria-expanded="true"] .faq-caret {
+/* <details open> replaces the previous aria-expanded="true" signal. */
+.faq-item[open] > .faq-question .faq-caret {
   transform: rotate(45deg);
   background: var(--rui-ink);
   color: var(--rui-white);

@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useId, useState, type ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export type FaqItem = {
   question: string;
@@ -11,22 +9,34 @@ export type FaqItem = {
 type FAQAccordionProps = {
   heading?: string;
   headingLevel?: 2 | 3;
-  initialOpenIndex?: number;
   items: readonly FaqItem[];
   aside?: ReactNode;
 };
 
+/**
+ * Native <details>/<summary> accordion — zero client-side JavaScript.
+ *
+ * Previous implementation was a "use client" component with shared
+ * useState(openIndex) across all items: every toggle re-rendered every
+ * item, and the whole block hydrated on page load. claude-seo re-audit
+ * P3 flagged this as an INP risk on mid-tier Android.
+ *
+ * The <details> element provides expand/collapse behaviour natively,
+ * handles keyboard + screen-reader accessibility by spec, and works
+ * without JavaScript. As a side-effect, users can open multiple FAQs
+ * simultaneously — usually what they want when comparing answers,
+ * whereas the "only one open at a time" behaviour of the old impl
+ * forced them to close-and-reopen.
+ *
+ * The component is now a server component (no "use client" directive),
+ * so it participates in SSG/SSR without shipping any JS for FAQ logic.
+ */
 export function FAQAccordion({
   heading = "Häufige Fragen",
   headingLevel = 2,
-  initialOpenIndex = 0,
   items,
   aside,
 }: FAQAccordionProps) {
-  const initialIndex = initialOpenIndex >= 0 && initialOpenIndex < items.length ? initialOpenIndex : 0;
-  const [openIndex, setOpenIndex] = useState(initialIndex);
-  const rootId = useId();
-
   if (items.length === 0) {
     return null;
   }
@@ -53,44 +63,37 @@ export function FAQAccordion({
         </aside>
 
         <div className="faq-list">
-          {items.map((item, index) => {
-            const buttonId = `${rootId}-question-${index}`;
-            const panelId = `${rootId}-panel-${index}`;
-            const isOpen = openIndex === index;
-
-            return (
-              <article key={item.question} className="faq-item" data-faq-question={item.question}>
-                <h3>
-                  <button
-                    id={buttonId}
-                    type="button"
-                    className="faq-question"
-                    aria-expanded={isOpen}
-                    aria-controls={panelId}
-                    onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                  >
-                    <span>{item.question}</span>
-                    <span aria-hidden="true" className="faq-caret">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <line x1="7" y1="2" x2="7" y2="12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-                        <line x1="2" y1="7" x2="12" y2="7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-                      </svg>
-                    </span>
-                  </button>
-                </h3>
-                <div
-                  id={panelId}
-                  role="region"
-                  aria-labelledby={buttonId}
-                  className="faq-answer"
-                  data-faq-answer={item.answer}
-                  hidden={!isOpen}
-                >
-                  <p>{item.answer}</p>
-                </div>
-              </article>
-            );
-          })}
+          {items.map((item, index) => (
+            <details
+              key={item.question}
+              className="faq-item"
+              data-faq-question={item.question}
+              data-faq-answer={item.answer}
+              // First item open by default — matches the old
+              // `initialOpenIndex=0` behaviour.
+              open={index === 0 || undefined}
+            >
+              <summary
+                className="faq-question"
+                // Announces the question as a heading to screen readers
+                // so the FAQ list is navigable as a structured block,
+                // matching the previous <h3><button> wrapping.
+                role="heading"
+                aria-level={3}
+              >
+                <span>{item.question}</span>
+                <span aria-hidden="true" className="faq-caret">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <line x1="7" y1="2" x2="7" y2="12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                    <line x1="2" y1="7" x2="12" y2="7" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="faq-answer">
+                <p>{item.answer}</p>
+              </div>
+            </details>
+          ))}
         </div>
       </div>
     </section>
