@@ -117,7 +117,7 @@ export default async function LegalPage({ params }: PageProps) {
       { question: "Wie läuft das Erstgespräch ab?", answer: "Kurzes Gespräch via Google Meet. Du erzählst, woran du arbeitest und wo es hakt. Wir stellen Fragen, geben erste Impulse und halten fest, ob ein Mandat sinnvoll wäre." },
       { question: "Muss ich schon vorab Unterlagen schicken?", answer: "Nicht zwingend. Hilfreich: URL der Website, Analytics-Screenshot der letzten 12 Monate, ggf. Search Console. Wir lernen dich aber auch ohne Vorbereitung kennen." },
       { question: "Was kostet das Erstgespräch?", answer: "Nichts. Die ersten 30 Minuten sind komplett kostenlos und unverbindlich. Danach entscheidest du, ob es weitergeht." },
-      { question: "Wie schnell bekomme ich eine Antwort?", answer: "Innerhalb von 24 Stunden an Werktagen — meistens deutlich schneller. Bei dringenden Anliegen ruf direkt an." },
+      { question: "Wie schnell bekomme ich eine Antwort?", answer: "Innerhalb von 24 Stunden an Werktagen — meistens deutlich schneller. Bei dringenden Anliegen schreib gerne direkt an info@nordpush.de." },
     ];
 
     return (
@@ -141,12 +141,8 @@ export default async function LegalPage({ params }: PageProps) {
 
               <div className="contact-channels">
                 <div className="contact-channel">
-                  <span className="contact-channel-label">Telefon</span>
-                  <a href="tel:+491713117971">0171 / 311 79 71</a>
-                </div>
-                <div className="contact-channel">
                   <span className="contact-channel-label">E-Mail</span>
-                  <a href="mailto:support@nordpush.de">support@nordpush.de</a>
+                  <a href="mailto:info@nordpush.de">info@nordpush.de</a>
                 </div>
                 <div className="contact-channel">
                   <span className="contact-channel-label">Standort</span>
