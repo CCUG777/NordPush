@@ -566,10 +566,21 @@ button.button {
 }
 .mobile-menu > summary::-webkit-details-marker { display: none; }
 .mobile-menu-sheet {
-  position: absolute;
-  top: calc(100% + 8px);
+  /* Fixed instead of absolute: anchors to viewport, so a long menu that
+     overflows the screen height stays bounded (rather than spilling
+     unscrollably below the fold, which is what the previous absolute
+     positioning did). 100 px top approximates the combined utility-bar
+     + main-bar header height on mobile/tablet — small gap variance is
+     fine because the sheet has its own border-radius. */
+  position: fixed;
+  top: 100px;
   right: var(--layout-padding);
   left: var(--layout-padding);
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+  /* Don't bleed the scroll into the body when the user reaches the
+     top/bottom of the menu list. */
+  overscroll-behavior: contain;
   background: var(--rui-white);
   border: 1px solid var(--rui-border);
   border-radius: var(--radius-lg);
