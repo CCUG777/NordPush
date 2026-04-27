@@ -176,54 +176,64 @@ export function Header() {
           <details ref={mobileRef} className="mobile-menu">
             <summary>Menü</summary>
             <nav className="mobile-menu-sheet" aria-label="Mobile Navigation">
-              <details className="mobile-services">
-                <summary>
-                  <span>SEO</span>
-                  <span aria-hidden="true" className="mobile-services-caret">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path
-                        d="M4 6l4 4 4-4"
-                        stroke="currentColor"
-                        strokeWidth="1.8"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </summary>
-                {megaCategories.map((category) => (
-                  <div key={`mobile-${category.title}`} className="mobile-mega-column">
-                    <p className="mobile-mega-title">{category.title}</p>
-                    <ul>
-                      {category.links.map((link) => (
-                        <li key={`mobile-${link.href}`}>
-                          <Link href={link.href}>{link.label}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </details>
-              <ul className="mobile-top-links">
-                <li>
-                  <Link href="/websites/">Websites</Link>
-                </li>
-                <li>
-                  <Link href="/ueber-uns/">Agentur</Link>
-                </li>
-                <li>
-                  <Link href="/category/wissen/">Wissen</Link>
-                </li>
-                <li>
-                  <Link href="/kontakt/">Kontakt</Link>
-                </li>
-                <li>
-                  <Link href="/preise/">Preise</Link>
-                </li>
-              </ul>
-              <Link href="/kontakt/" className="button primary mobile-menu-cta">
-                Kostenlose Ersteinschätzung
-              </Link>
+              {/* Scrollable navigation region — gets max-height + overflow,
+                  so the sticky footer below stays anchored to the sheet bottom
+                  even when the SEO sub-list is open and would otherwise push
+                  the CTA out of view. */}
+              <div className="mobile-menu-scroll">
+                <details className="mobile-services">
+                  <summary>
+                    <span>SEO</span>
+                    <span aria-hidden="true" className="mobile-services-caret">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path
+                          d="M4 6l4 4 4-4"
+                          stroke="currentColor"
+                          strokeWidth="1.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </summary>
+                  {megaCategories.map((category) => (
+                    <div key={`mobile-${category.title}`} className="mobile-mega-column">
+                      <p className="mobile-mega-title">{category.title}</p>
+                      <ul>
+                        {category.links.map((link) => (
+                          <li key={`mobile-${link.href}`}>
+                            <Link href={link.href}>{link.label}</Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </details>
+                <ul className="mobile-top-links">
+                  <li>
+                    <Link href="/websites/">Websites</Link>
+                  </li>
+                  <li>
+                    <Link href="/ueber-uns/">Agentur</Link>
+                  </li>
+                  <li>
+                    <Link href="/category/wissen/">Wissen</Link>
+                  </li>
+                  <li>
+                    <Link href="/kontakt/">Kontakt</Link>
+                  </li>
+                  <li>
+                    <Link href="/preise/">Preise</Link>
+                  </li>
+                </ul>
+              </div>
+              {/* Sticky footer — CTA stays visible regardless of scroll
+                  position inside the navigation list above. */}
+              <div className="mobile-menu-footer">
+                <Link href="/kontakt/" className="button primary mobile-menu-cta">
+                  Kostenlose Ersteinschätzung
+                </Link>
+              </div>
             </nav>
           </details>
         </div>

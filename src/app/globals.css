@@ -565,6 +565,20 @@ button.button {
   font-size: 14px;
 }
 .mobile-menu > summary::-webkit-details-marker { display: none; }
+/* Backdrop dim overlay when the mobile menu is open — gives the white
+   sheet meaningful depth contrast against the white page behind it
+   (DESIGN.md "no shadows, depth via surface contrast"). Pseudo-element
+   on the <details> root so it appears/disappears with the open state
+   without any JavaScript wiring. */
+.mobile-menu[open]::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(25, 28, 31, 0.4);
+  z-index: 25;
+  pointer-events: none;
+}
+
 .mobile-menu-sheet {
   /* Fixed instead of absolute: anchors to viewport, so a long menu that
      overflows the screen height stays bounded (rather than spilling
@@ -577,18 +591,35 @@ button.button {
   right: var(--layout-padding);
   left: var(--layout-padding);
   max-height: calc(100vh - 116px);
-  overflow-y: auto;
-  /* Don't bleed the scroll into the body when the user reaches the
-     top/bottom of the menu list. */
-  overscroll-behavior: contain;
   background: var(--rui-white);
   border: 1px solid var(--rui-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-3) var(--space-5);
-  /* No grid gap — each row controls its own padding so SEO summary,
-     top-links and CTA sit in one continuous rhythm. */
-  display: block;
+  /* Flex column so the inner scroll region grows freely while the
+     sticky footer (CTA) stays at the bottom of the sheet. */
+  display: flex;
+  flex-direction: column;
+  /* No padding on the sheet itself — the scroll region and footer
+     each carry their own padding so the footer top-border can sit
+     edge-to-edge across the sheet. */
+  overflow: hidden;
   z-index: 30;
+}
+
+/* Scrollable navigation list above the sticky CTA footer. */
+.mobile-menu-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--space-3) var(--space-5);
+}
+
+/* Sticky footer — always-visible CTA, separated from the link list by
+   a hairline border. */
+.mobile-menu-footer {
+  flex: 0 0 auto;
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--rui-border);
+  background: var(--rui-white);
 }
 
 /* Common row treatment: SEO summary + top-link anchors look identical
@@ -672,12 +703,11 @@ button.button {
   display: block;
 }
 
-/* CTA gets visual breathing room from the link list — no top border,
-   just margin so it reads as the action separate from the navigation. */
+/* CTA pill sits inside .mobile-menu-footer (the sticky bottom region of
+   the sheet), so spacing + separator are handled at the wrapper level. */
 .mobile-menu-cta {
   width: 100%;
   justify-content: center;
-  margin-top: var(--space-4);
 }
 
 /* -------------------------------------------------------------------------
