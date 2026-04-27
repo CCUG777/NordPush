@@ -565,17 +565,19 @@ button.button {
   font-size: 14px;
 }
 .mobile-menu > summary::-webkit-details-marker { display: none; }
-/* Backdrop dim overlay when the mobile menu is open — gives the white
-   sheet meaningful depth contrast against the white page behind it
-   (DESIGN.md "no shadows, depth via surface contrast"). Pseudo-element
-   on the <details> root so it appears/disappears with the open state
-   without any JavaScript wiring. */
-.mobile-menu[open]::before {
+/* Backdrop dim overlay when the mobile menu is open. Anchored to <body>
+   via :has() so it isn't trapped by the .site-header's backdrop-filter
+   (which would otherwise create a fixed-position containing block and
+   constrain `inset: 0` to the header bar only). :has() is supported in
+   all majors since 2022/2023; on the rare unsupported runtime the
+   surface-tinted sheet below still provides clear visual contrast
+   against the white page background. */
+body:has(.mobile-menu[open])::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(25, 28, 31, 0.4);
-  z-index: 25;
+  background: rgba(25, 28, 31, 0.45);
+  z-index: 50;
   pointer-events: none;
 }
 
@@ -591,7 +593,12 @@ button.button {
   right: var(--layout-padding);
   left: var(--layout-padding);
   max-height: calc(100vh - 116px);
-  background: var(--rui-white);
+  /* Surface tint instead of pure white so the sheet is clearly
+     distinguishable from the page background even on backdrop-disabled
+     environments. Combined with the dim layer above, this gives a
+     proper modal-style "lifted" surface without violating the
+     no-shadow rule from DESIGN.md. */
+  background: var(--rui-surface);
   border: 1px solid var(--rui-border);
   border-radius: var(--radius-lg);
   /* Flex column so the inner scroll region grows freely while the
@@ -614,12 +621,13 @@ button.button {
 }
 
 /* Sticky footer — always-visible CTA, separated from the link list by
-   a hairline border. */
+   a hairline border. Background matches the sheet's surface tint so it
+   reads as part of the same lifted surface. */
 .mobile-menu-footer {
   flex: 0 0 auto;
   padding: var(--space-4) var(--space-5);
   border-top: 1px solid var(--rui-border);
-  background: var(--rui-white);
+  background: var(--rui-surface);
 }
 
 /* Common row treatment: SEO summary + top-link anchors look identical
