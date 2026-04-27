@@ -2608,7 +2608,12 @@ label {
   .home-refresh-cta-actions { justify-content: flex-start; }
   .primary-nav,
   .header-cta-pair { display: none; }
-  .mobile-menu { display: inline-block; position: relative; }
+  /* No `position: relative` here on purpose: the .mobile-menu-sheet is
+     position: absolute with right/left = layout-padding, and we want it
+     to anchor to the full-width .site-header (which is position: sticky
+     and thus a positioning context). Making .mobile-menu relative would
+     trap the sheet inside the ~70 px-wide summary button. */
+  .mobile-menu { display: inline-block; }
   .services-mega { min-width: 600px; grid-template-columns: repeat(2, 1fr); }
   /* Logo on tablet: shrink so the mobile-menu button always has room.
      Default `.brand-logo` height is 120 px with -40 px negative margins —
