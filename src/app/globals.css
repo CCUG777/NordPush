@@ -2610,6 +2610,16 @@ label {
   .header-cta-pair { display: none; }
   .mobile-menu { display: inline-block; position: relative; }
   .services-mega { min-width: 600px; grid-template-columns: repeat(2, 1fr); }
+  /* Logo on tablet: shrink so the mobile-menu button always has room.
+     Default `.brand-logo` height is 120 px with -40 px negative margins —
+     that's a deliberate desktop bleed effect, but on tablet the logo
+     wants ~600 px width (168:32 aspect at 120 px height) and would push
+     the menu button off-screen. */
+  .site-header-main .brand-logo {
+    height: 80px;
+    margin: -22px 0;
+    max-width: 180px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -2625,6 +2635,14 @@ label {
   .home-process-step { grid-template-columns: 1fr; }
   .home-refresh-panel { padding: var(--space-6); }
   .home-refresh-hero { padding: var(--space-12) 0; }
+  /* Phone: tighter shell-inner gap + further-shrunk logo so brand + Menü
+     fit on a single 375 px row without wrapping. */
+  .site-header-main .shell-inner { gap: var(--space-3); }
+  .site-header-main .brand-logo {
+    height: 64px;
+    margin: -16px 0;
+    max-width: 140px;
+  }
 }
 
 @media (max-width: 400px) {
