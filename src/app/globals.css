@@ -584,28 +584,42 @@ button.button {
   background: var(--rui-white);
   border: 1px solid var(--rui-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-6);
-  display: grid;
-  gap: var(--space-5);
+  padding: var(--space-3) var(--space-5);
+  /* No grid gap — each row controls its own padding so SEO summary,
+     top-links and CTA sit in one continuous rhythm. */
+  display: block;
   z-index: 30;
 }
-.mobile-services > summary {
-  /* Layout: SEO label on the left, lila caret on the right */
+
+/* Common row treatment: SEO summary + top-link anchors look identical
+   so they read as peers in the same primary list. The lila chevron on
+   SEO is the only visual cue that it's a disclosure rather than a link. */
+.mobile-services > summary,
+.mobile-top-links a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  list-style: none;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 0.02em;
-  color: var(--rui-text-muted);
-  text-transform: uppercase;
+  font-size: 17px;
+  color: var(--rui-ink);
+  padding: 14px 0;
   cursor: pointer;
-  padding-bottom: var(--space-3);
-  border-bottom: 1px solid var(--rui-border);
+  transition: color 0.15s var(--ease-standard);
 }
+.mobile-services > summary { list-style: none; }
 .mobile-services > summary::-webkit-details-marker { display: none; }
+
+/* Hover/tap accent — picks up the same lila as the chevron */
+.mobile-services > summary:hover,
+.mobile-top-links a:hover { color: var(--rui-primary); }
+
+/* Subtle hairline between primary rows — restrained, no double-border
+   "section divider" effect that made SEO look isolated. */
+.mobile-services,
+.mobile-top-links li { border-bottom: 1px solid var(--rui-border); }
+.mobile-top-links li:last-child { border-bottom: none; }
+
 .mobile-services-caret {
   display: inline-flex;
   align-items: center;
@@ -618,25 +632,53 @@ button.button {
 .mobile-services[open] > summary .mobile-services-caret {
   transform: rotate(180deg);
 }
-.mobile-mega-column { padding-top: var(--space-4); }
+
+/* Expanded sub-list — slightly inset + lighter weight so it visually
+   nests under the SEO row without competing with the primary peers. */
+.mobile-mega-column {
+  padding: var(--space-3) 0 var(--space-2) var(--space-4);
+}
+.mobile-mega-column:first-of-type { padding-top: var(--space-2); }
 .mobile-mega-title {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--rui-text-muted);
+  color: var(--rui-primary);
   margin: 0 0 var(--space-2);
 }
-.mobile-mega-column ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.mobile-mega-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
 .mobile-mega-column a {
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 15px;
-  color: var(--rui-ink);
+  color: var(--rui-text-secondary);
+  padding: 4px 0;
+  display: block;
+  transition: color 0.15s var(--ease-standard);
 }
-.mobile-top-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; border-top: 1px solid var(--rui-border); padding-top: var(--space-4); }
-.mobile-top-links a { font-family: var(--font-display); font-weight: 500; font-size: 16px; color: var(--rui-ink); }
-.mobile-menu-cta { width: 100%; justify-content: center; }
+.mobile-mega-column a:hover { color: var(--rui-ink); }
+
+.mobile-top-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+/* CTA gets visual breathing room from the link list — no top border,
+   just margin so it reads as the action separate from the navigation. */
+.mobile-menu-cta {
+  width: 100%;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
 
 /* -------------------------------------------------------------------------
    7. Footer
