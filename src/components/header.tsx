@@ -176,8 +176,21 @@ export function Header() {
           <details ref={mobileRef} className="mobile-menu">
             <summary>Menü</summary>
             <nav className="mobile-menu-sheet" aria-label="Mobile Navigation">
-              <details className="mobile-services" open>
-                <summary>SEO</summary>
+              <details className="mobile-services">
+                <summary>
+                  <span>SEO</span>
+                  <span aria-hidden="true" className="mobile-services-caret">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M4 6l4 4 4-4"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </summary>
                 {megaCategories.map((category) => (
                   <div key={`mobile-${category.title}`} className="mobile-mega-column">
                     <p className="mobile-mega-title">{category.title}</p>

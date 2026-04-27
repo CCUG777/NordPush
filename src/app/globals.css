@@ -590,6 +590,10 @@ button.button {
   z-index: 30;
 }
 .mobile-services > summary {
+  /* Layout: SEO label on the left, lila caret on the right */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   list-style: none;
   font-family: var(--font-display);
   font-weight: 500;
@@ -602,6 +606,18 @@ button.button {
   border-bottom: 1px solid var(--rui-border);
 }
 .mobile-services > summary::-webkit-details-marker { display: none; }
+.mobile-services-caret {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Brand-lila — used here as a deliberate accent on the only
+     interactive disclosure in the mobile menu (SEO sub-list toggle). */
+  color: var(--rui-primary);
+  transition: transform 0.2s var(--ease-standard);
+}
+.mobile-services[open] > summary .mobile-services-caret {
+  transform: rotate(180deg);
+}
 .mobile-mega-column { padding-top: var(--space-4); }
 .mobile-mega-title {
   font-size: 11px;
