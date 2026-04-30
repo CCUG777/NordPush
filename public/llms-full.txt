@@ -38,9 +38,13 @@ NordPush arbeitet primär mit **B2B-Unternehmen mit 5–250 Mitarbeitenden** in 
 
 ### Website-Entwicklung
 
+**Starter Website** (ab 3.900 € Einmalkauf oder ab 199 €/Monat im Abo): Drei- bis fünfseitige Website mit Strategie-Workshop, individuellem Konzept und BFSG-konformer Umsetzung. Niederschwelliger Einstieg für Unternehmen, die mehr als ein Template-Setup wollen, aber noch nicht die volle WordPress-Tiefe brauchen.
+
 **Landingpages** (ab 4.900 € Einmalkauf oder ab 229 €/Monat im Abo): Conversion-optimierte Einzelseiten mit integriertem Analytics-Setup, typisch 4–6 Sektionen. Geeignet für Einzelkampagnen, Events, Produkt-Launches.
 
 **WordPress-Websites** (ab 9.900 € oder ab 479 €/Monat): Individuelle Themes ohne Page-Builder, redaktionell pflegbar durch den Kunden. Custom Blocks für die wiederkehrenden Content-Typen, saubere CSS-Architektur. Inklusive Security-Hardening und Performance-Tuning.
+
+**Next.js Premium** (ab 12.900 € Einmalkauf oder ab 599 €/Monat im Abo): Headless oder Hybrid auf Next.js — Top-Speed, Core Web Vitals im grünen Bereich, beste SEO-Performance. Edge-Hosting auf Vercel. Für ambitionierte E-Commerce-, SaaS- und B2B-Kunden, denen klassisches WordPress-Tempo nicht reicht.
 
 **Online-Shops** (ab 14.900 € oder ab 699 €/Monat): WooCommerce oder Shopify, je nach Sortimentsgröße und Integration-Bedarf. SEO-bereit mit Produkt-Schema, saubere Kategoriestruktur, hreflang bei internationalen Shops.
 

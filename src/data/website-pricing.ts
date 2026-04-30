@@ -25,6 +25,11 @@ export type WebsitePricingTier = {
 
 export const websitePricingTiers: readonly WebsitePricingTier[] = [
   {
+    value: "ab 3.900 €",
+    title: "Starter Website",
+    body: "3–5 Seiten mit Strategie-Workshop, individuellem Konzept und BFSG-konformer Umsetzung. Der niederschwellige Einstieg in NordPush.",
+  },
+  {
     value: "ab 4.900 €",
     title: "Landingpage",
     body: "Einzel-Seite mit Konzept, Design, Entwicklung und Analytics-Anbindung.",
@@ -35,6 +40,11 @@ export const websitePricingTiers: readonly WebsitePricingTier[] = [
     body: "Mehrseitige Unternehmens-Website mit individuellem Theme und redaktionellem System.",
   },
   {
+    value: "ab 12.900 €",
+    title: "Next.js Premium",
+    body: "Headless oder Hybrid auf Next.js — Top-Speed, Core Web Vitals im grünen Bereich, beste SEO-Performance. Für ambitionierte E-Commerce-, SaaS- und B2B-Teams.",
+  },
+  {
     value: "ab 14.900 €",
     title: "Online-Shop",
     body: "E-Commerce-Projekt auf WooCommerce oder Shopify, bereit für SEO und Conversion.",
@@ -42,7 +52,7 @@ export const websitePricingTiers: readonly WebsitePricingTier[] = [
   {
     value: "auf Anfrage",
     title: "Individuelle Projekte",
-    body: "Headless-Setups, Marktplätze, Mehrsprachigkeit oder komplexe Integrationen — Umfang und Preis klären wir im Scope-Gespräch.",
+    body: "Marktplätze, Mehrsprachigkeit oder komplexe Integrationen — Umfang und Preis klären wir im Scope-Gespräch.",
   },
 ];
 
@@ -63,6 +73,23 @@ export type WebsiteAboTier = {
 };
 
 export const websiteAboTiers: readonly WebsiteAboTier[] = [
+  {
+    id: "starter-abo",
+    title: "Starter-Abo",
+    rate: "199 €",
+    suffix: "/ Monat",
+    term: "24 Monate Mindestlaufzeit",
+    equivalent: "≈ 4.776 € auf 24 Monate",
+    body:
+      "Drei- bis fünfseitige Starter-Website mit Strategie-Workshop und BFSG-konformer Umsetzung — gehostet und gepflegt von uns.",
+    includes: [
+      "3–5 Seiten mit Konzept, Design, Entwicklung",
+      "Hosting auf NordPush-Infrastruktur",
+      "Wartung, Updates, Backups, SSL",
+      "30 Min Änderungen pro Monat inklusive",
+      "Nach 24 Monaten monatlich kündbar",
+    ],
+  },
   {
     id: "landingpage-abo",
     title: "Landingpage-Abo",
@@ -97,6 +124,23 @@ export const websiteAboTiers: readonly WebsiteAboTier[] = [
       "Nach 24 Monaten monatlich kündbar",
     ],
     recommended: true,
+  },
+  {
+    id: "nextjs-premium-abo",
+    title: "Next.js-Premium-Abo",
+    rate: "599 €",
+    suffix: "/ Monat",
+    term: "24 Monate Mindestlaufzeit",
+    equivalent: "≈ 14.376 € auf 24 Monate",
+    body:
+      "Premium-Performance auf Next.js — Headless oder Hybrid, beste Core Web Vitals und SEO-Skalierung. Für Tech-Brands und ambitionierte B2B-Auftritte.",
+    includes: [
+      "Next.js-Setup (Headless oder Hybrid)",
+      "Edge-Hosting auf Vercel-Infrastruktur",
+      "Wartung, Updates, Backups, SSL",
+      "1,5 h Änderungen pro Monat inklusive",
+      "Nach 24 Monaten monatlich kündbar",
+    ],
   },
   {
     id: "shop-abo",
