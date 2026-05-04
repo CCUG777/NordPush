@@ -133,12 +133,23 @@ const securityHeaders = [
   //   - Browser support: Chrome 96+, Firefox 110+, Safari 16.4+ — all
   //     shipped 2+ years ago, broadly safe in 2026.
   //
-  // CORP `same-site` means our own assets (images, generated OG images,
-  // the Satoshi font bundle) can be embedded across nordpush.de and any
-  // subdomain, but not hotlinked by unrelated domains.
+  // CORP `cross-origin` deliberately — earlier "same-site" choice broke a
+  // real use case: 100+ legacy eBay listings hot-link the CodeButler logo
+  // at /wp-content/uploads/2025/12/codebutler-logo.png from ebay.de pages.
+  // CORP same-site told browsers "only nordpush.de + subdomains may embed"
+  // and the listings rendered with broken images even though the file was
+  // served at HTTP 200. For a marketing site whose marketing-assets are
+  // *meant* to be referenced from elsewhere (logos in partner mentions,
+  // images in inbound listings, OG tags rendered by social platforms),
+  // hot-linking protection is the wrong default — every blocked embed is
+  // a missed brand surface, not a saved bandwidth bill.
+  //
+  // Trade-off accepted: anyone can technically embed any of our assets
+  // in their own page. For static marketing collateral that's fine —
+  // we'd rather be cited than locked down.
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
-  { key: "Cross-Origin-Resource-Policy", value: "same-site" },
+  { key: "Cross-Origin-Resource-Policy", value: "cross-origin" },
   // CSP enforcing (see comment block above for the 'unsafe-inline'
   // trade-off and why nonce/hash modes were not chosen).
   { key: "Content-Security-Policy", value: contentSecurityPolicy },
