@@ -1698,6 +1698,16 @@ body:has(.mobile-menu[open])::before {
   .websites-abo-grid { grid-template-columns: 1fr; }
 }
 
+/* SEO retainer grid on /preise/ has 4 tiers (Starter, Wachstum, Skalierung,
+   Enterprise) — a 3-column grid leaves Enterprise hanging alone in row 2.
+   Force 2+2 here for balance. Mobile breakpoint inherits the 1fr fallback. */
+.seo-pricing-section .websites-abo-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 720px) {
+  .seo-pricing-section .websites-abo-grid { grid-template-columns: 1fr; }
+}
+
 .websites-abo-card {
   position: relative;
   background: var(--rui-white);
