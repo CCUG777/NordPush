@@ -82,8 +82,14 @@ export function RichContentPage({
         eyebrow={eyebrow ?? "NordPush"}
         title={heading}
         description={heroLede}
-        primaryAction={{ href: "/kontakt/", label: "Kostenlose SEO-Analyse" }}
-        secondaryAction={{ href: "/preise/", label: "Preise ansehen" }}
+        primaryAction={{ href: "/kontakt/", label: "Kostenlose Ersteinschätzung" }}
+        secondaryAction={
+          canonicalPath === "/preise/"
+            ? undefined
+            : { href: "/preise/", label: "Leistungen & Preise ansehen" }
+        }
+        primaryMicrocopy="Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck"
+        ctaScope="hero-rich"
         headingLevel={headingLevel}
       />
 
@@ -104,17 +110,20 @@ export function RichContentPage({
           <div>
             <p className="eyebrow">Nächster Schritt</p>
             <h2>
-              Bereit für <em className="headline-italic">mehr Sichtbarkeit</em>?
+              Jetzt kostenlose Ersteinschätzung anfragen — <em className="headline-italic">unverbindlich</em>.
             </h2>
             <p>
-              Buche dir ein kostenloses SEO-Gespräch. 30 Minuten, kein Pitch – nur eine ehrliche Einschätzung
-              deiner aktuellen Lage und klare nächste Schritte.
+              30 Minuten, kein Sales-Skript — nur eine ehrliche Einschätzung deiner aktuellen Lage
+              und konkrete nächste Schritte. Du entscheidest, ob es weitergeht.
             </p>
           </div>
           <div className="final-cta-actions">
-            <Link href="/kontakt/" className="button primary">
-              <span>Kostenlose SEO-Analyse</span>
+            <Link href="/kontakt/" className="button primary" data-cta="rich-footer">
+              <span>Kostenlose Ersteinschätzung anfragen</span>
             </Link>
+            <p className="rich-final-microcopy">
+              Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck
+            </p>
           </div>
           <WaypointDivider className="rich-final-waypoint" variant="inverse" label="True North" />
         </section>

@@ -2869,10 +2869,11 @@ label {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 12px 20px;
   align-items: center;
   margin-top: var(--space-3);
 }
+.hero-microcopy { margin-top: 4px; }
 .proof-pill {
   display: inline-flex;
   align-items: center;
@@ -3072,9 +3073,17 @@ label {
 }
 .final-cta-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 12px;
-  justify-content: flex-end;
+}
+.rich-final-microcopy {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(244, 244, 244, 0.65);
+  margin: 0;
+  letter-spacing: 0.16px;
+  text-align: right;
 }
 .final-cta .button.primary {
   --btn-bg: var(--rui-white);
@@ -3091,7 +3100,8 @@ label {
 
 @media (max-width: 900px) {
   .final-cta { grid-template-columns: 1fr; }
-  .final-cta-actions { justify-content: flex-start; }
+  .final-cta-actions { align-items: flex-start; }
+  .rich-final-microcopy { text-align: left; }
   .hero-block { grid-template-columns: 1fr; }
 }
 

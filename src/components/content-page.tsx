@@ -17,8 +17,10 @@ export function ContentPage({ heading, canonicalPath, content, headingLevel = "h
         eyebrow={content.eyebrow}
         title={heading}
         description={content.heroDescription}
-        primaryAction={{ href: "/kontakt/", label: "Kostenlose SEO-Analyse" }}
-        secondaryAction={{ href: "/preise/", label: "Preise ansehen" }}
+        primaryAction={{ href: "/kontakt/", label: "Kostenlose Ersteinschätzung" }}
+        secondaryAction={{ href: "/preise/", label: "Leistungen & Preise ansehen" }}
+        primaryMicrocopy="Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck"
+        ctaScope="hero-service"
         proofBadge={content.proofBadge}
         stats={content.heroStats}
         headingLevel={headingLevel}
@@ -84,13 +86,19 @@ export function ContentPage({ heading, canonicalPath, content, headingLevel = "h
       <section className="card final-cta" data-block="final-cta">
         <div>
           <p className="eyebrow">Nächster Schritt</p>
-          <h2>{content.ctaHeading ?? "Bereit, mit uns zu starten?"}</h2>
-          <p>{content.ctaBody ?? "Sprich direkt mit Marc Friedrich. 30 Minuten, kostenlos, ohne Verkaufsshow."}</p>
+          <h2>{content.ctaHeading ?? "Jetzt kostenlose Ersteinschätzung anfragen — unverbindlich."}</h2>
+          <p>
+            {content.ctaBody ??
+              "30 Minuten, kein Sales-Skript — nur eine ehrliche Einschätzung deiner aktuellen Lage und konkrete nächste Schritte."}
+          </p>
         </div>
         <div className="final-cta-actions">
-          <Link href="/kontakt/" className="button primary">
-            Kostenlose SEO-Analyse
+          <Link href="/kontakt/" className="button primary" data-cta="service-footer">
+            Kostenlose Ersteinschätzung anfragen
           </Link>
+          <p className="rich-final-microcopy">
+            Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck
+          </p>
         </div>
       </section>
     </article>
