@@ -1088,6 +1088,16 @@ body:has(.mobile-menu[open])::before {
   gap: var(--space-6);
   margin-bottom: var(--space-12);
 }
+
+/* Tech-stack section on /websites/ has 4 cards (WordPress, Next.js,
+   Headless, Performance) — a 3-col grid leaves the 4th alone in
+   row 2. Force 2+2 here for visual balance. */
+#tech-stack .home-proof-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 720px) {
+  #tech-stack .home-proof-grid { grid-template-columns: 1fr; }
+}
 .home-proof-card {
   background: var(--rui-surface);
   border-radius: var(--radius-lg);
