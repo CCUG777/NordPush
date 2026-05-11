@@ -98,7 +98,7 @@ const servicePillars: readonly ServicePillar[] = [
       { label: "Priorisierung nach Funnel und Potenzial" },
     ],
     href: "/seo-strategie/",
-    cta: "Strategie ansehen",
+    cta: "SEO-Strategie entwickeln lassen",
   },
   {
     title: "Technik & UX",
@@ -110,7 +110,7 @@ const servicePillars: readonly ServicePillar[] = [
       { label: "Saubere Übergaben für Dev-Teams" },
     ],
     href: "/technisches-seo-audit/",
-    cta: "Technisches SEO prüfen",
+    cta: "Technische Bremsen aufdecken",
   },
   {
     title: "Content & Ausbau",
@@ -231,13 +231,20 @@ export default function HomePage() {
           </div>
 
           <div className="home-refresh-actions">
-            <Link href="/kontakt/" className="button primary">
+            <Link href="/kontakt/" className="button primary" data-cta="hero-primary">
               Kostenlose Ersteinschätzung
             </Link>
-            <Link href="/preise/" className="button">
-              Leistungen &amp; Preise
+            <Link
+              href="/preise/"
+              className="home-refresh-secondary-link"
+              data-cta="hero-secondary"
+            >
+              Leistungen &amp; Preise ansehen <span aria-hidden="true">→</span>
             </Link>
           </div>
+          <p className="home-refresh-microcopy">
+            Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck
+          </p>
 
           <ul className="home-refresh-points">
             <li>Audit, Roadmap und schnelle Priorisierung statt Maßnahmenfriedhof.</li>
@@ -365,8 +372,12 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Link href={pillar.href} className="text-link home-service-link">
-                {pillar.cta}
+              <Link
+                href={pillar.href}
+                className="text-link home-service-link"
+                data-cta={`card-${pillar.title.split(" ")[0].toLowerCase()}`}
+              >
+                {pillar.cta} <span aria-hidden="true">→</span>
               </Link>
             </article>
           ))}
@@ -453,35 +464,38 @@ export default function HomePage() {
       </section>
 
       <FAQAccordion
-        heading="Häufige Fragen vor dem Projektstart"
+        heading="Noch Fragen? Wir schauen kurz gemeinsam drauf."
         items={homeFaqs}
         aside={
           <>
             <p>
-              Wenn du möchtest, schauen wir vorab auf deine wichtigsten URLs, Rankings und technischen
-              Risiken. Ohne Sales-Skript, mit einer ehrlichen ersten Einschätzung.
+              Lieber direkt sprechen statt scrollen? 30 Minuten, ohne Sales-Skript — wir hören zu,
+              du entscheidest.
             </p>
-            <Link href="/kontakt/" className="button">
-              Projekt besprechen
+            <Link href="/kontakt/" className="button primary" data-cta="faq">
+              Erstgespräch anfragen
             </Link>
           </>
         }
       />
 
-      <section className="home-refresh-cta">
+      <section className="home-refresh-cta home-refresh-cta--accent">
         <div className="home-refresh-cta-copy">
           <p className="eyebrow">Nächster Schritt</p>
-          <h2>Wenn Sichtbarkeit endlich als Wachstumshebel funktionieren soll, lass uns starten.</h2>
+          <h2>Jetzt kostenlose Ersteinschätzung anfragen — unverbindlich.</h2>
           <p>
-            Wir schauen gemeinsam auf die Seiten, Themen und technischen Bremsen, die heute den größten
-            Unterschied machen würden.
+            Du bekommst eine ehrliche Einschätzung zu deinen wichtigsten Seiten, Themen und
+            technischen Bremsen — keine Verkaufspräsentation, kein Vertrag.
           </p>
         </div>
 
         <div className="home-refresh-cta-actions">
-          <Link href="/kontakt/" className="button primary">
-            Kostenlose Analyse anfragen
+          <Link href="/kontakt/" className="button primary" data-cta="footer">
+            Kostenlose Ersteinschätzung anfragen
           </Link>
+          <p className="home-refresh-cta-microcopy">
+            Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck
+          </p>
         </div>
       </section>
     </SiteShell>

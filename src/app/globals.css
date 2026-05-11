@@ -908,7 +908,38 @@ body:has(.mobile-menu[open])::before {
   margin-top: var(--space-6);
 }
 
-.home-refresh-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--space-3); }
+.home-refresh-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: var(--space-3); }
+
+.home-refresh-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--rui-text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rui-border);
+  padding-bottom: 2px;
+  transition: color 160ms ease, border-color 160ms ease, gap 160ms ease;
+}
+.home-refresh-secondary-link:hover {
+  color: var(--rui-ink);
+  border-color: var(--rui-ink);
+  gap: 10px;
+}
+.home-refresh-secondary-link:focus-visible {
+  outline: 2px solid var(--rui-primary);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.home-refresh-microcopy {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--rui-text-secondary);
+  margin: 10px 0 0;
+  letter-spacing: 0.16px;
+}
 
 .home-refresh-points {
   list-style: none;
@@ -2469,9 +2500,21 @@ body:has(.mobile-menu[open])::before {
 }
 .home-refresh-cta-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 12px;
-  justify-content: flex-end;
+}
+.home-refresh-cta--accent {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(91, 33, 213, 0.35);
+}
+.home-refresh-cta-microcopy {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(244, 244, 244, 0.65) !important;
+  margin: 0;
+  letter-spacing: 0.16px;
+  text-align: right;
 }
 .home-refresh-cta .button.primary {
   --btn-bg: var(--rui-white);
@@ -2712,7 +2755,8 @@ label {
   .home-service-grid,
   .service-cards { grid-template-columns: 1fr 1fr; }
   .home-refresh-cta { grid-template-columns: 1fr; }
-  .home-refresh-cta-actions { justify-content: flex-start; }
+  .home-refresh-cta-actions { align-items: flex-start; }
+  .home-refresh-cta-microcopy { text-align: left; }
   .primary-nav,
   .header-cta-pair { display: none; }
   /* No `position: relative` here on purpose: the .mobile-menu-sheet is
@@ -3539,6 +3583,91 @@ label {
 /* Contact hero — form IS the above-the-fold hero (conversion-first) */
 .contact-hero {
   padding: clamp(24px, 4vw, 56px) 0 clamp(48px, 6vw, 80px);
+}
+
+/* Tier-demarcation block — free Erstgespräch vs. paid Quick-Audit.
+   Sits between contact-hero and the FAQ; tells the visitor exactly
+   what's bundled in the gratis 30 min vs. what the 299 € product is. */
+.contact-tiers {
+  padding: clamp(40px, 5vw, 72px) 0;
+}
+.contact-tiers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+.contact-tier-card {
+  background: var(--rui-white);
+  border: 1px solid var(--rui-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.contact-tier-card--free {
+  background: var(--rui-surface);
+}
+.contact-tier-card--paid {
+  border-color: rgba(91, 33, 213, 0.35);
+  box-shadow: inset 0 0 0 1px rgba(91, 33, 213, 0.12);
+}
+.contact-tier-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rui-primary);
+  margin: 0;
+}
+.contact-tier-card--free .contact-tier-eyebrow {
+  color: var(--rui-text-secondary);
+}
+.contact-tier-card h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--rui-ink);
+}
+.contact-tier-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.contact-tier-card ul li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--rui-text);
+}
+.contact-tier-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 10px;
+  height: 2px;
+  background: var(--rui-primary);
+  border-radius: 1px;
+}
+.contact-tier-card--free ul li::before { background: var(--rui-text-secondary); }
+.contact-tier-note {
+  font-size: 13px;
+  color: var(--rui-text-secondary);
+  margin: auto 0 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--rui-border);
+  letter-spacing: 0.16px;
+}
+@media (max-width: 800px) {
+  .contact-tiers-grid { grid-template-columns: 1fr; }
 }
 .contact-grid {
   display: grid;

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { AgbContent } from "@/components/agb-content";
 import { ContactForm } from "@/components/contact-form";
@@ -152,6 +153,46 @@ export default async function LegalPage({ params }: PageProps) {
             </div>
 
             <ContactForm />
+          </div>
+        </section>
+
+        {/* Demarcation: free initial conversation vs. paid Quick-Audit deliverable.
+            Pre-empts the "is the free analysis the same as the 299 € audit?"
+            confusion that the homepage CTA copy can otherwise trigger. */}
+        <section className="contact-tiers" aria-labelledby="contact-tiers-heading">
+          <div className="section-heading section-heading--compact">
+            <p className="eyebrow">Was du bekommst</p>
+            <h2 id="contact-tiers-heading">Kostenlos sprechen oder mit Dokument loslegen.</h2>
+            <p>
+              Damit klar ist, was im Erstgespräch passiert und wo ein bezahltes Audit beginnt —
+              ohne Erwartung-Mismatch.
+            </p>
+          </div>
+          <div className="contact-tiers-grid">
+            <article className="contact-tier-card contact-tier-card--free">
+              <p className="contact-tier-eyebrow">Kostenlos · 30 Min</p>
+              <h3>Erstgespräch &amp; erste Einschätzung</h3>
+              <ul>
+                <li>Gemeinsamer Blick auf deine wichtigsten URLs, Rankings und die größten Bremsen</li>
+                <li>Ehrliche Einschätzung, ob &amp; wo SEO sinnvoll wäre — keine Verkaufspräsentation</li>
+                <li>Konkrete erste Impulse, die du auch ohne Mandat umsetzen kannst</li>
+              </ul>
+              <p className="contact-tier-note">Kein schriftliches Dokument · keine Vertragsbindung</p>
+            </article>
+            <article className="contact-tier-card contact-tier-card--paid">
+              <p className="contact-tier-eyebrow">Ab 299 € · einmalig</p>
+              <h3>SEO-Quick-Audit (schriftliches Dokument)</h3>
+              <ul>
+                <li>Strukturierte technische und inhaltliche Sichtung mit priorisierten Maßnahmen</li>
+                <li>Dokumentierte Empfehlungen, intern an Dev oder Marketing weiterleitbar</li>
+                <li>Bei Retainer-Buchung innerhalb 4 Wochen wird der Audit voll angerechnet</li>
+              </ul>
+              <p className="contact-tier-note">
+                <Link href="/preise/" className="text-link">
+                  Details auf der Preisseite <span aria-hidden="true">→</span>
+                </Link>
+              </p>
+            </article>
           </div>
         </section>
 
