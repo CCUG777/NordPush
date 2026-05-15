@@ -135,10 +135,13 @@ export default async function LegalPage({ params }: PageProps) {
                 und wie wir helfen können.
               </p>
 
-              <div className="contact-proof">
-                <span className="contact-proof-pill">Antwort innerhalb von 24h</span>
-                <span className="contact-proof-pill">Kostenlos &amp; unverbindlich</span>
-              </div>
+              {/* Trust signals as plain microcopy, mirroring the CTA microcopy
+                  pattern used across hero/footer CTAs. Previously two filled
+                  purple pills that looked tappable but weren't — visual-review
+                  finding #6. */}
+              <p className="contact-proof-microcopy">
+                Antwort innerhalb 24&#160;h · kostenlos &amp; unverbindlich · kein Sales-Druck
+              </p>
 
               <div className="contact-channels">
                 <div className="contact-channel">

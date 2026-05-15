@@ -3732,24 +3732,16 @@ label {
   margin: 0;
   max-width: 38ch;
 }
-.contact-proof {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: var(--space-2) 0;
-}
-.contact-proof-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
-  background: var(--rui-primary-soft);
-  border: 1px solid var(--rui-primary-tint);
+/* Trust microcopy under the contact hero lede — replaces the previous
+   .contact-proof / .contact-proof-pill block (filled purple pills that
+   looked tappable). Mirrors the .home-refresh-microcopy treatment used
+   under every primary CTA on the site. */
+.contact-proof-microcopy {
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--rui-primary);
+  line-height: 1.5;
+  color: var(--rui-text-secondary);
+  margin: var(--space-2) 0 0;
+  letter-spacing: 0.16px;
 }
 .contact-channels {
   display: grid;
