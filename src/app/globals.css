@@ -1086,6 +1086,63 @@ body:has(.mobile-menu[open])::before {
    ------------------------------------------------------------------------- */
 .home-trust { background: var(--rui-white); }
 
+/* Trust-Strip — three stat blocks sitting directly under the hero in a
+   single horizontal band. Replaces the dense stats inside the right
+   hero panel. On mobile collapses to a 1-column stack so '100+',
+   '1 Team', 'Klar' no longer scream at 64 px each. */
+.home-trust-strip {
+  margin: clamp(20px, 3vw, 36px) 0 clamp(40px, 5vw, 64px);
+  padding: clamp(24px, 3vw, 36px) clamp(28px, 4vw, 56px);
+  background: var(--rui-surface);
+  border: 1px solid var(--rui-border);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 48px);
+  align-items: start;
+}
+.home-trust-strip-item {
+  display: grid;
+  gap: 6px;
+}
+.home-trust-strip-value {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  color: var(--rui-ink);
+  margin: 0;
+}
+.home-trust-strip-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--rui-ink);
+  margin: 0;
+}
+.home-trust-strip-note {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--rui-text-secondary);
+  margin: 0;
+  letter-spacing: 0.16px;
+  max-width: 36ch;
+}
+@media (max-width: 720px) {
+  .home-trust-strip {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .home-trust-strip-item {
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--rui-border);
+  }
+  .home-trust-strip-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
 .home-proof-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3830,7 +3887,16 @@ label {
   gap: 12px;
   cursor: pointer;
   align-items: start;
+  /* Reset the global `label { … }` styling (font-size: 13, bold, ALL-CAPS,
+     letter-spaced) which is meant for short field labels like 'NAME *'
+     and renders the multi-line DSGVO consent body as 6-line shouting on
+     mobile. Visual-review finding #11. */
   font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  text-transform: none;
+  color: var(--rui-text-secondary);
+  margin-bottom: 0;
 }
 .contact-checkbox input[type="checkbox"] {
   width: 20px;
