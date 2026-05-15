@@ -412,29 +412,10 @@ button.button {
   backdrop-filter: saturate(180%) blur(10px);
 }
 
-.site-header-utility {
-  background: var(--rui-ink);
-  color: var(--rui-white);
-}
-.site-header-utility .shell-inner {
-  padding: 10px var(--layout-padding);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  max-width: var(--layout-max);
-  font-size: 13px;
-  letter-spacing: 0.02em;
-}
-.utility-trust { color: rgba(244, 244, 244, 0.75); }
-.utility-phone {
-  color: var(--rui-white);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  border-bottom: 1.5px solid rgba(244, 244, 244, 0.35);
-  padding-bottom: 1px;
-}
-.utility-phone:hover { border-bottom-color: var(--rui-white); }
+/* Legacy utility bar (`.site-header-utility`) removed in the live visual
+   review — it duplicated the homepage H1 message, claimed above-the-fold
+   real estate on every page, and clashed with the calm Revolut-inspired
+   aesthetic. The brand promise now lives only in the hero H1 + lede. */
 
 .site-header-main .shell-inner {
   padding: 16px var(--layout-padding);

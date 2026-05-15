@@ -95,12 +95,6 @@ export function Header() {
 
   return (
     <header className="site-header" data-ux-slot="Header">
-      <div className="site-header-utility">
-        <div className="shell-inner">
-          <span className="utility-trust">Websites und SEO für Unternehmen mit Anspruch an Substanz und Klarheit</span>
-        </div>
-      </div>
-
       <div className="site-header-main">
         <div className="shell-inner">
           <Link href="/" className="brand" aria-label="NordPush Startseite">
