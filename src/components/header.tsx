@@ -159,11 +159,11 @@ export function Header() {
           </nav>
 
           <div className="header-cta-pair">
-            <Link href="/preise/" className="button">
+            <Link href="/preise/" className="button" data-cta="header-secondary">
               Preise
             </Link>
-            <Link href="/kontakt/" className="button primary">
-              Ersteinschätzung
+            <Link href="/kontakt/" className="button primary" data-cta="header-primary">
+              Kostenlose Ersteinschätzung
             </Link>
           </div>
 
