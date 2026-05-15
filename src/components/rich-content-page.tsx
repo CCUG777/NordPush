@@ -26,6 +26,14 @@ type RichContentPageProps = {
 /**
  * Auto-generate a 3-point TL;DR from the hero lede + first two sentences of body.
  * Falls back gracefully when content is sparse.
+ *
+ * Pre-cleans the body to drop WordPress hero-duplication artifacts that leak
+ * into auto-extraction: leading <h4>/<p>/<a>/<h5> blocks that mirror the hero
+ * itself, plus emoji-prefixed CTA links (✅/➡) and the "Vertraut von B2B-…"
+ * proof-pill text. Without this pre-clean, the TL;DR rendered things like
+ * "✅ Jetzt meine kostenlose SEO-Analyse anfragen Vertraut von B2B-Unternehmen
+ * in ganz DACH Was ist SEO…" as a single bullet (visible in the rendered box
+ * but stripped from the body via rich-body's enhance()).
  */
 function autoTldr(lede: string, bodyHtml: string): string[] {
   const pts: string[] = [];
@@ -35,18 +43,34 @@ function autoTldr(lede: string, bodyHtml: string): string[] {
     pts.push(short);
   }
 
+  // Strip the duplicated hero block (mirrors the rich-body enhance() rule).
+  // This is the same regex used to remove it from the rendered body — we run
+  // it here too so the TL;DR is generated from the same content the user
+  // actually sees, not from leaked WordPress hero leftovers.
+  const cleaned = bodyHtml.replace(
+    /(<article>\s*(?:<header><\/header>)?\s*<div>)\s*<div>\s*<(?:h4|h5|p)>[\s\S]*?<a[^>]*>[\s\S]*?<\/a>\s*<h5>[^<]*<\/h5>\s*<\/div>/,
+    "$1",
+  );
+
   // Strip HTML tags, grab first few sentences from body
-  const text = bodyHtml
+  const text = cleaned
     .replace(/<script[\s\S]*?<\/script>/gi, "")
     .replace(/<style[\s\S]*?<\/style>/gi, "")
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 
+  const ledeSig = ledeClean.slice(0, 30).toLowerCase();
   const sentences = text.match(/[^.!?]+[.!?]+/g) ?? [];
   for (const s of sentences) {
     const t = s.trim();
     if (t.length < 30 || t.length > 180) continue;
+    // Drop sentences that start with the same prefix as the lede — they're
+    // duplicates of content already shown one box above.
+    if (t.slice(0, 30).toLowerCase() === ledeSig) continue;
+    // Drop sentences containing CTA-emoji or proof-pill leakage.
+    if (/[✅➡🚀⭐👉]/u.test(t)) continue;
+    if (/Vertraut von B2B-Unternehmen/i.test(t)) continue;
     if (pts.length >= 3) break;
     if (pts.some((p) => p.slice(0, 20) === t.slice(0, 20))) continue;
     pts.push(t);

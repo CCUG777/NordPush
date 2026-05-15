@@ -37,6 +37,11 @@ function enhance(html: string): string {
   //   #contact → /kontakt/  (dedicated Kontakt page in the new info architecture)
   out = out.replace(/href="#contact"/g, 'href="/kontakt/"');
 
+  // Strip emoji prefixes (✅, ➡, 🚀, ⭐, 👉) from CTA link text — they're
+  // WordPress-era visual flourishes that clash with the calm Revolut-inspired
+  // aesthetic and end up looking like rendering bugs at body sizes.
+  out = out.replace(/(<a[^>]*>)\s*[✅➡🚀⭐👉]\s*/g, "$1");
+
   // Strip WordPress tab TOC items — `<a href="#tab-…"><span>…</span></a>` pointed
   // into tab panels that don't exist in the new layout (the panel content itself
   // is still present inline below, so the list is redundant navigation).
