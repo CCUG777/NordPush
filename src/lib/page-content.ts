@@ -1,3 +1,4 @@
+import { getH1Override } from "@/data/h1-overrides";
 import { getMetadataRecord } from "@/lib/metadata-catalog";
 import { normalizePath } from "@/lib/url-normalization";
 
@@ -786,6 +787,11 @@ export function getPageContent(canonicalPath: string): PageContent {
 
 export function getHeadingFor(canonicalPath: string, fallbackHeading: string): string {
   const normalized = normalizePath(canonicalPath);
+  // Curated overrides win over the WordPress snapshot — fixes typographic
+  // inconsistencies (e.g. "SEO Strategie" → "SEO-Strategie") without
+  // mutating the build-time metadata artifact.
+  const override = getH1Override(normalized);
+  if (override) return override;
   const record = getMetadataRecord(normalized);
   return record?.h1?.trim() || record?.title?.trim() || fallbackHeading;
 }

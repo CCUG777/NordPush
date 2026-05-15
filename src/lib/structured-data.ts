@@ -1,4 +1,5 @@
 import { getBlogDates } from "@/data/blog-dates";
+import { getH1Override } from "@/data/h1-overrides";
 import { getMetadataRecord } from "@/lib/metadata-catalog";
 import { SITE_URL, normalizePath, toAbsoluteUrl } from "@/lib/url-normalization";
 
@@ -127,6 +128,11 @@ function buildFaqSchema(canonicalPath: string, runtimeFaqs?: readonly FaqEntry[]
 }
 
 function resolvePageName(canonicalPath: string, fallbackName: string): string {
+  // Curated H1 overrides win — keeps JSON-LD `name`/`headline` aligned with
+  // the visible H1, preventing the schema-drift the SEOmator CLI flags
+  // when extracted-snapshot text and rendered text diverge.
+  const override = getH1Override(canonicalPath);
+  if (override) return override;
   const record = getMetadataRecord(canonicalPath);
   return record?.h1?.trim() || record?.title?.trim() || fallbackName;
 }
