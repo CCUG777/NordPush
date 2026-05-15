@@ -266,10 +266,14 @@ export default function WebsitesPage() {
           </div>
 
           <div className="home-refresh-heading">
+            {/* Em-dash is bound to "Substanz" via NBSP (&#160;) so it cannot
+                end up dangling alone at the end of a wrapped line on mobile,
+                and the natural break now falls cleanly after the dash, before
+                "Design". Visual-review finding #5. */}
             <h1>
-              Websites mit
-              <span className="accent-text"> Substanz </span>
-              — Design, Technik und SEO aus einer Hand.
+              Websites mit{" "}
+              <span className="accent-text">Substanz&#160;—</span>{" "}
+              Design, Technik und SEO aus einer Hand.
             </h1>
             <p className="home-refresh-lede">
               Wir bauen Webseiten, Landingpages und Online-Shops für Unternehmen, die Gestaltung, Geschwindigkeit
