@@ -283,13 +283,20 @@ export default function WebsitesPage() {
           </div>
 
           <div className="home-refresh-actions">
-            <Link href="/kontakt/" className="button primary">
-              Projekt anfragen
+            <Link href="/kontakt/" className="button primary" data-cta="websites-hero-primary">
+              Kostenlose Ersteinschätzung
             </Link>
-            <Link href="#arbeiten" className="button">
-              Unsere Arbeiten
+            <Link
+              href="#arbeiten"
+              className="home-refresh-secondary-link"
+              data-cta="websites-hero-secondary"
+            >
+              Unsere Arbeiten ansehen <span aria-hidden="true">→</span>
             </Link>
           </div>
+          <p className="home-refresh-microcopy">
+            Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck
+          </p>
 
           <ul className="home-refresh-points">
             <li>WordPress, Next.js oder Headless — passend zu deiner Redaktion und deinem Stack.</li>
