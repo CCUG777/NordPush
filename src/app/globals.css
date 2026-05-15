@@ -1361,23 +1361,32 @@ body:has(.mobile-menu[open])::before {
    on /websites/. Subtle enough to not undermine the premium positioning,
    visible enough to catch budget-conscious prospects.
    ------------------------------------------------------------------------- */
+/* Starter-Bonus callout — premium dark ink-card treatment.
+   Previously this was a fully purple-on-lavender card (filled
+   --rui-primary-soft background + purple eyebrow + purple body),
+   which broke the design system's "purple as accent only" rule and
+   made the CTA pill disappear into its own background. Visual-review
+   finding #7. Now mirrors the homepage footer-CTA treatment: near-
+   black surface, white text, purple-accent eyebrow + dot, white CTA
+   pill that pops cleanly against the dark ground. */
 .websites-starter-bonus {
   display: flex;
   align-items: flex-start;
   gap: var(--space-5);
   padding: clamp(20px, 2.4vw, 28px) clamp(24px, 3vw, 36px);
   margin: var(--space-6) 0 var(--space-8);
-  background: var(--rui-primary-soft);
-  border: 1px solid var(--rui-primary-tint);
+  background: var(--rui-ink);
+  border: 1px solid rgba(91, 33, 213, 0.35);
   border-radius: var(--radius-lg);
   flex-wrap: wrap;
+  color: var(--rui-white);
 }
 .websites-starter-bonus-dot {
   width: 10px;
   height: 10px;
   border-radius: var(--radius-pill);
   background: var(--rui-primary);
-  box-shadow: 0 0 0 5px var(--rui-primary-soft);
+  box-shadow: 0 0 0 5px rgba(91, 33, 213, 0.18);
   flex: 0 0 auto;
   margin-top: 7px;
 }
@@ -1398,12 +1407,12 @@ body:has(.mobile-menu[open])::before {
 .websites-starter-bonus-body {
   font-size: 15px;
   line-height: 1.55;
-  color: var(--rui-ink);
+  color: rgba(244, 244, 244, 0.85);
   margin: 0;
 }
 .websites-starter-bonus-body strong {
   font-weight: 500;
-  color: var(--rui-ink);
+  color: var(--rui-white);
 }
 .websites-starter-bonus-link {
   flex: 0 0 auto;
@@ -1414,15 +1423,16 @@ body:has(.mobile-menu[open])::before {
   font-family: var(--font-display);
   font-weight: 500;
   font-size: 15px;
-  color: var(--rui-white);
-  background: var(--rui-primary);
+  color: var(--rui-ink);
+  background: var(--rui-white);
   padding: 10px 20px;
   border-radius: var(--radius-pill);
-  transition: background 0.2s var(--ease-standard);
+  transition: opacity 0.2s var(--ease-standard);
 }
 .websites-starter-bonus-link:hover {
-  background: var(--rui-primary-hover);
-  color: var(--rui-white);
+  background: var(--rui-white);
+  color: var(--rui-ink);
+  opacity: 0.88;
 }
 @media (max-width: 720px) {
   .websites-starter-bonus-link { width: 100%; justify-content: center; }
