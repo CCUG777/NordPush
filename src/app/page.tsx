@@ -260,16 +260,6 @@ export default function HomePage() {
               <span className="home-status-pill">Strategisch. Sauber. Direkt.</span>
             </div>
 
-            <div className="home-signal-grid">
-              {heroSignals.map((signal) => (
-                <article key={signal.label} className="home-signal-card">
-                  <p className="home-signal-value">{signal.value}</p>
-                  <p className="home-signal-label">{signal.label}</p>
-                  <p className="home-signal-note">{signal.note}</p>
-                </article>
-              ))}
-            </div>
-
             <div className="home-panel-block">
               <p className="home-panel-label">In den ersten 30 Tagen</p>
               <ul className="home-panel-list">
@@ -288,6 +278,21 @@ export default function HomePage() {
             </div>
           </div>
         </aside>
+      </section>
+
+      {/* Trust-Strip — moved out of the right hero panel where 5 nested
+          content blocks (pill + stats + plan + footer-note) made the card
+          feel dense vs. the airy left column. The stats are higher-value
+          when given their own breathing-room as a horizontal proof-band
+          right under the hero. Visual-review finding #12 (Option A). */}
+      <section className="home-trust-strip" aria-label="Vertrauensindikatoren">
+        {heroSignals.map((signal) => (
+          <article key={signal.label} className="home-trust-strip-item">
+            <p className="home-trust-strip-value">{signal.value}</p>
+            <p className="home-trust-strip-label">{signal.label}</p>
+            <p className="home-trust-strip-note">{signal.note}</p>
+          </article>
+        ))}
       </section>
 
       <section className="home-section home-trust">
