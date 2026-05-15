@@ -167,6 +167,14 @@ export function Header() {
             </Link>
           </div>
 
+          {/* Mobile-only Kontakt pill — restores an above-the-fold conversion
+              action on phones, where the desktop .header-cta-pair is hidden
+              and the only header action was "Menü" (a navigation toggle, not
+              a business action). Visual-review finding #4. */}
+          <Link href="/kontakt/" className="header-mobile-cta" data-cta="mobile-header">
+            Kontakt
+          </Link>
+
           <details ref={mobileRef} className="mobile-menu">
             <summary>Menü</summary>
             <nav className="mobile-menu-sheet" aria-label="Mobile Navigation">

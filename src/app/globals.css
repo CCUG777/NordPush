@@ -531,6 +531,29 @@ button.button {
 .header-cta-pair { display: flex; gap: 10px; align-items: center; }
 .header-cta-pair .button { padding: 10px 22px; font-size: 14px; }
 
+/* Mobile-only Kontakt pill — restores the conversion action above the
+   fold on phones where .header-cta-pair is hidden. Sits left of the
+   Menü toggle as a compact primary action. */
+.header-mobile-cta {
+  display: none;
+  align-items: center;
+  background: var(--rui-primary);
+  color: var(--rui-white);
+  border: 1px solid var(--rui-primary);
+  border-radius: var(--radius-pill);
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  text-decoration: none;
+  transition: opacity 160ms;
+}
+.header-mobile-cta:hover { opacity: 0.88; }
+.header-mobile-cta:focus-visible {
+  outline: 2px solid var(--rui-ink);
+  outline-offset: 3px;
+}
+
 .mobile-menu { display: none; }
 .mobile-menu > summary {
   list-style: none;
@@ -2760,6 +2783,10 @@ label {
   .home-refresh-cta-microcopy { text-align: left; }
   .primary-nav,
   .header-cta-pair { display: none; }
+  /* Show the compact Kontakt pill — sits left of the Menü toggle.
+     `margin-left: auto` pushes it (and the following Menü pill) to the
+     right edge so the visible mobile-row reads: [Logo] .... [Kontakt][Menü] */
+  .header-mobile-cta { display: inline-flex; margin-left: auto; }
   /* No `position: relative` here on purpose: the .mobile-menu-sheet is
      position: absolute with right/left = layout-padding, and we want it
      to anchor to the full-width .site-header (which is position: sticky
@@ -2805,6 +2832,8 @@ label {
 @media (max-width: 400px) {
   .button,
   button.button { padding: 12px 22px; font-size: 15px; }
+  /* Tighten mobile-CTA padding so [Logo] [Kontakt] [Menü] fits on a 360 px row. */
+  .header-mobile-cta { padding: 8px 14px; font-size: 13px; }
 }
 
 /* -------------------------------------------------------------------------
