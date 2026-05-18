@@ -6,6 +6,7 @@ import { ContentPage } from "@/components/content-page";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { ImpressumContent } from "@/components/impressum-content";
 import { JsonLd } from "@/components/json-ld";
+import { PaketFinder } from "@/components/paket-finder";
 import { RichContentPage } from "@/components/rich-content-page";
 import { SeoPricingSection } from "@/components/seo-pricing-section";
 import { SiteShell } from "@/components/site-shell";
@@ -251,6 +252,7 @@ export default async function LegalPage({ params }: PageProps) {
           afterHero={
             isPreise ? (
               <>
+                <PaketFinder />
                 <WebsitePricingTeaser />
                 <SeoPricingSection />
               </>
