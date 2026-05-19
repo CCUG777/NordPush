@@ -3862,7 +3862,7 @@ label {
 .paket-finder-segment:has(.pill-tag) { padding-right: 84px; }
 .paket-finder-segment:hover { border-color: var(--rui-border-strong); }
 .paket-finder-segment:active { transform: scale(0.99); }
-.paket-finder-segment[aria-pressed="true"] {
+.paket-finder-segment[aria-checked="true"] {
   border-color: var(--rui-primary);
   background: rgba(91, 33, 213, 0.06);
   box-shadow: inset 0 0 0 1px var(--rui-primary);
@@ -3915,7 +3915,7 @@ label {
   align-items: center;
   gap: 8px;
 }
-.paket-finder-toggle button[aria-pressed="true"] {
+.paket-finder-toggle button[aria-checked="true"] {
   background: var(--rui-ink);
   color: var(--rui-white);
 }
@@ -3932,7 +3932,7 @@ label {
   font-weight: 600;
   margin-left: 2px;
 }
-.paket-finder-toggle button[aria-pressed="true"] small {
+.paket-finder-toggle button[aria-checked="true"] small {
   background: rgba(255, 255, 255, 0.18);
   color: var(--rui-white);
 }

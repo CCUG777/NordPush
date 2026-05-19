@@ -348,7 +348,7 @@ export function PaketFinder() {
           )}
 
           <p className="paket-finder-micro">
-            Grobe Schätzung auf Basis der „ab"-Preise. Finaler Umfang &amp; Festpreis kommen nach deinem
+            Grobe Schätzung auf Basis der &bdquo;ab&ldquo;-Preise. Finaler Umfang &amp; Festpreis kommen nach deinem
             30-Min-Erstgespräch — kein Sales-Druck, kein Vertrag erforderlich.
           </p>
 
@@ -432,9 +432,10 @@ function Segments({
           type="button"
           role="radio"
           className="paket-finder-segment"
-          aria-pressed={value === opt.value}
+          aria-checked={value === opt.value}
           onClick={() => onChange(opt.value)}
           data-value={opt.value}
+          data-pressed={value === opt.value}
         >
           {opt.label}
           <small>{opt.sub}</small>
@@ -465,8 +466,9 @@ function Toggle({
           key={opt.value}
           type="button"
           role="radio"
-          aria-pressed={value === opt.value}
+          aria-checked={value === opt.value}
           onClick={() => onChange(opt.value)}
+          data-pressed={value === opt.value}
         >
           {opt.label}
           {opt.suffix ? <small>{opt.suffix}</small> : null}
