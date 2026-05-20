@@ -3699,8 +3699,17 @@ label {
    ------------------------------------------------------------------------- */
 .paket-finder {
   margin: clamp(40px, 5vw, 72px) 0 clamp(48px, 6vw, 88px);
+  /* Constrain to grid-track width — without min-width: 0 the grid-auto-columns
+     on the parent .content-page (display: grid, no explicit template) sizes
+     the track to fit the largest min-content of the section, which on narrow
+     viewports is the longest segment label + pill-tag. That makes the whole
+     finder overflow the page's horizontal layout-padding on phones <=480 px.
+     Setting min-width: 0 + box-sizing tells the grid to honor parent width. */
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
-.paket-finder-inner { max-width: 920px; margin: 0 auto; }
+.paket-finder-inner { max-width: 920px; margin: 0 auto; min-width: 0; }
 
 .paket-finder-hero { margin-bottom: 32px; }
 .paket-finder-hero h2 {
@@ -3807,6 +3816,15 @@ label {
   margin: 0 0 14px;
   letter-spacing: -0.005em;
   color: var(--rui-ink);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+.paket-finder-hero h2,
+.paket-finder-custom-banner .headline {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 .paket-finder-step-note {
   font-size: 13px;
@@ -3843,6 +3861,7 @@ label {
   }
 }
 
+.paket-finder-segments { min-width: 0; }
 .paket-finder-segment {
   position: relative;
   cursor: pointer;
@@ -3858,8 +3877,25 @@ label {
   text-align: left;
   line-height: 1.3;
   min-height: 76px;
+  /* Allow segment to shrink below its content's min-content width so a
+     pill-tag-bearing label doesn't force the grid track to overflow. */
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .paket-finder-segment:has(.pill-tag) { padding-right: 84px; }
+@media (max-width: 480px) {
+  /* Pill-tag padding-right is too aggressive on phones — shrink the reserved
+     gutter so the label has room and the pill never appears clipped. */
+  .paket-finder-segment:has(.pill-tag) { padding-right: 72px; }
+  .paket-finder-segment .pill-tag {
+    top: 8px;
+    right: 8px;
+    font-size: 9px;
+    padding: 2px 6px;
+    letter-spacing: 0.06em;
+  }
+}
 .paket-finder-segment:hover { border-color: var(--rui-border-strong); }
 .paket-finder-segment:active { transform: scale(0.99); }
 .paket-finder-segment[aria-checked="true"] {
