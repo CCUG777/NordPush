@@ -410,6 +410,11 @@ button.button {
   background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--rui-border);
   backdrop-filter: saturate(180%) blur(10px);
+  /* Promote to its own compositor layer so the sticky transform + backdrop-
+     filter don't cause scroll-repaint flicker on iOS Safari / older Chrome
+     for Android. Helps on devices where backdrop-filter painting otherwise
+     lags by 1 frame during fast scroll. */
+  will-change: transform;
 }
 
 /* Legacy utility bar (`.site-header-utility`) removed in the live visual
@@ -3526,6 +3531,21 @@ label {
 
 /* Consecutive rb-step blocks: add spacing between them */
 .rich-prose .rb-step + .rb-step { margin-top: var(--space-3); }
+
+/* Mobile: collapse the 2-column step layout (pill | content) to a single
+   stacked column so the body text gets the full card width instead of
+   wrapping at ~4-5 words per line in a 210 px right-strip. Visual-review
+   #1 from the mobile-responsive scan. */
+@media (max-width: 720px) {
+  .rb-step {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  .rb-step mark {
+    grid-row: auto;
+    justify-self: start;
+  }
+}
 
 /* When rb-steps are direct children of a div (no grid wrapper) — add vertical spacing */
 .rich-prose div > .rb-step:first-child { margin-top: var(--space-5); }
