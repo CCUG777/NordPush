@@ -2,9 +2,8 @@
 
 import { useState, useRef, useCallback, Fragment } from "react";
 
-/* ── Formspree endpoint — set NEXT_PUBLIC_FORMSPREE_FRAGEBOGEN in .env.local ── */
-const FORMSPREE_URL =
-  process.env.NEXT_PUBLIC_FORMSPREE_FRAGEBOGEN ?? "";
+/* ── Submission endpoint — internal API route, same SMTP as /api/contact ── */
+const API_URL = "/api/fragebogen";
 
 const STEP_LABELS = [
   "Kontakt",
@@ -287,16 +286,21 @@ export function KundenfragebogenForm() {
       fd.append("design_stil", form.c_stil);
       fd.append("design_anm", form.f_stil_anm);
       fd.append("features", form.c_features.join(", "));
+      fd.append("schnittstellen", form.f_ss);
+      fd.append("textbedarf", form.c_texte);
       fd.append("keywords", form.f_kw);
+      fd.append("gmb", form.c_gmb);
+      fd.append("social", form.c_social.join(", "));
       fd.append("launch_termin", form.f_termin);
       fd.append("prioritaet", form.c_prio);
+      fd.append("pflege", form.c_pflege);
       fd.append("sonstiges", form.f_sonstiges);
       files.forEach((f) => fd.append("dateien", f, f.name));
 
-      const res = await fetch(FORMSPREE_URL, {
+      const res = await fetch(API_URL, {
         method: "POST",
         body: fd,
-        headers: { Accept: "application/json" },
+        // No Content-Type header — browser sets multipart/form-data + boundary
       });
 
       if (res.ok) {
