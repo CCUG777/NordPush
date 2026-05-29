@@ -4848,8 +4848,27 @@ label {
   background: #fff;
 }
 .kf-opt--on {
-  background: var(--rui-primary-soft);
-  border-color: rgba(91, 33, 213, 0.55);
+  background: var(--rui-primary-tint);
+  border: 2px solid var(--rui-primary);
+  position: relative;
+}
+/* Checkmark badge top-right corner */
+.kf-opt--on::after {
+  content: "✓";
+  position: absolute;
+  top: 7px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--rui-primary);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 .kf-oi { font-size: 18px; margin-bottom: 8px; display: block; }
 .kf-ot {
@@ -4865,6 +4884,7 @@ label {
   line-height: 1.3;
 }
 .kf-opt--on .kf-ot { color: var(--rui-primary); }
+.kf-opt--on .kf-os { color: rgba(91, 33, 213, 0.6); }
 
 /* ── Nav bar ─────────────────────────────────────────────────────────────── */
 .kf-nav {
