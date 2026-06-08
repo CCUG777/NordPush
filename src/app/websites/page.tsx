@@ -48,15 +48,15 @@ const caseStudies: readonly CaseStudy[] = [
     branchChip: "Automotive · Schleswig-Holstein",
     scope: "Konzept · Design · Entwicklung · Conversion · Local SEO",
     challenge:
-      "Ein Meisterbetrieb mit drei Werkstatt-Standorten (Borgstedt, Büdelsdorf, Rendsburg) brauchte eine Website, die regional gefunden wird, Vertrauen aufbaut und direkt Termine abholt — statt nur als digitale Visitenkarte zu dienen.",
+      "Ein Meisterbetrieb in Borgstedt brauchte eine Website, die regional gefunden wird, Vertrauen aufbaut und direkt Termine abholt — statt nur als digitale Visitenkarte zu dienen.",
     solution:
-      "Mehrstandort-Architektur mit sauberer Service-Hierarchie (Technik, Tuning, Inspektion), eingebetteter Online-Terminbuchung, WhatsApp-Direktkontakt und Google-Reviews als Social-Proof. Mobile-First mit sichtbaren Call- und Book-Buttons auf jeder Seite.",
+      "Klare Service-Hierarchie (Technik, Tuning, Inspektion), eingebettete Online-Terminbuchung, WhatsApp-Direktkontakt und Google-Reviews als Social-Proof. Mobile-First mit sichtbaren Call- und Book-Buttons auf jeder Seite.",
     outcome:
       "Eine Werkstatt-Website, die als Vertriebskanal arbeitet: Termine, Anrufe und WhatsApp-Anfragen kommen direkt aus der Seite. Premium-Positionierung und regionale Auffindbarkeit in einem Setup vereint.",
     liveUrl: "https://www.kfz-andresen.de",
     liveLabel: "kfz-andresen.de live ansehen",
     previewSrc: "/cases/kfz-andresen.jpg",
-    previewAlt: "Startseite von kfz-andresen.de — Werkstatt-Website mit Online-Buchung und Mehrstandort-Navigation",
+    previewAlt: "Startseite von kfz-andresen.de — Werkstatt-Website mit Online-Buchung und klarer Navigation",
     domain: "kfz-andresen.de",
   },
   {
