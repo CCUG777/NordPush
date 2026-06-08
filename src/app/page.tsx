@@ -260,7 +260,7 @@ export default function HomePage() {
 
           <div className="home-refresh-heading">
             <h1>
-              Websites, die <span className="accent-text">gefunden werden</span> — und überzeugen.
+              Websites, die <span className="accent-text">gefunden werden</span> — und{" "}überzeugen.
             </h1>
             <p className="home-refresh-lede">
               NordPush baut Websites, die verkaufen, und sorgt dafür, dass sie in Google auch
