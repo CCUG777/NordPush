@@ -558,7 +558,7 @@ export default function HomePage() {
               height={20}
               className="brand-logo brand-logo--invert"
             />
-            <span>Operating Principle</span>
+            <span>Marc Friedrich, NordPush</span>
           </footer>
         </blockquote>
       </section>
