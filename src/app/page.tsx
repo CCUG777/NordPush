@@ -136,6 +136,8 @@ const workItems: readonly WorkItem[] = [
     body: "Ruhige, vertrauensbildende Website für eine Hundezucht — als Design- und Konzeptreferenz.",
     liveUrl: "https://vom-elbwind.de",
     domain: "vom-elbwind.de",
+    previewSrc: "/cases/vom-elbwind.jpg",
+    previewAlt: "Startseite von vom-elbwind.de — Website einer Havaneser-Hundezucht in Hamburg",
   },
   {
     id: "aktuellekw",
