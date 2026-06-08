@@ -1,128 +1,167 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ClientLogos } from "@/components/client-logos";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { JsonLd } from "@/components/json-ld";
 import { SiteShell } from "@/components/site-shell";
 import { buildPageMetadata } from "@/lib/seo";
 import { buildPageSchemas } from "@/lib/structured-data";
 
-const clientLogos = [
-  { name: "Aurora Labs", src: "/logos/aurora-labs.svg" },
-  { name: "Basalt Commerce", src: "/logos/basalt-commerce.svg" },
-  { name: "Feldwerk", src: "/logos/feldwerk.svg" },
-  { name: "Helix Manufacturing", src: "/logos/helix-manufacturing.svg" },
-  { name: "Kranz Finance", src: "/logos/kranz-finance.svg" },
-  { name: "Nordstack", src: "/logos/nordstack.svg" },
-  { name: "Ostsee Medical", src: "/logos/ostsee-medical.svg" },
-  { name: "Pulse SaaS", src: "/logos/pulse-saas.svg" },
-];
-
-type ServiceItem = {
-  label: string;
-  href?: string;
-};
-
-type ServicePillar = {
+type PathOption = {
   title: string;
   body: string;
-  items: readonly ServiceItem[];
+  href: string;
+  icon: string;
+  cta: string;
+};
+
+type Pillar = {
+  title: string;
+  subtitle: string;
+  items: readonly string[];
+  price: string;
+  priceLabel: string;
   href: string;
   cta: string;
 };
 
+type WorkItem = {
+  id: string;
+  title: string;
+  badge: string;
+  tag: string;
+  body: string;
+  liveUrl: string;
+  domain: string;
+  previewSrc?: string;
+  previewAlt?: string;
+};
+
 export const metadata = buildPageMetadata(
   "/",
-  "NordPush – SEO-Agentur für planbare Sichtbarkeit und qualifizierte Anfragen",
+  "NordPush | Website- & SEO-Agentur aus Neumünster",
+  "Website und SEO aus einer Hand | Wir bauen deine Seite und machen sie bei Google & KI sichtbar | Aus Neumünster",
+  { forceOverride: true },
 );
 
 const heroSignals = [
   {
-    value: "100+",
-    label: "SEO-Projekte",
-    note: "Erfahrung aus B2B, E-Commerce und lokalen Märkten.",
+    value: "Beides",
+    label: "aus einer Hand",
+    note: "Website und Sichtbarkeit laufen im selben Team zusammen — ohne Übergaben.",
   },
   {
     value: "1 Team",
     label: "klare Verantwortung",
-    note: "Strategie, Technik und Content greifen sauber ineinander.",
+    note: "Design, Technik, Content und SEO greifen sauber ineinander.",
   },
   {
     value: "Klar",
     label: "Reporting",
-    note: "Mit Prioritäten, Risiken und den nächsten echten Hebeln.",
+    note: "Mit Prioritäten, Risiken und den nächsten echten Schritten.",
   },
 ] as const;
 
-const proofHighlights = [
+const pathOptions: readonly PathOption[] = [
   {
-    value: "Substanz",
-    title: "Kein SEO-Theater",
-    body: "Wir priorisieren nach Geschäftswirkung, nicht nach Lautstärke im Meeting.",
+    title: "eine neue Website",
+    body: "Eine Website, die nicht nur gut aussieht, sondern Anfragen, Anrufe und Termine abholt.",
+    href: "/websites/",
+    icon: "/icons/website-loop.svg",
+    cta: "Websites ansehen",
   },
   {
-    value: "Hands-on",
-    title: "Umsetzung statt PDF-Stapel",
-    body: "Empfehlungen werden in Aufgaben, Templates und Entscheidungen übersetzt.",
+    title: "mehr Sichtbarkeit",
+    body: "Eine bestehende Seite, die in Google endlich gefunden wird — strategisch, technisch, inhaltlich.",
+    href: "/preise/",
+    icon: "/icons/sichtbarkeit-loop.svg",
+    cta: "SEO-Betreuung ansehen",
   },
   {
-    value: "Direkt",
-    title: "Kurze Wege im Projekt",
-    body: "Feste Ansprechpartner, klare Zuständigkeiten und ein Tempo, das mitzieht.",
-  },
-] as const;
-
-const principles = [
-  {
-    title: "Wir starten bei den Seiten, die Umsatzpotenzial haben.",
-    body: "Money Pages, Angebotsseiten und wichtige Kategoriestrukturen bekommen zuerst die Aufmerksamkeit, die sie verdienen.",
-  },
-  {
-    title: "Technik, Content und UX werden nicht getrennt behandelt.",
-    body: "Indexierung, interne Verlinkung, Suchintention und Conversion-Pfade hängen zusammen. Genau so bearbeiten wir sie auch.",
-  },
-  {
-    title: "Jeder Report beantwortet die Frage: Was machen wir als Nächstes?",
-    body: "Wir reduzieren Komplexität auf klare Prioritäten, offene Risiken und konkrete Entscheidungen.",
+    title: "beides aus einer Hand",
+    body: "Neue Website und Sichtbarkeit von Anfang an zusammen denken — ein Team, ein Plan.",
+    href: "/kontakt/",
+    icon: "/icons/beides-loop.svg",
+    cta: "Projekt besprechen",
   },
 ] as const;
 
-const servicePillars: readonly ServicePillar[] = [
+const servicePillars: readonly Pillar[] = [
   {
-    title: "Strategie & Nachfrage",
-    body: "Wir finden die Themenfelder, Keywords und Seitentypen, mit denen Sichtbarkeit tatsächlich Geschäft erzeugt.",
+    title: "Websites",
+    subtitle: "Design & Umsetzung, die verkaufen",
     items: [
-      { label: "Keyword- und Opportunity-Mapping", href: "/keyword-recherche/" },
-      { label: "SERP- und Konkurrenzanalyse", href: "/seo-konkurrenzanalyse/" },
-      { label: "Informationsarchitektur und Seitenlogik" },
-      { label: "Priorisierung nach Funnel und Potenzial" },
+      "Konzept, Design und Entwicklung aus einer Hand",
+      "Klare Conversion-Pfade statt digitaler Visitenkarte",
+      "Technisch sauber gebaut — schnell, wartbar, SEO-bereit",
+      "Redaktionell pflegbare Übergabe für dein Team",
     ],
-    href: "/seo-strategie/",
-    cta: "SEO-Strategie entwickeln lassen",
+    price: "ab 3.900 €",
+    priceLabel: "Websites",
+    href: "/websites/",
+    cta: "Websites & Preise ansehen",
   },
   {
-    title: "Technik & UX",
-    body: "Wir beheben die Bremsen, die Rankings, Crawling und Nutzerführung unsichtbar schwächen.",
+    title: "SEO",
+    subtitle: "Strategie, Technik & Content",
     items: [
-      { label: "Crawling, Indexierung und interne Links", href: "/technisches-seo-audit/" },
-      { label: "Core Web Vitals und Seitengeschwindigkeit", href: "/pagespeed-optimierung/" },
-      { label: "Template-Qualität und Seitenstruktur" },
-      { label: "Saubere Übergaben für Dev-Teams" },
+      "Audit, Roadmap und Priorisierung nach Geschäftswirkung",
+      "Technische Bremsen bei Crawling, Indexierung und Speed beheben",
+      "Content- und Themenstruktur entlang echter Suchintention",
+      "Laufendes Reporting mit klaren nächsten Schritten",
     ],
-    href: "/technisches-seo-audit/",
-    cta: "Technische Bremsen aufdecken",
+    price: "ab 1.200 €/Monat",
+    priceLabel: "SEO-Betreuung",
+    href: "/preise/",
+    cta: "SEO-Betreuung & Preise ansehen",
+  },
+] as const;
+
+const workItems: readonly WorkItem[] = [
+  {
+    id: "kfz-andresen",
+    title: "KFZ Technik & Tuning Andresen",
+    badge: "★ Platz 1 Google",
+    tag: "Kfz-Werkstatt · Borgstedt",
+    body: "Website mit Online-Terminbuchung und Local SEO — heute die organische Nr. 1 für „kfz werkstatt borgstedt“.",
+    liveUrl: "https://www.kfz-andresen.de",
+    domain: "kfz-andresen.de",
+    previewSrc: "/cases/kfz-andresen.jpg",
+    previewAlt: "Startseite von kfz-andresen.de — Werkstatt-Website mit Online-Terminbuchung",
   },
   {
-    title: "Content & Ausbau",
-    body: "Wir bauen Inhalte, Cluster und Autorität so auf, dass Rankings und Conversion gemeinsam wachsen können.",
-    items: [
-      { label: "Content-Planung entlang echter Suchintention", href: "/content-marketing/" },
-      { label: "OnPage-Briefings und Template-Vorgaben" },
-      { label: "Digital PR und OffPage-Ausbau", href: "/backlinks/" },
-      { label: "Laufendes Monitoring und Nachschärfung", href: "/seo-monitoring/" },
-    ],
-    href: "/content-marketing/",
-    cta: "Content-System aufbauen",
+    id: "vom-elbwind",
+    title: "Havaneser vom Elbwind",
+    badge: "Neu 2026",
+    tag: "Hundezucht · Hamburg",
+    body: "Ruhige, vertrauensbildende Website für eine Hundezucht — als Design- und Konzeptreferenz.",
+    liveUrl: "https://vom-elbwind.de",
+    domain: "vom-elbwind.de",
+  },
+  {
+    id: "aktuellekw",
+    title: "aktuellekw.de",
+    badge: "Neu 2026",
+    tag: "Web-Tool",
+    body: "Schnelle Utility-Seite rund um die aktuelle Kalenderwoche — als Design- und Konzeptreferenz.",
+    liveUrl: "https://aktuellekw.de",
+    domain: "aktuellekw.de",
+    previewSrc: "/cases/aktuelle-kw.jpg",
+    previewAlt: "Startseite von aktuellekw.de — Utility-Seite mit Kalenderwochen-Anzeige",
+  },
+] as const;
+
+const comboPoints = [
+  {
+    title: "Ein Ansprechpartner",
+    body: "Für Website und Sichtbarkeit sprichst du mit demselben Team — keine Übergaben, keine Verständnislücken zwischen Agenturen.",
+  },
+  {
+    title: "Keine Reibungsverluste",
+    body: "Design, Technik und SEO werden von Anfang an zusammen geplant, statt hinterher mühsam zusammengeflickt.",
+  },
+  {
+    title: "Sichtbarkeit von Anfang an",
+    body: "Neue Seiten starten mit sauberer Struktur und Technik — bereit, gefunden zu werden, statt erst Monate später nachgebessert.",
   },
 ] as const;
 
@@ -130,68 +169,68 @@ const processSteps = [
   {
     step: "01",
     title: "Audit & Diagnose",
-    body: "Wir prüfen Technik, Suchintention, Seitenarchitektur und Conversion-Hürden mit Fokus auf die relevanten URLs.",
+    body: "Wir schauen auf Technik, Design, Inhalte und Suchintention — mit Fokus auf die Seiten, die für dein Geschäft zählen.",
   },
   {
     step: "02",
     title: "Roadmap & Scope",
-    body: "Du bekommst eine klare Priorisierung nach Impact, Aufwand und Abhängigkeiten statt einer langen Wunschliste.",
+    body: "Klare Priorisierung nach Wirkung und Aufwand statt langer Wunschliste. Du weißt, was zuerst passiert und warum.",
   },
   {
     step: "03",
     title: "Umsetzung in Sprints",
-    body: "Wir arbeiten Aufgaben sauber durch, stimmen mit deinem Team ab und halten Entscheidungen dokumentiert fest.",
+    body: "Wir setzen um, stimmen mit deinem Team ab und halten Entscheidungen nachvollziehbar fest.",
   },
   {
     step: "04",
     title: "Reporting & Ausbau",
-    body: "Fortschritt, Risiken und nächste Hebel werden regelmäßig überprüft und an die Realität angepasst.",
+    body: "Fortschritt und nächste Schritte werden regelmäßig geprüft und an die Realität angepasst.",
   },
 ] as const;
 
 const reportMetrics = [
   {
     title: "Sichtbarkeit",
-    body: "Wir verfolgen relevante Cluster und Seitentypen statt nur einzelne Keywords ohne Geschäftsbezug.",
-    footnote: "Cluster, SERP-Wirkung, Gewinner und Verlierer",
+    body: "Wir verfolgen die Cluster und Seiten, die für dein Geschäft zählen — nicht jedes Keyword einzeln.",
+    footnote: "Cluster, Rankings, Gewinner und Verlierer",
   },
   {
     title: "Qualifizierter Traffic",
     body: "Nicht jeder Besuch ist gut. Wir schauen auf Nachfrage, Einstiegsseiten und echte Relevanz.",
-    footnote: "Landingpages, Suchintention, Segmentqualität",
+    footnote: "Landingpages, Suchintention, Qualität",
   },
   {
-    title: "Leads & Conversion",
-    body: "SEO endet nicht beim Ranking. Wir betrachten, wie Sichtbarkeit zu Anfragen und Umsatz beiträgt.",
-    footnote: "Anfragen, Micro-Conversions, Conversion-Pfade",
+    title: "Anfragen & Conversion",
+    body: "Sichtbarkeit zählt erst, wenn daraus Anfragen, Anrufe oder Verkäufe werden.",
+    footnote: "Anfragen, Conversion-Pfade, Umsatzbezug",
   },
   {
     title: "Technische Gesundheit",
-    body: "Wenn Indexierung, interne Links oder Templates kippen, wird das sichtbar und priorisiert behandelt.",
-    footnote: "Crawling, Core Web Vitals, Template-Risiken",
+    body: "Wenn Indexierung, interne Links oder Ladezeiten kippen, sehen wir es zuerst — und kümmern uns darum.",
+    footnote: "Crawling, Core Web Vitals, Risiken",
   },
 ] as const;
 
 const homeFaqs = [
   {
-    question: "Für welche Unternehmen ist NordPush der richtige Partner?",
+    question: "Baut ihr nur Websites oder übernehmt ihr auch SEO?",
     answer:
-      "Vor allem für Unternehmen, die SEO als Wachstumssystem aufbauen wollen: B2B-Teams, lokale Dienstleister, E-Commerce-Shops und Marken mit erklärungsbedürftigen Leistungen.",
+      "Beides — und das bewusst aus einer Hand. Wir entwickeln Websites, die von Anfang an sauber für die Suche aufgestellt sind, und betreuen Sichtbarkeit auch langfristig weiter, wenn das gewünscht ist.",
   },
   {
-    question: "Übernehmt ihr nur Beratung oder auch die Umsetzung?",
+    question: "Für welche Unternehmen ist NordPush der richtige Partner?",
     answer:
-      "Beides. Wir können strategisch führen, dein internes Team enablen oder die operative Umsetzung in Technik, Content und Priorisierung direkt begleiten.",
+      "Vor allem für lokale Dienstleister, Handwerksbetriebe und kleinere Unternehmen, die eine Website wollen, die wirklich etwas bringt — und die Sichtbarkeit dazu nicht dem Zufall überlassen möchten.",
   },
   {
     question: "Wie schnell kann ein Projekt starten?",
     answer:
-      "In der Regel kurzfristig. Nach dem Erstgespräch klären wir Scope, beteiligte Teams, verfügbare Daten und den sinnvollen Startpunkt für Audit und Roadmap.",
+      "In der Regel kurzfristig. Im Erstgespräch klären wir Ziel, Umfang und den sinnvollen Startpunkt — für eine neue Website, SEO-Betreuung oder beides zusammen.",
   },
   {
     question: "Wie transparent ist die Zusammenarbeit?",
     answer:
-      "Sehr transparent. Du bekommst keine Black Box, sondern klare Prioritäten, dokumentierte Entscheidungen und regelmäßige Updates zu Fortschritt, Risiken und nächsten Maßnahmen.",
+      "Sehr. Du bekommst keine Black Box, sondern klare Prioritäten, nachvollziehbare Entscheidungen und regelmäßige Updates zu Fortschritt und nächsten Schritten.",
   },
 ] as const;
 
@@ -212,79 +251,89 @@ export default function HomePage() {
           <div className="home-refresh-kicker">
             <span className="home-refresh-chip">
               <span className="home-refresh-chip-dot" aria-hidden="true" />
-              SEO-Agentur aus Neumünster
+              Website- &amp; SEO-Agentur aus Neumünster
             </span>
-            <p className="eyebrow eyebrow--plain">Strategie, Technik &amp; Content aus einer Hand</p>
+            <p className="eyebrow eyebrow--plain">Websites und Sichtbarkeit aus einer Hand</p>
           </div>
 
           <div className="home-refresh-heading">
             <h1>
-              SEO, das aus Sichtbarkeit
-              <span className="accent-text"> planbare Anfragen </span>
-              macht.
+              Websites, die <span className="accent-text">gefunden werden</span> — und überzeugen.
             </h1>
             <p className="home-refresh-lede">
-              NordPush entwickelt Suchmaschinenstrategien für Unternehmen, die Rankings, Nutzerführung
-              und Vertrieb nicht getrennt denken wollen. Keine lauten Versprechen, sondern saubere
-              Priorisierung und nachvollziehbare Umsetzung.
+              NordPush baut Websites, die verkaufen, und sorgt dafür, dass sie in Google auch
+              gefunden werden. Design, Technik und Sichtbarkeit denken wir von Anfang an zusammen —
+              ein Team, ein Plan, keine Reibungsverluste.
             </p>
           </div>
 
           <div className="home-refresh-actions">
             <Link href="/kontakt/" className="button primary" data-cta="hero-primary">
-              Kostenlose Ersteinschätzung
+              Kostenlose Ersteinschätzung <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href="/preise/"
-              className="home-refresh-secondary-link"
-              data-cta="hero-secondary"
-            >
-              Leistungen &amp; Preise ansehen <span aria-hidden="true">→</span>
+            <Link href="#unsere-arbeit" className="home-refresh-secondary-link" data-cta="hero-secondary">
+              Arbeiten ansehen <span aria-hidden="true">→</span>
             </Link>
           </div>
           <p className="home-refresh-microcopy">
             Antwort innerhalb 24 h · kein Vertrag · kein Sales-Druck
           </p>
-
-          <ul className="home-refresh-points">
-            <li>Audit, Roadmap und schnelle Priorisierung statt Maßnahmenfriedhof.</li>
-            <li>Direkte Ansprechpartner für Technik, Content und strategische Entscheidungen.</li>
-            <li>Auf Wunsch komplett umgesetzt oder eng mit deinem Team verzahnt.</li>
-          </ul>
         </div>
 
         <aside className="home-refresh-panel" aria-label="NordPush Projektmodell">
           <div className="home-refresh-panel-shell">
             <div className="home-refresh-panel-head">
-              <p className="eyebrow eyebrow--plain">SEO Operating System</p>
-              <span className="home-status-pill">Strategisch. Sauber. Direkt.</span>
+              <p className="eyebrow eyebrow--plain">Website- &amp; SEO-Setup</p>
+              <span className="home-status-pill">Gebaut. Gefunden. Überzeugend.</span>
             </div>
 
             <div className="home-panel-block">
               <p className="home-panel-label">In den ersten 30 Tagen</p>
               <ul className="home-panel-list">
-                <li>Technisches Audit mit Prioritäten nach Impact und Aufwand</li>
+                <li>Klarheit über Ziel, Zielgruppe und sinnvollen Seitenaufbau</li>
+                <li>Erste Entwürfe oder technisches Audit — je nach Startpunkt</li>
                 <li>Keyword- und Themenlandschaft für die wichtigsten Seiten</li>
-                <li>Quick Wins für Angebotsseiten, interne Links und Conversion-Pfade</li>
-                <li>Setup für Reporting, Verantwortlichkeiten und nächste Sprints</li>
+                <li>Setup für Reporting, Verantwortlichkeiten und nächste Schritte</li>
               </ul>
             </div>
 
             <div className="home-panel-foot">
               <p>
-                Wöchentliche Abstimmung, klare Owner und ein Reporting, das Entscheidungen vorbereitet
-                statt nur Zustand zu beschreiben.
+                Wöchentliche Abstimmung, klare Owner und ein Reporting, das Entscheidungen
+                vorbereitet statt nur Zustand zu beschreiben.
               </p>
             </div>
           </div>
         </aside>
       </section>
 
-      {/* Trust-Strip — moved out of the right hero panel where 5 nested
-          content blocks (pill + stats + plan + footer-note) made the card
-          feel dense vs. the airy left column. The stats are higher-value
-          when given their own breathing-room as a horizontal proof-band
-          right under the hero. Visual-review finding #12 (Option A). */}
+      <section className="home-section" aria-labelledby="path-heading">
+        <div className="section-heading section-heading--compact">
+          <p className="eyebrow">Ich brauche …</p>
+          <h2 id="path-heading">Wo stehst du gerade?</h2>
+        </div>
+
+        <div className="home-path-grid">
+          {pathOptions.map((option) => (
+            <Link
+              key={option.title}
+              href={option.href}
+              className="home-path-card"
+              data-cta={`path-${option.title.split(" ")[0].toLowerCase()}`}
+            >
+              <span className="home-path-icon">
+                <img src={option.icon} alt="" aria-hidden="true" width={30} height={30} loading="lazy" />
+              </span>
+              <h3>{option.title}</h3>
+              <p>{option.body}</p>
+              <span className="home-path-cta">
+                {option.cta} <span aria-hidden="true">→</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       <section className="home-trust-strip" aria-label="Vertrauensindikatoren">
         {heroSignals.map((signal) => (
           <article key={signal.label} className="home-trust-strip-item">
@@ -295,92 +344,35 @@ export default function HomePage() {
         ))}
       </section>
 
-      <section className="home-section home-trust">
-        <div className="section-heading section-heading--compact">
-          <p className="eyebrow">Vertrauen &amp; Fokus</p>
-          <h2>SEO für Teams, die Substanz vor Show wählen.</h2>
-          <p>
-            Wir arbeiten mit Unternehmen zusammen, die Sichtbarkeit nicht als isolierten Kanal sehen,
-            sondern als Wachstumshebel zwischen Nachfrage, Marke und Vertrieb.
-          </p>
-        </div>
-
-        <div className="home-proof-grid">
-          {proofHighlights.map((item) => (
-            <article key={item.title} className="home-proof-card">
-              <p className="home-proof-value">{item.value}</p>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
-          ))}
-        </div>
-
-        <div className="home-logo-wrap">
-          <ClientLogos
-            label="Vertrauen von Unternehmen in ganz DACH"
-            logos={clientLogos}
-            variant="grid"
-          />
-        </div>
-      </section>
-
-      <section className="home-section">
-        <div className="section-heading">
-          <p className="eyebrow">Wie wir arbeiten</p>
-          <h2>Wir räumen zuerst die echten Bremsen aus dem Weg.</h2>
-          <p>
-            Viele SEO-Projekte verlieren Monate mit Nebenkriegsschauplätzen. Wir sortieren technische
-            Risiken, Suchintention, Informationsarchitektur und Conversion-Pfade so, dass die wichtigsten
-            Seiten zuerst profitieren.
-          </p>
-        </div>
-
-        <div className="home-principles-grid">
-          {principles.map((principle, index) => (
-            <article key={principle.title} className="home-principle-card">
-              <span className="home-principle-index">{String(index + 1).padStart(2, "0")}</span>
-              <h3>{principle.title}</h3>
-              <p>{principle.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="home-section">
+      <section className="home-section" id="leistungen">
         <div className="section-heading">
           <p className="eyebrow">Leistungen</p>
-          <h2>Ein Setup, das Strategie, Technik und Content wirklich verbindet.</h2>
+          <h2>Websites und SEO — gleich wichtig, gleich ernst genommen.</h2>
           <p>
-            Ob punktuelles Audit oder laufende Betreuung: Wir bauen ein System, das auf stabile Rankings
-            und qualifizierte Anfragen einzahlt.
+            Ob neue Website, laufende SEO-Betreuung oder beides zusammen: Du bekommst ein System,
+            das auf Sichtbarkeit und echte Anfragen einzahlt.
           </p>
         </div>
 
-        <div className="home-service-grid">
+        <div className="home-service-grid home-pillar-grid">
           {servicePillars.map((pillar) => (
             <article key={pillar.title} className="home-service-card">
               <div className="home-service-head">
-                <p className="eyebrow eyebrow--plain">Leistungsfeld</p>
+                <p className="eyebrow eyebrow--plain">{pillar.subtitle}</p>
                 <h3>{pillar.title}</h3>
               </div>
-              <p>{pillar.body}</p>
               <ul className="home-service-list">
                 {pillar.items.map((item) => (
-                  <li key={item.label}>
-                    {item.href ? (
-                      <Link href={item.href} className="text-link">
-                        {item.label}
-                      </Link>
-                    ) : (
-                      item.label
-                    )}
-                  </li>
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
+              <p className="home-pillar-price">
+                {pillar.price} <span>{pillar.priceLabel}</span>
+              </p>
               <Link
                 href={pillar.href}
                 className="text-link home-service-link"
-                data-cta={`card-${pillar.title.split(" ")[0].toLowerCase()}`}
+                data-cta={`card-${pillar.title.toLowerCase()}`}
               >
                 {pillar.cta} <span aria-hidden="true">→</span>
               </Link>
@@ -389,13 +381,115 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="home-section" id="unsere-arbeit">
+        <div className="section-heading">
+          <p className="eyebrow">Unsere Arbeit</p>
+          <h2>Drei Projekte, drei Branchen — gebaut, um zu wirken.</h2>
+          <p>
+            Statt Logos fremder Marken zeigen wir lieber, was wir wirklich gebaut haben: Websites
+            für eine Werkstatt, eine Hundezucht und ein Web-Tool — jede mit eigenem Ziel.
+          </p>
+        </div>
+
+        <div className="home-work-grid">
+          {workItems.map((item) => (
+            <article key={item.id} className="home-work-card">
+              <a
+                href={item.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="websites-case-preview"
+                aria-label={`${item.domain} in neuem Tab öffnen`}
+              >
+                <div className="websites-case-preview-bar" aria-hidden="true">
+                  <span className="websites-case-dots">
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                  <span className="websites-case-url">{item.domain}</span>
+                </div>
+                <div className="home-work-preview-frame">
+                  {item.previewSrc ? (
+                    <Image
+                      src={item.previewSrc}
+                      alt={item.previewAlt ?? ""}
+                      width={1600}
+                      height={1000}
+                      sizes="(max-width: 980px) 100vw, 360px"
+                      className="home-work-preview-img"
+                    />
+                  ) : (
+                    <span className="home-work-preview-placeholder" aria-hidden="true">
+                      Vorschau folgt
+                    </span>
+                  )}
+                </div>
+              </a>
+
+              <div className="home-work-body">
+                <span className="home-work-badge">{item.badge}</span>
+                <h3>{item.title}</h3>
+                <p className="home-work-tag">{item.tag}</p>
+                <p className="home-work-text">{item.body}</p>
+                <a
+                  href={item.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="home-work-link"
+                >
+                  Live ansehen <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="home-result">
+          <p className="home-result-metric">#1</p>
+          <div className="home-result-copy">
+            <p className="eyebrow">Ergebnis</p>
+            <h2>Gebaut — und gefunden.</h2>
+            <p>
+              KFZ Technik &amp; Tuning Andresen rankt heute organisch auf Platz 1 bei Google für
+              „kfz werkstatt borgstedt“ — ohne Anzeigen, mit sauberer Website-Struktur und
+              gezielter lokaler Sichtbarkeit.
+            </p>
+            <span>Stand: organische Google-Suche, Juni 2026 — Screenshot auf Anfrage.</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="home-section">
+        <div className="section-heading">
+          <p className="eyebrow">Aus einer Hand</p>
+          <h2>Warum beides zusammen besser ist.</h2>
+          <p>
+            Eine neue Website ohne Sichtbarkeitsplan verpufft. SEO ohne überzeugende Website
+            verschwendet die Klicks, die es gewinnt. Wir denken beides von Anfang an zusammen.
+          </p>
+        </div>
+
+        <div className="home-principles-grid">
+          {comboPoints.map((point, index) => (
+            <article key={point.title} className="home-principle-card">
+              <span className="home-principle-index">{String(index + 1).padStart(2, "0")}</span>
+              <h3>{point.title}</h3>
+              <p>{point.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="home-section home-operations">
         <div className="section-heading">
           <p className="eyebrow">Projektmodell</p>
-          <h2>Klare Phasen, klare Verantwortlichkeiten, kein Black-Box-Gefühl.</h2>
+          <h2>Klare Phasen, klare Verantwortlichkeiten.</h2>
           <p>
-            Wir führen Projekte so, dass intern niemand rätseln muss, was gerade passiert, warum es
-            wichtig ist und wer den nächsten Schritt verantwortet.
+            Du musst nicht raten, was gerade passiert. Jede Phase hat ein Ziel, einen Owner und ein
+            nachvollziehbares Ergebnis.
           </p>
         </div>
 
@@ -414,17 +508,16 @@ export default function HomePage() {
 
           <div className="home-deliverables-card">
             <p className="eyebrow">Was du bekommst</p>
-            <h3>Kein hübsches Dokument ohne Anschlussfähigkeit.</h3>
+            <h3>Kein Dokument ohne Anschlussfähigkeit.</h3>
             <ul className="home-deliverables-list">
-              <li>Priorisierte Maßnahmenliste mit Impact-, Aufwand- und Owner-Logik</li>
-              <li>Konkrete Empfehlungen für Templates, interne Verlinkung und Seitentypen</li>
-              <li>Keyword- und Content-Struktur für die wichtigsten Cluster</li>
-              <li>Reporting-Setup für Sichtbarkeit, Traffic, Conversion und Technik</li>
-              <li>Saubere Abstimmung mit internen Stakeholdern oder externen Entwicklern</li>
+              <li>Priorisierte Maßnahmenliste mit Wirkungs- und Aufwandslogik</li>
+              <li>Konkrete Vorgaben für Design, Templates und interne Verlinkung</li>
+              <li>Keyword- und Content-Struktur für die wichtigsten Seiten</li>
+              <li>Reporting-Setup für Sichtbarkeit, Traffic und Anfragen</li>
             </ul>
             <div className="home-deliverables-note">
-              <strong>Passend für:</strong> Unternehmen, die SEO ernsthaft aufbauen wollen, ohne intern
-              mehrere Disziplinen einzeln koordinieren zu müssen.
+              <strong>Passend für:</strong> Unternehmen, die eine Website und Sichtbarkeit wollen,
+              die wirklich zusammenspielen — ohne mehrere Dienstleister koordinieren zu müssen.
             </div>
           </div>
         </div>
@@ -433,10 +526,10 @@ export default function HomePage() {
       <section className="home-section home-reporting">
         <div className="section-heading">
           <p className="eyebrow">Reporting</p>
-          <h2>Wir reporten auf die Metriken, die Entscheidungen auslösen.</h2>
+          <h2>Wir reporten auf Zahlen, die Entscheidungen auslösen.</h2>
           <p>
-            Statt zehn Dashboard-Seiten mit Vanity Metrics bekommst du einen klaren Blick auf Fortschritt,
-            Risiken und die nächsten Hebel.
+            Statt zehn Dashboard-Seiten bekommst du einen klaren Blick auf Fortschritt, Risiken und
+            die nächsten Schritte.
           </p>
         </div>
 
@@ -452,8 +545,8 @@ export default function HomePage() {
 
         <blockquote className="home-operator-note">
           <p>
-            &bdquo;Gutes SEO fühlt sich im Alltag nicht nach Aktionismus an. Es fühlt sich nach Klarheit
-            an: Was blockiert, was wirkt und was wir als Nächstes sauber umsetzen.&ldquo;
+            &bdquo;Gute Arbeit fühlt sich im Alltag nicht nach Aktionismus an. Sie fühlt sich nach
+            Klarheit an: Was wirkt, was blockiert — und was wir als Nächstes sauber umsetzen.&ldquo;
           </p>
           <footer>
             <Image
@@ -489,8 +582,9 @@ export default function HomePage() {
           <p className="eyebrow">Nächster Schritt</p>
           <h2>Jetzt kostenlose Ersteinschätzung anfragen — unverbindlich.</h2>
           <p>
-            Du bekommst eine ehrliche Einschätzung zu deinen wichtigsten Seiten, Themen und
-            technischen Bremsen — keine Verkaufspräsentation, kein Vertrag.
+            Egal ob neue Website, mehr Sichtbarkeit oder beides: Du bekommst eine ehrliche
+            Einschätzung zu deiner Ausgangslage und den sinnvollsten nächsten Schritten — keine
+            Verkaufspräsentation, kein Vertrag.
           </p>
         </div>
 

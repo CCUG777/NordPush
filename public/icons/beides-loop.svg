@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="44" height="44" fill="none" role="img" aria-label="Beides aus einer Hand">
+  <!-- NordPush · "beides aus einer Hand" — LOOP (gut sichtbar): Kreise verbinden sich alle 4s neu -->
+  <defs>
+    <linearGradient id="npl-b" x1="4" y1="6" x2="20" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#B9A6FF"/>
+      <stop offset=".5" stop-color="#9B7BF7"/>
+      <stop offset="1" stop-color="#7C5CFC"/>
+    </linearGradient>
+    <filter id="npl-b-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="1.1"/>
+    </filter>
+  </defs>
+  <style>
+    .npl-cycle{animation:npl-fade 4s ease-in-out infinite}
+    .npl-ring{fill:none;stroke:url(#npl-b);stroke-width:1.7;stroke-linecap:round;
+      stroke-dasharray:100;stroke-dashoffset:100;animation:npl-draw 4s cubic-bezier(.4,0,.2,1) infinite}
+    .npl-seed{fill:url(#npl-b)}
+    .npl-halo{fill:url(#npl-b);filter:url(#npl-b-glow);transform-box:fill-box;transform-origin:center;
+      animation:npl-halo 2.4s ease-in-out infinite}
+    @keyframes npl-fade{0%{opacity:0}8%{opacity:1}55%{opacity:1}78%{opacity:0}100%{opacity:0}}
+    @keyframes npl-draw{0%,5%{stroke-dashoffset:100}32%,100%{stroke-dashoffset:0}}
+    @keyframes npl-halo{0%,100%{opacity:.18;transform:scale(.8)}50%{opacity:.5;transform:scale(1.35)}}
+    @media (prefers-reduced-motion:reduce){
+      .npl-cycle{opacity:1;animation:none}
+      .npl-ring{stroke-dashoffset:0;animation:none}
+      .npl-halo{opacity:.3;animation:none}
+    }
+  </style>
+  <g class="npl-cycle">
+    <circle class="npl-ring" pathLength="100" cx="9.7" cy="12" r="4.6"/>
+    <circle class="npl-ring" pathLength="100" cx="14.3" cy="12" r="4.6"/>
+    <circle class="npl-halo" cx="12" cy="12" r="1.6"/>
+    <circle class="npl-seed" cx="12" cy="12" r="1.3"/>
+  </g>
+</svg>
