@@ -283,6 +283,33 @@ export default function HomePage() {
         </div>
 
         <aside className="home-refresh-panel" aria-label="NordPush Projektmodell">
+          <a
+            href="https://www.kfz-andresen.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="home-hero-preview"
+            aria-label="kfz-andresen.de ansehen — von NordPush gebaut"
+          >
+            <div className="websites-case-preview-bar" aria-hidden="true">
+              <span className="websites-case-dots">
+                <span />
+                <span />
+                <span />
+              </span>
+              <span className="websites-case-url">kfz-andresen.de</span>
+            </div>
+            <div className="home-hero-preview-frame">
+              <Image
+                src="/cases/kfz-andresen.jpg"
+                alt="kfz-andresen.de — Werkstatt-Website, gebaut von NordPush"
+                width={800}
+                height={450}
+                sizes="(max-width: 1024px) 100vw, 520px"
+                className="home-hero-preview-img"
+                loading="lazy"
+              />
+            </div>
+          </a>
           <div className="home-refresh-panel-shell">
             <div className="home-refresh-panel-head">
               <p className="eyebrow eyebrow--plain">Website- &amp; SEO-Setup</p>
@@ -349,7 +376,7 @@ export default function HomePage() {
       <section className="home-section" id="leistungen">
         <div className="section-heading">
           <p className="eyebrow">Leistungen</p>
-          <h2>Websites und SEO — gleich wichtig, gleich ernst genommen.</h2>
+          <h2>Websites und SEO —{" "}gleich wichtig, gleich ernst genommen.</h2>
           <p>
             Ob neue Website, laufende SEO-Betreuung oder beides zusammen: Du bekommst ein System,
             das auf Sichtbarkeit und echte Anfragen einzahlt.
@@ -383,10 +410,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="home-section" id="unsere-arbeit">
+      <section className="home-section home-section--tinted" id="unsere-arbeit">
         <div className="section-heading">
           <p className="eyebrow">Unsere Arbeit</p>
-          <h2>Drei Projekte, drei Branchen — gebaut, um zu wirken.</h2>
+          <h2>Drei Projekte, drei Branchen —{" "}gebaut, um zu wirken.</h2>
           <p>
             Statt Logos fremder Marken zeigen wir lieber, was wir wirklich gebaut haben: Websites
             für eine Werkstatt, eine Hundezucht und ein Web-Tool — jede mit eigenem Ziel.
@@ -461,10 +488,37 @@ export default function HomePage() {
             </p>
             <span>Stand: organische Google-Suche, Juni 2026 — Screenshot auf Anfrage.</span>
           </div>
+          <a
+            href="https://www.kfz-andresen.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="home-result-visual"
+            aria-label="kfz-andresen.de live ansehen"
+          >
+            <div className="home-result-visual-bar" aria-hidden="true">
+              <span className="home-result-visual-dots">
+                <span />
+                <span />
+                <span />
+              </span>
+              <span className="home-result-visual-url">kfz-andresen.de</span>
+            </div>
+            <div className="home-result-visual-frame">
+              <Image
+                src="/cases/kfz-andresen.jpg"
+                alt="kfz-andresen.de — Platz 1 bei Google für kfz werkstatt borgstedt"
+                width={800}
+                height={600}
+                sizes="(max-width: 900px) 0px, 360px"
+                className="home-result-visual-img"
+                loading="lazy"
+              />
+            </div>
+          </a>
         </div>
       </section>
 
-      <section className="home-section">
+      <section className="home-section home-section--tinted">
         <div className="section-heading">
           <p className="eyebrow">Aus einer Hand</p>
           <h2>Warum beides zusammen besser ist.</h2>
@@ -477,7 +531,17 @@ export default function HomePage() {
         <div className="home-principles-grid">
           {comboPoints.map((point, index) => (
             <article key={point.title} className="home-principle-card">
-              <span className="home-principle-index">{String(index + 1).padStart(2, "0")}</span>
+              <span className="home-section-icon" aria-hidden="true">
+                {index === 0 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="7.5" r="3.2"/><path d="M5.5 20c0-3.59 2.91-6.5 6.5-6.5s6.5 2.91 6.5 6.5"/></svg>
+                )}
+                {index === 1 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M15 7l5 5-5 5"/><path d="M9 7L4 12l5 5" opacity=".4"/></svg>
+                )}
+                {index === 2 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                )}
+              </span>
               <h3>{point.title}</h3>
               <p>{point.body}</p>
             </article>
@@ -536,8 +600,22 @@ export default function HomePage() {
         </div>
 
         <div className="home-report-grid">
-          {reportMetrics.map((metric) => (
+          {reportMetrics.map((metric, index) => (
             <article key={metric.title} className="home-report-card">
+              <span className="home-section-icon" aria-hidden="true">
+                {index === 0 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V14M9 20V8M14 20v-6M19 20V4"/></svg>
+                )}
+                {index === 1 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+                )}
+                {index === 2 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h14l-2 7H7L5 4zM7 11l-2 9h14l-2-9"/></svg>
+                )}
+                {index === 3 && (
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L4 7v5c0 4.418 3.358 8.553 8 9.93C17.642 20.553 21 16.418 21 12V7l-9-4z"/><path d="M9 12l2 2 4-4"/></svg>
+                )}
+              </span>
               <h3>{metric.title}</h3>
               <p>{metric.body}</p>
               <span>{metric.footnote}</span>
@@ -599,6 +677,16 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      {/* Sticky mobile CTA — only visible on phones via CSS, keeps the primary
+          action reachable without scrolling. Duplicate link is intentional;
+          aria-hidden prevents double-announcement for screen readers. */}
+      <div className="home-sticky-cta" aria-hidden="true">
+        <Link href="/kontakt/" className="button primary" data-cta="sticky-mobile" tabIndex={-1}>
+          Kostenlose Ersteinschätzung →
+        </Link>
+      </div>
+      <div className="home-sticky-cta-spacer" aria-hidden="true" />
     </SiteShell>
   );
 }
