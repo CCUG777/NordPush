@@ -1444,6 +1444,13 @@ body:has(.mobile-menu[open])::before {
   transition: border-color 0.2s var(--ease-standard), transform 0.2s var(--ease-standard);
 }
 .home-work-card:hover { border-color: var(--rui-primary); transform: translateY(-2px); }
+
+/* The shared .websites-case-preview uses negative margins to bleed into the
+   padding of the /websites/ page cards. home-work-card has no padding, so
+   the negative margins instead pull the frame OUTSIDE the card's overflow:hidden
+   boundary, clipping ~28px off the left edge of the screenshot. Reset to zero. */
+.home-work-card .websites-case-preview { margin: 0; }
+
 .home-work-preview-frame {
   position: relative;
   aspect-ratio: 16 / 10;
