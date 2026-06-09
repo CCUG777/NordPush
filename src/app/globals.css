@@ -1671,7 +1671,9 @@ body:has(.mobile-menu[open])::before {
   flex-shrink: 0;
   margin-bottom: var(--space-2);
 }
-.home-report-card .home-section-icon { margin-bottom: var(--space-3); color: var(--rui-primary); }
+/* .home-report-card span sets display:inline-block for the footnote span, which
+   bleeds onto this icon span too. Re-assert flex so centering works. */
+.home-report-card .home-section-icon { display: flex; margin-bottom: var(--space-3); color: var(--rui-primary); }
 
 /* -------------------------------------------------------------------------
    Mobile sticky CTA — fixed bar at bottom of viewport, only on phones.
