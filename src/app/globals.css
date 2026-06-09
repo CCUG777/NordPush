@@ -1488,7 +1488,7 @@ body:has(.mobile-menu[open])::before {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  padding: var(--space-6) var(--space-6) var(--space-7);
+  padding: var(--space-6) var(--space-6) var(--space-8);
 }
 .home-work-badge {
   align-self: flex-start;
