@@ -1552,9 +1552,9 @@ body:has(.mobile-menu[open])::before {
 .home-result-metric {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(72px, 10vw, 132px);
-  line-height: 0.9;
-  letter-spacing: -0.03em;
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.02em;
   color: var(--rui-primary);
   margin: 0;
 }
