@@ -1444,7 +1444,7 @@ body:has(.mobile-menu[open])::before {
   display: flex;
   flex-direction: column;
   background: var(--rui-white);
-  border: 1px solid var(--rui-border);
+  border: 1px solid transparent; /* invisible by default; white-on-grey contrast defines the card */
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: border-color 0.2s var(--ease-standard), transform 0.2s var(--ease-standard);
@@ -1744,7 +1744,6 @@ body:has(.mobile-menu[open])::before {
   margin: calc(clamp(28px, 3vw, 40px) * -1)
           calc(clamp(28px, 3vw, 40px) * -1)
           var(--space-2);
-  border-bottom: 1px solid var(--rui-border);
   border-top-left-radius: calc(var(--radius-lg) - 1px);
   border-top-right-radius: calc(var(--radius-lg) - 1px);
   overflow: hidden;
@@ -1759,7 +1758,7 @@ body:has(.mobile-menu[open])::before {
   gap: 14px;
   padding: 10px 14px;
   background: var(--rui-surface);
-  border-bottom: 1px solid var(--rui-border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* very subtle — just marks where chrome ends */
 }
 .websites-case-dots {
   display: inline-flex;
@@ -1770,7 +1769,7 @@ body:has(.mobile-menu[open])::before {
   width: 10px;
   height: 10px;
   border-radius: var(--radius-pill);
-  background: var(--rui-border-strong);
+  background: var(--rui-border); /* was border-strong — softer, less "traffic-light" look */
 }
 .websites-case-url {
   font-family: var(--font-mono, var(--font-sans));
