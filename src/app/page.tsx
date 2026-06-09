@@ -260,7 +260,7 @@ export default function HomePage() {
 
           <div className="home-refresh-heading">
             <h1>
-              Websites, die <span className="accent-text">gefunden werden</span> — und{" "}überzeugen.
+              Websites, die <span className="accent-text">gefunden werden</span> und überzeugen.
             </h1>
             <p className="home-refresh-lede">
               NordPush baut Websites, die verkaufen, und sorgt dafür, dass sie in Google auch
@@ -610,7 +610,7 @@ export default function HomePage() {
                   <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
                 )}
                 {index === 2 && (
-                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M5 4h14l-2 7H7L5 4zM7 11l-2 9h14l-2-9"/></svg>
+                  <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 )}
                 {index === 3 && (
                   <svg viewBox="0 0 24 24" width={24} height={24} fill="none" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" strokeLinejoin="round"><path d="M12 3L4 7v5c0 4.418 3.358 8.553 8 9.93C17.642 20.553 21 16.418 21 12V7l-9-4z"/><path d="M9 12l2 2 4-4"/></svg>

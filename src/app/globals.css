@@ -1599,7 +1599,7 @@ body:has(.mobile-menu[open])::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: top left;
   transition: transform 0.4s var(--ease-standard);
 }
 .home-result-visual:hover .home-result-visual-img { transform: scale(1.02); }
@@ -1658,7 +1658,7 @@ body:has(.mobile-menu[open])::before {
   flex-shrink: 0;
   margin-bottom: var(--space-2);
 }
-.home-report-card .home-section-icon { margin-bottom: var(--space-3); }
+.home-report-card .home-section-icon { margin-bottom: var(--space-3); color: var(--rui-primary); }
 
 /* -------------------------------------------------------------------------
    Mobile sticky CTA — fixed bar at bottom of viewport, only on phones.
